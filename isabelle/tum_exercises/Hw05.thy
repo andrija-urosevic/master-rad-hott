@@ -10,17 +10,26 @@ text \<open>We define a (slightly simplified) version of the landau symbol @{tex
 text \<open>@{text "\<O> g = {f .\<exists> c > 0. \<exists> x0. \<forall> x \<ge> x0. f x \<le> c \<^emph> g x}"}\<close>
 
 definition \<O> :: "(nat \<Rightarrow> nat) \<Rightarrow> (nat \<Rightarrow> nat) set" where
-  "\<O> g = {f . \<exists> c > 0. \<exists> x0. \<forall> x \<ge> x0. f x \<le> c * g x}"
+  "\<O> g = {f . \<exists> c::nat > 0. \<exists> x0::nat. \<forall> x::nat \<ge> x0. f x \<le> c * g x}"
 
 text \<open>Show that @{text "2n \<in> O(n²)"}. 
       Use Isar proof patterns, and make sure that your types are correct.\<close>
 
+value "(0::nat) < 2"
+
 thm exE[of "(<) 0"]
-lemma lin_in_square: "(\<lambda> n. 2 * n) \<in> \<O> (\<lambda> n. n ^ 2)"
+
+lemma lin_in_square: "(\<lambda> n. (2::nat) * n) \<in> \<O> (\<lambda> n. n ^ 2)"
   unfolding \<O>_def
 proof
-  show "\<exists>c>0. \<exists>x0. \<forall>x\<ge>x0. 2 * x \<le> c * x ^ 2"
-    sorry
+  have "\<forall>x::nat \<ge> 1. x \<le> x ^ 2"
+    by (simp add: self_le_power)
+  then have "\<forall>x::nat \<ge> 1. 2 * x \<le> 2 * x ^ 2" 
+    by simp
+  then have "\<exists>x0::nat. \<forall>x::nat \<ge> x0. 2 * x \<le> 2 * x ^ 2"
+    by (rule_tac x = "1" in exI)
+  then show "\<exists>c::nat>0. \<exists>x0::nat. \<forall>x::nat\<ge>x0. 2 * x \<le> c * x ^ 2"
+    using pos2 by blast
 qed
 
 text \<open>Show that the other direction does not hold, i.e., n^2 \<notin> 2*n\<close>
@@ -28,7 +37,18 @@ text \<open>Hint: to simplify quadratic formulae, give @{text "power2_eq_square"
       and @{text "algebra_simps"} to the simplifier.\<close>
 
 lemma square_notin_lin: "(\<lambda> n. n ^ 2) \<notin> \<O> (\<lambda> n. 2 * n)"
-  sorry
+proof
+  assume "power2 \<in> \<O> (\<lambda> n. 2 * n)"
+  then have "power2 \<in> {f . \<exists> c::nat > 0. \<exists> x0::nat. \<forall> x::nat \<ge> x0. f x \<le> c * (2 * x)}" 
+    using \<O>_def[of "(*) 2"] by simp
+  then have "\<exists> c::nat > 0. \<exists> x0::nat. \<forall> x::nat \<ge> x0. power2 x \<le> c * (2 * x)" by simp
+  then obtain c where "\<exists> x0::nat. \<forall> x::nat \<ge> x0. power2 x \<le> c * (2 * x)" by blast
+  then obtain x0 where "\<forall> x::nat \<ge> x0. power2 x \<le> c * (2 * x)" by blast
+  then have "\<forall> x::nat \<ge> x0. x * x \<le> c * (2 * x)" by (simp add: power2_eq_square)
+  then have "\<forall> x::nat \<ge> x0. x \<le> c * 2" by (auto simp add: algebra_simps)
+  then show False
+    by (meson Suc_n_not_le_n dual_order.refl le_SucI)
+qed
 
 section \<open>Interleave Lists\<close>
 

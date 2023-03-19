@@ -50,9 +50,9 @@ value "pins (2, 9) test_ptree"
 
 text \<open>Show the most interesting property, namely that insert preserves the invariant:\<close>
 
-lemma pins_invar: "pbst t \<Longrightarrow> pbst (pins x t)"
-  apply (induction x t rule: pins.induct)
-   apply (auto split: prod.split)
+lemma pins_invar[simp]: "pbst t \<Longrightarrow> pbst (pins x t)"
+  apply (induction t arbitrary: x)
+   apply (auto)
   sorry
 
 text \<open>Now define the @{text "pisin"} function, which should return the updated @{text "ptree"} 
@@ -74,19 +74,17 @@ value "pisin 2 test_ptree"
 
 text \<open>Show the correctness of your function:\<close>
 
-lemma pisin_set: "pbst t \<Longrightarrow> set_ptree (fst (pisin x t)) = set_ptree t"
+lemma pisin_set[simp]: "pbst t \<Longrightarrow> set_ptree (fst (pisin x t)) = set_ptree t"
   by (induction x t rule: pisin.induct) (auto split: prod.split if_split_asm)
 
-lemma pisin_invar: "pbst t \<Longrightarrow> pbst (fst (pisin x t))"
+lemma pisin_invar[simp]: "pbst t \<Longrightarrow> pbst (fst (pisin x t))"
   apply (induction x t rule: pisin.induct)
    apply (auto split: prod.split)
    apply (metis fst_eqD pisin_set)+
   done
 
-lemma pisin_inc: "pbst t \<Longrightarrow> (n,x) \<in> set_tree t \<Longrightarrow> (Suc n,x) \<in> set_tree (fst (pisin x t))"
-  apply (induction x t arbitrary: n rule: pisin.induct)
-   apply (auto split: prod.split)
-  sorry
+lemma pisin_inc[simp]: "pbst t \<Longrightarrow> (n,x) \<in> set_tree t \<Longrightarrow> (Suc n,x) \<in> set_tree (fst (pisin x t))"
+  by (induction x t arbitrary: n rule: pisin.induct) (auto split: prod.split simp add: set_ptree)
 
 text \<open>Knowing the popularity of element queries, we can re-order the tree from time to time to
       optimize query time (assuming that the distribution of searched nodes stays the same).\<close>
@@ -104,26 +102,29 @@ term pins
 definition reorder :: "('a :: linorder) ptree \<Rightarrow> 'a ptree" where
   "reorder t = foldr pins (sort_key fst (inorder t)) Leaf"
 
+value "test_ptree"
 value "reorder test_ptree"
 
-value "sort_key fst [(1::nat, 2::nat), (3, 2)]"
+value "sort_key fst [(5::nat, 2::nat), (3, 2)]"
 
 text \<open>Show that your re-ordering preserves the invariant:\<close>
 
-theorem reorder_pbst: "pbst t \<Longrightarrow> pbst (reorder t)"
-  apply (induction t)
-   apply auto
-  sorry
+lemma foldr_pins_aux[simp]: "pbst (foldr pins xs \<langle>\<rangle>)"
+  by (induction xs) auto
+
+theorem reorder_pbst[simp]: "pbst t \<Longrightarrow> pbst (reorder t)"
+  unfolding reorder_def
+  by auto
 
 section \<open>Popularity Annotated Trees (II)\<close>
-
 
 text \<open>Show that in the @{text "reorder"} function, the set of elements stays unchanged. 
       Start by proving that the @{text "set_ptree"} stays unchanged — 
       this should give you an idea how the proof should work.\<close>
 
-theorem reorder_pset: "pbst t \<Longrightarrow> set_ptree (reorder t) = set_ptree t"
+theorem reorder_pset[simp]: "pbst t \<Longrightarrow> set_ptree (reorder t) = set_ptree t"
   sorry
+ 
 
 theorem reorder_set: "pbst t \<Longrightarrow> set_tree (reorder t) = set_tree t"
   sorry
