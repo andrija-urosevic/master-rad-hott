@@ -1,0 +1,9 @@
+\babel@toc {serbianc}{}\relax 
+\contentsline {chapter}{\chapternumberline {1}Увод}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Интуиционистичка теорија типова}{3}{section.1.1}%
+\contentsline {subsection}{Правила закључивања}{5}{section*.2}%
+\contentsline {subsection}{Зависни типови}{5}{section*.3}%
+\contentsline {section}{\numberline {1.2}Аксиома унивалентности}{5}{section.1.2}%
+\contentsline {chapter}{\chapternumberline {2}Разрада}{6}{chapter.2}%
+\contentsline {chapter}{\chapternumberline {3}Закључак}{7}{chapter.3}%
+\contentsline {chapter}{Литература}{8}{section*.5}%
