@@ -187,19 +187,20 @@
 % paket amsthm omogućava lep ispis definicija, lema, teorema, i dokaza
 \RequirePackage{amsthm}
 
+% paket amsmath omogućava pored ostalog i align
+\RequirePackage{amsmath}
+
 %%%% ---------------------------------------------------------------------------
 %%%% Moje komande i postavke
 %%%% ---------------------------------------------------------------------------
-\newcommand{\type}{\mathrm{type}}
-
 \theoremstyle{definition}
-\newtheorem{definition}{Definicija}[section]
+\newtheorem{definition}{Дефиниција}[section]
 
 \theoremstyle{theorem}
-\newtheorem{theorem}{Teorema}
+\newtheorem{theorem}{Теорема}
 
 \theoremstyle{lemma}
-\newtheorem{lemma}{Lema}
+\newtheorem{lemma}{Лема}
 
 %%%% ---------------------------------------------------------------------------
 %%%% Podešavamo parametre strane (opcije klase memoir)
@@ -430,6 +431,21 @@
    \bibliography{\matfmaster@bib}{}%
    \bibliographystyle{plain}%
 \fi}
+
+%%%% ---------------------------------------------------------------------------
+%%%% Komande za skraceno pisanje
+%%%% ---------------------------------------------------------------------------
+
+
+% macros za tipove generalno
+\newcommand{\type}{{\mathrm{type}}}
+\newcommand{\ind}[1]{\mathsf{ind}_{#1}}
+
+% racros za prirodne brojeve
+\newcommand{\N}{{\mathbb{N}}}
+\newcommand{\zeroN}{\mathsf{0}_\mathbb{N}}
+\newcommand{\succN}{\mathsf{succ}_\mathbb{N}}
+
 
 %%%%%%%%%%%%%%% end of *.sty file
 \endinput

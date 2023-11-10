@@ -79,15 +79,69 @@
     Свако \emph{расуђивање} је облика $\Gamma\vdash \mathcal{J}$, где је $\Gamma$ \emph{контекст} и $\mathcal{J}$ \emph{теза} расуђивања. Теза може имати четири врсте расуђивања и то су:
     \begin{enumerate}[(i)]
         \item{$A$ је \emph{(добро-формиран) тип} у контексту $\Gamma$. \[\Gamma\vdash A~\type\]}
-        \item{$A$ и $B$ су \emph{расуђивачки једнаки типови} у контексту $\Gamma$. \[\Gamma\vdash A~\dot{=}~B~\type\]}
+        \item{$A$ и $B$ су \emph{расуђивачки једнаки типови} у контексту $\Gamma$. \[\Gamma\vdash A \equiv B~\type\]}
         \item{$a$ је \emph{елемент} типа $A$ у контексту $\Gamma$. \[\Gamma\vdash a : A\]}
-        \item{$a$ и $b$ су \emph{расуђивачки једнаки елементи} типа $A$ у контексту $\Gamma$. \[\Gamma\vdash a~\dot{=}_A~b : A\]}
+        \item{$a$ и $b$ су \emph{расуђивачки једнаки елементи} типа $A$ у контексту $\Gamma$. \[\Gamma\vdash a \equiv_A b : A\]}
     користећи правила закључивања теорије типова.
     \end{enumerate}
 Контекст је коначна листа \emph{декларисаних променљивих} облика \[x_1 : A_1, x_2 : A_2 (x_1), \ldots, x_n : A_n(x_1, \ldots, x_{n-1}),\] под условом да за свако $1 \le k \le n$ можемо да изведемо расуђивање \[x_1 : A_1, x_2 : A_2(x_1), \ldots, x_{k-1} : A_{k-1}(x_1, \ldots, x_{k-2}) \vdash A_k(x_1, x_2, \ldots, x_{k-1}),\] применом правила закључивања.
 \end{definition}
 
-Из дефиниције контекста можемо видети да неки типови зависе од других термова. На пример, $A_2(x_1)$ зависи од $x_1 : A_1$, тј. за разне термове $x_1 : A_1$ имамо разне типове $A_2(x_1)$. Ову идеју можемо уопштити помоћу следеће две дефиниције:
+\subsection{Правила закључивања}
+
+Пример неких правила закључивања:
+
+\begin{samepage}
+    \begin{center}
+        \begin{minipage}{.2\textwidth}
+            \begin{prooftree}
+                \AxiomC{$\Gamma\vdash A~\textrm{type}$}
+                \UnaryInfC{$\Gamma\vdash A \equiv A~\textrm{type}$}
+            \end{prooftree}
+        \end{minipage}
+        \begin{minipage}{.25\textwidth}
+            \begin{prooftree}
+                \AxiomC{$\Gamma\vdash A \equiv A'~\textrm{type}$}
+                \UnaryInfC{$\Gamma\vdash A' \equiv A~\textrm{type}$}
+            \end{prooftree}
+        \end{minipage}
+        \begin{minipage}{.5\textwidth}
+            \begin{prooftree}
+                \AxiomC{$\Gamma\vdash A \equiv A'~\textrm{type}$}
+                \AxiomC{$\Gamma\vdash A' \equiv A''~\textrm{type}$}
+                \BinaryInfC{$\Gamma\vdash A \equiv A''~\textrm{type}$}
+            \end{prooftree}
+        \end{minipage}
+        \\*
+        \bigskip\
+        \begin{minipage}{.2\textwidth}
+            \begin{prooftree}
+                \AxiomC{$\Gamma\vdash a:A$}
+                \UnaryInfC{$\Gamma\vdash a \equiv_A a : A$}
+            \end{prooftree}
+        \end{minipage}
+        \begin{minipage}{.25\textwidth}
+            \begin{prooftree}
+                \AxiomC{$\Gamma\vdash a \equiv_A a':A$}
+                \UnaryInfC{$\Gamma\vdash a' \equiv_A a: A$}
+            \end{prooftree}
+        \end{minipage}
+        \begin{minipage}{.5\textwidth}
+            \begin{prooftree}
+                \AxiomC{$\Gamma\vdash a \equiv_A a' : A$}
+                \AxiomC{$\Gamma\vdash a' \equiv_A a'': A$}
+                \BinaryInfC{$\Gamma\vdash a \equiv_A a'': A$}
+            \end{prooftree}
+        \end{minipage}
+        %\end{small}
+    \end{center}
+\end{samepage}
+
+Исцрпна листа правила закључивања у интуиционистичкој теорији типова се може наћи у \cite{rijke2022intro}.
+
+\subsection{Зависни типови}
+
+Из дефиниције контекста можемо видети да неки типови зависе од других термова. На пример, $A_2(x_1)$ зависи од $x_1 : A_1$, тј. за разне термове $x_1 : A_1$ имамо разне типове $A_2(x_1)$. Ову идеју можемо уопштити помоћу следећих дефиниција:
 
 \begin{definition}
     Нека је тип $A$ у контексту $\Gamma$. \emph{Фамилија} типова над $A$ у контексту $\Gamma$ је тип $B(x)$ у контексту $\Gamma, x : A$, тј.
@@ -101,65 +155,187 @@
     Кажемо да је $b$ секција фамилије $B$ над $A$ у контексту $\Gamma$. Алтернативно, кажемода да је $b(x)$ елемент типа $B(x)$ индексиран са $x : A$ у контексту $\Gamma, x : A$. 
 \end{definition}
 
-\subsection{Правила закључивања}
+\begin{definition}
+    Нека је $B$ фамилија типова над $A$ у контексту $\Gamma$, и нека је $a : A$. Кажемо да је $B[a/x]$ \emph{влакно} од $B$ за параметар $a$, где $B[a/x]$ представља замену свих појављивања $x$ у $B$ са $a$. Нит од $B$ за параметар $a$ крађе записујемо као $B(a)$.
+\end{definition}
 
-Нека правила закључивања:
+\begin{definition}
+    Нека је $b$ секција фамилије типова $B$ над $A$ у контексту $\Gamma$. Кажемо да је $b[a/x]$ \emph{вредност} од $b$ за параметар $a$, где $b[a/x]$ представља замену свих појављивања $x$ у $b$ са $a$. Такође, вредност од $b$ за параметар $a$ крађе записујемо као $b(a)$.
+\end{definition}
+
+\subsection{Типови зависних функција}
+
+У математици заснованој на теорији скупова функција $f : A \to B$ дефинисана је над одређеним доменом $A$ и кодоменом $B$. У теорији типова то не мора да буде случај, тј. кодомен може зависити од елемента над којим се функција примељује. Прецизније, посматрајмо секцију $b$ фамилије типова $B$ над $A$ у контексту $\Gamma$. Један начин је да $b$ посматрамо као функцију $x \mapsto b(x)$. Тада $b(x)$ настањује тип $B(x)$ који зависи од $x : A$. Због тога за разне елементе $x : A$ домена
+имамо разне кодомене, те има смисла говорити о типу \emph{зависних функција} $\prod_{(x : A)} B(x)$. 
+
+Спецификација типа зависних функција $\prod_{(x:A)} B(x)$ је дата следећим правилима закључивања:
+
+\begin{samepage}
+    \begin{center}
+    \begin{minipage}{0.3\textwidth}
+        \begin{prooftree}[$\prod$-form]
+            \AxiomC{$\Gamma, x : A \vdash B(x)~\textrm{type}$}
+            \UnaryInfC{$\Gamma \vdash \prod_{(x : A)} B(x)~\textrm{type}$}
+        \end{prooftree}
+    \end{minipage}
+    \begin{minipage}{0.35\textwidth}
+        \begin{prooftree}[$\prod$-intro]
+            \AxiomC{$\Gamma, x : A \vdash b(x) : B(x)$}
+            \UnaryInfC{$\Gamma \vdash \lambda x.b(x) : \prod_{(x : A)} B(x)$}
+        \end{prooftree}
+    \end{minipage}
+    \begin{minipage}{0.3\textwidth}
+        \begin{prooftree}[$\prod$-elim]
+            \AxiomC{$\Gamma \vdash f : \prod_{(x : A)} B(x)$}
+            \UnaryInfC{$\Gamma, x : A \vdash f(x) : B(x)$}
+        \end{prooftree}
+    \end{minipage}
+    \\*
+    \bigskip%
+    \begin{minipage}{0.4\textwidth}
+        \begin{prooftree}[$\prod$-comp$_1$]
+            \AxiomC{$\Gamma, x : A \vdash b(x) : B(x)$}
+            \UnaryInfC{$\Gamma \vdash (\lambda y.b(y)) (x) \equiv b (x) : B(x)$}
+        \end{prooftree}
+    \end{minipage}
+    \begin{minipage}{0.4\textwidth}
+        \begin{prooftree}[$\prod$-comp$_2$]
+            \AxiomC{$\Gamma \vdash f : \prod_{(x : A)} B(x)$}
+            \UnaryInfC{$\Gamma \vdash \lambda x.f(x) \equiv f : \prod_{(x : A)} B(x)$}
+        \end{prooftree}
+    \end{minipage}
+    \end{center}
+\end{samepage}
+
+Специјала случај типа зависних функција је тип (уобичајених) \emph{функција} $A \to B$. Уколико су типови $A$ и $B$ у контексту $\Gamma$, тј. тип $B$ не зависи од елемената типа $A$, тада $\prod_{(x:A)} B$ представља тип (уобичајених) функција. 
+
+\begin{definition}
+    Тип (уобичајених) \emph{функција} $A \to B$ дефинишемо као:
+    \begin{equation}
+        A \to B:= \prod_{(x:A)} B.
+    \end{equation}
+    Ако је $f : A \to B$ функција, тада је $A$ \emph{домен}, а $B$ \emph{кодомен} функције $f$. 
+\end{definition}
+
+\begin{definition}
+    За сваки тип $A$ дефинишемо \emph{функцију идентитета} $\mathsf{id}_A : A \to A$ као $\mathsf{id}_A := \lambda x.x$.
+\end{definition}
+
+\begin{definition}
+    За свака три типа $A$, $B$, и $C$ дефинишемо \emph{композицију} $\mathsf{comp} : (B \to C) \to (A \to B) \to A \to C$ као $\mathsf{comp} := \lambda g.\lambda f.\lambda x.g(f(x))$.
+\end{definition}
+Може се показати да је композиција асоцијативна, као и да је функција идентитета неутрал за композицију функција. Због сагласности типова имамо леви неутрал $\mathsf{id}_B$ и десни неутрал $\mathsf{id}_A$.
+
+\subsection{Индуктивни типови}
+
+\subsection{Тип природних бројева}
 
 \begin{samepage}
     \begin{center}
         \begin{minipage}{.2\textwidth}
-            \begin{prooftree}
-                \AxiomC{$\Gamma\vdash A~\textrm{type}$}
-                \UnaryInfC{$\Gamma\vdash A \dot{=} A~\textrm{type}$}
+            \begin{prooftree}[$\N$-form]
+                \AxiomC{}
+                \UnaryInfC{$\vdash \N~\type$}
             \end{prooftree}
         \end{minipage}
-        \begin{minipage}{.25\textwidth}
-            \begin{prooftree}
-                \AxiomC{$\Gamma\vdash A\dot{=} A'~\textrm{type}$}
-                \UnaryInfC{$\Gamma\vdash A'\dot{=} A~\textrm{type}$}
+        \begin{minipage}{.2\textwidth}
+            \begin{prooftree}[$\N$-intro$_{\zeroN}$]
+                \AxiomC{}
+                \UnaryInfC{$\vdash \zeroN : \N$}
             \end{prooftree}
         \end{minipage}
-        \begin{minipage}{.5\textwidth}
-            \begin{prooftree}
-                \AxiomC{$\Gamma\vdash A\dot{=} A'~\textrm{type}$}
-                \AxiomC{$\Gamma\vdash A'\dot{=} A''~\textrm{type}$}
-                \BinaryInfC{$\Gamma\vdash A\dot{=} A''~\textrm{type}$}
+        \begin{minipage}{.2\textwidth}
+            \begin{prooftree}[$\N$-intro$_{\succN}$]
+                \AxiomC{}
+                \UnaryInfC{$\vdash \succN : \N \to \N$}
             \end{prooftree}
         \end{minipage}
         \\*
-        \bigskip\
-        \begin{minipage}{.2\textwidth}
-            \begin{prooftree}
-                \AxiomC{$\Gamma\vdash a:A$}
-                \UnaryInfC{$\Gamma\vdash a\dot{=} a : A$}
+        \bigskip%
+        \begin{minipage}{.49\textwidth}
+            \begin{prooftree}[$\N$-ind]
+                \def\fCenter{\Gamma}
+                \Axiom$\fCenter, n:\N \vdash P(n)~\type$
+                \noLine%
+                \UnaryInf$\fCenter\ \vdash p_{\zeroN} :P(\zeroN)$
+                \noLine%
+                \UnaryInf$\fCenter\ \vdash p_{\succN}:\prod_{(n:\N)}P(n)\to P(\succN(n))$
+                \UnaryInf$\fCenter\ \vdash \ind{\N}(p_{\zeroN},p_{\succN}):\prod_{(n:\N)} P(n)$
             \end{prooftree}
         \end{minipage}
-        \begin{minipage}{.25\textwidth}
-            \begin{prooftree}
-                \AxiomC{$\Gamma\vdash a\dot{=} a':A$}
-                \UnaryInfC{$\Gamma\vdash a'\dot{=} a: A$}
+        \begin{minipage}{.49\textwidth}
+            \begin{prooftree}[$\mathbb{N}$-comp$_{\zeroN}$]
+                \def\fCenter{\Gamma}
+                \Axiom$\fCenter, n:\N \vdash P(n)~\type$
+                \noLine%
+                \UnaryInf$\fCenter\ \vdash p_{\zeroN} :P(\zeroN)$
+                \noLine%
+                \UnaryInf$\fCenter\ \vdash p_{\succN}:\prod_{(n:\N)}P(n)\to P(\succN(n))$
+                \UnaryInf$\fCenter\ \vdash \ind{\N}(p_{\zeroN},p_{\succN}, \zeroN) \equiv p_{\zeroN} : P(\zeroN)$
             \end{prooftree}
         \end{minipage}
-        \begin{minipage}{.5\textwidth}
-            \begin{prooftree}
-                \AxiomC{$\Gamma\vdash a\dot{=} a' : A$}
-                \AxiomC{$\Gamma\vdash a'\dot{=} a'': A$}
-                \BinaryInfC{$\Gamma\vdash a\dot{=} a'': A$}
+        \\*
+        \bigskip%
+        \begin{minipage}{\textwidth}
+            \begin{prooftree}[$\mathbb{N}$-comp$_{\succN}$]
+                \def\fCenter{\Gamma}
+                \Axiom$\fCenter, n:\N \vdash P(n)~\type$
+                \noLine%
+                \UnaryInf$\fCenter\ \vdash p_{\zeroN} :P(\zeroN)$
+                \noLine%
+                \UnaryInf$\fCenter\ \vdash p_{\succN}:\prod_{(n:\N)}P(n)\to P(\succN(n))$
+                \UnaryInf$\fCenter\ n:\N \vdash \ind{\N}(p_{\zeroN},p_{\succN}, \succN(n)) \equiv p_{\succN}(n, \ind{\N}(p_{\zeroN}, p_{\succN}, n)) : P(\succN(n))$
             \end{prooftree}
         \end{minipage}
-        %\end{small}
     \end{center}
 \end{samepage}
 
+\subsubsection{Prazni tipovi}
+\subsubsection{Jedinični tipovi}
+\subsubsection{Boolean tipovi}
+\subsubsection{Nat tipovi}
+\subsubsection{Hijerarhija univerzuma i univerzum tipovi}
+\subsection{Типови зависних парова}
 
+\section{Tipovi identiteti}
 
-\subsection{Зависни типови}
+\subsection{Homotopna invarijantnost}
 
-\section{Аксиома унивалентности}
+\subsection{Transport}
+
+\subsection{Indukcija putanje}
+
+\subsection{Akcije nad putanjama}
+
+\section{Homotopni nivoi}
+
+\subsection{Kontraktibilnost}
+
+\subsection{n types}
+
+\subsection{Osobina vs.~struktura}
+
+\subsection{Trunkacija}
+
+\subsubsection{Logika}
+
+\section{Ekvivalentnosti}
+
+\subsection{Functional extentionality}
+
+\subsection{Ekvivalentnosti i univerzalna osobina}
+
+\section{Aksioma univalentnosti}
+
+\subsection{Neke posledice univalentnosti}
 
 % ------------------------------------------------------------------------------
 \chapter{Разрада}
 \label{chp:razrada}
+
+\section{Neki deo HoTTa koji će se formalizovati}
+\section{Neki drugi deo HoTTa koji će se formalizovati}
+
 % ------------------------------------------------------------------------------
 
 % ------------------------------------------------------------------------------
