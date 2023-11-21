@@ -291,8 +291,35 @@
 \end{samepage}
 
 \subsubsection{Prazni tipovi}
+
 \subsubsection{Jedinični tipovi}
-\subsubsection{Boolean tipovi}
+
+\begin{prooftree}[$\1$-form]
+    \AxiomC{}
+    \UnaryInfC{$\vdash \1~\type$}
+\end{prooftree}
+
+\begin{prooftree}[$\1$-intro$_{*}$]
+    \AxiomC{}
+    \UnaryInfC{$\vdash * : \1$}
+\end{prooftree}
+
+\begin{prooftree}[$\1$-ind]
+    \def\fCenter{\Gamma}
+    \Axiom$\fCenter, x:\1 \vdash P(x)~\type$
+    \noLine%
+    \UnaryInf$\fCenter\ \vdash p_{*} : P(*)$
+    \UnaryInf$\fCenter\ x : \1 \vdash {\ind_\1} (p_{*}) : \prod_{( x : \1 )} P(x)$
+\end{prooftree}
+
+\begin{prooftree}[$\1$-comp]
+    \def\fCenter{\Gamma}
+    \Axiom$\fCenter, x:\1 \vdash P(x)~\type$
+    \noLine%
+    \UnaryInf$\fCenter\ \vdash p_{*} : P(*)$
+    \UnaryInf$\fCenter\ x : \1 \vdash {\ind_\1} (p_{*}, *) \equiv p_{*} :  P(x)$
+\end{prooftree}
+
 \subsubsection{Nat tipovi}
 \subsubsection{Hijerarhija univerzuma i univerzum tipovi}
 \subsection{Типови зависних парова}
