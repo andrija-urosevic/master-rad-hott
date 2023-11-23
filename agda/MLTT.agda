@@ -45,7 +45,7 @@ data ℕ : 𝓤₀ ̇ where
             → P 0
             → ((n : ℕ) → P n → P (succ n))
             → (n : ℕ) → P n
-ℕ-induction P p₀ pₛ zero = p₀
+ℕ-induction P p₀ pₛ zero     = p₀
 ℕ-induction P p₀ pₛ (succ n) = pₛ n (ℕ-induction P p₀ pₛ n)
 
 ℕ-recursion : (A : 𝓤 ̇ )
