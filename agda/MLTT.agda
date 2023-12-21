@@ -35,31 +35,6 @@ data 𝟙 : 𝓤₀ ̇ where
 !𝟙 : {A : 𝓤 ̇ } → A → 𝟙
 !𝟙 a = ⋆
 
-data ℕ : 𝓤₀ ̇ where
-    zero : ℕ
-    succ : ℕ → ℕ
-    
-{-# BUILTIN NATURAL ℕ #-}
-
-ℕ-induction : (P : ℕ → 𝓤 ̇ )
-            → P 0
-            → ((n : ℕ) → P n → P (succ n))
-            → (n : ℕ) → P n
-ℕ-induction P p₀ pₛ zero     = p₀
-ℕ-induction P p₀ pₛ (succ n) = pₛ n (ℕ-induction P p₀ pₛ n)
-
-ℕ-recursion : (A : 𝓤 ̇ )
-            → A 
-            → (ℕ → A → A)
-            → ℕ → A
-ℕ-recursion A = ℕ-induction (λ _ → A)
-
-ℕ-iteration : (A : 𝓤 ̇ )
-            → A
-            → (A → A)
-            → ℕ → A 
-ℕ-iteration A a f = ℕ-recursion A a (λ _ a → f a)
-
 data _+_ (X : 𝓤 ̇ ) (Y : 𝓥 ̇ ) : 𝓤 ⊔ 𝓥 ̇ where
     inl : X → X + Y 
     inr : Y → X + Y 
@@ -141,6 +116,16 @@ domain {𝓤} {𝓥} {X} {Y} f = X
 codomain : {X : 𝓤 ̇ } {Y : 𝓥 ̇ } → (X → Y) → 𝓥 ̇
 codomain {𝓤} {𝓥} {X} {Y} f = Y
 
-type_of : {X : 𝓤 ̇} → X → 𝓤 ̇
+type_of : {X : 𝓤 ̇ } → X → 𝓤 ̇
 type_of {𝓤} {X} x = X 
 
+data Id {𝓤} (X : 𝓤 ̇ ) : X → X → 𝓤 ̇ where
+    refl : (x : X) → Id X x x
+
+_==_ : {X : 𝓤 ̇ } → X → X → 𝓤 ̇
+x == y = Id _ x y
+
+𝕁 : (X : 𝓤 ̇ ) (A : (x y : X) → x == y → 𝓥 ̇ )
+  → ((x : X) → A x x (refl x))
+  → ((x y : X) (p : x == y) → A x y p)
+𝕁 X A f x y (refl x) = f x

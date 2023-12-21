@@ -228,7 +228,17 @@
 
 \subsection{Индуктивни типови}
 
-\subsection{Тип природних бројева}
+Поред типова зависних функција постоји и класа \emph{индуктивних типова}. Сваки индуктивни тип се дефинише помоћу следеће спецификације: 
+
+\begin{enumerate}[(i)]
+    \item{\emph{Конструисања} типа описује како се формира тип, и на који начин се уводе нови канонични елементи.}
+    \item{\emph{Индуктивни принцип} описује податке који су потреби за конструкцију секције произвољне фамилије типова.}
+    \item{Правила \emph{израчунавања} захтевају да се индуктивно дефинисана секција слаже по конструкцији са подацима који је дефинишу.}
+\end{enumerate}
+
+Сада ће бити дате спецификације за неке уобичајене индуктивне типове.
+
+\subsubsection{Тип природних бројева}
 
 \begin{samepage}
     \begin{center}
@@ -284,47 +294,217 @@
                 \UnaryInf$\fCenter\ \vdash p_{\zeroN} :P(\zeroN)$
                 \noLine%
                 \UnaryInf$\fCenter\ \vdash p_{\succN}:\prod_{(n:\N)}P(n)\to P(\succN(n))$
-                \UnaryInf$\fCenter\ n:\N \vdash \ind{\N}(p_{\zeroN},p_{\succN}, \succN(n)) \equiv p_{\succN}(n, \ind{\N}(p_{\zeroN}, p_{\succN}, n)) : P(\succN(n))$
+                \UnaryInf$\fCenter,\ n:\N \vdash \ind{\N}(p_{\zeroN},p_{\succN}, \succN(n)) \equiv p_{\succN}(n, \ind{\N}(p_{\zeroN}, p_{\succN}, n)) : P(\succN(n))$
             \end{prooftree}
         \end{minipage}
     \end{center}
 \end{samepage}
 
-\subsubsection{Prazni tipovi}
+\subsubsection{Празни тип}
 
-\subsubsection{Jedinični tipovi}
+\begin{samepage}
+    \begin{center}
+        \begin{minipage}{.25\textwidth}
+            \begin{prooftree}[$\0$-form]
+                \AxiomC{}
+                \UnaryInfC{$\vdash \0~\type$}
+            \end{prooftree}
+        \end{minipage}
+        \begin{minipage}{.25\textwidth}
+            \begin{prooftree}[$\0$-ind]
+                \AxiomC{}
+                \UnaryInfC{$\vdash \0~\type$}
+            \end{prooftree}
+        \end{minipage}
+        \begin{minipage}{.4\textwidth}
+            \begin{prooftree}[$\1$-ind]
+                \def\fCenter{\Gamma}
+                \Axiom$\fCenter, x:\0 \vdash P(x)~\type$
+                \UnaryInf$\fCenter\ \vdash \ind{\0} : \prod_{(x:\0)} P(x)$
+            \end{prooftree}
+        \end{minipage}
+    \end{center}
+\end{samepage}
 
-\begin{prooftree}[$\1$-form]
-    \AxiomC{}
-    \UnaryInfC{$\vdash \1~\type$}
-\end{prooftree}
+\subsubsection{Јединични тип}
 
-\begin{prooftree}[$\1$-intro$_{*}$]
-    \AxiomC{}
-    \UnaryInfC{$\vdash * : \1$}
-\end{prooftree}
+\begin{samepage}
+    \begin{center}
+        \begin{minipage}{.3\textwidth}
+            \begin{prooftree}[$\1$-form]
+                \AxiomC{}
+                \UnaryInfC{$\vdash \1~\type$}
+            \end{prooftree}
+        \end{minipage}
+        \begin{minipage}{.3\textwidth}
+            \begin{prooftree}[$\1$-intro$_\star$]
+                \AxiomC{}
+                \UnaryInfC{$\vdash \star : \1$}
+            \end{prooftree}
+        \end{minipage}
+        \\*
+        \bigskip%
+        \begin{minipage}{.45\textwidth}
+            \begin{prooftree}[$\1$-ind]
+                \def\fCenter{\Gamma}
+                \Axiom$\fCenter, x : \1 \vdash P(x)~\type$
+                \noLine%
+                \UnaryInf$\fCenter\ \vdash p_\star : P(\star)$
+                \UnaryInf$\fCenter\ x : \1 \vdash \ind{\1} (p_\star) : \prod_{( x : \1 )} P(x)$
+            \end{prooftree}
+        \end{minipage}
+        \begin{minipage}{.45\textwidth}
+            \begin{prooftree}[$\1$-comp]
+                \def\fCenter{\Gamma}
+                \Axiom$\fCenter, x:\1 \vdash P(x)~\type$
+                \noLine%
+                \UnaryInf$\fCenter\ \vdash p_\star : P(\star)$
+                \UnaryInf$\fCenter\ x:\1 \vdash \ind{\1} (p_\star, \star) \equiv p_\star :  P(x)$
+            \end{prooftree}
+        \end{minipage}
+    \end{center}
+\end{samepage}
 
-    \begin{prooftree}[$\1$-ind]
-    \def\fCenter{\Gamma}
-    \Axiom$\fCenter, x:\1 \vdash P(x)~\type$
-    \noLine%
-    \UnaryInf$\fCenter\ \vdash p_{*} : P(*)$
-    \UnaryInf$\fCenter\ x : \1 \vdash {\ind_\1} (p_{*}) : \prod_{( x : \1 )} P(x)$
-\end{prooftree}
+\subsubsection{Типови копроизвода}
 
-\begin{prooftree}[$\1$-comp]
-    \def\fCenter{\Gamma}
-    \Axiom$\fCenter, x:\1 \vdash P(x)~\type$
-    \noLine%
-    \UnaryInf$\fCenter\ \vdash p_{*} : P(*)$
-    \UnaryInf$\fCenter\ x : \1 \vdash {\ind_\1} (p_{*}, *) \equiv p_{*} :  P(x)$
-\end{prooftree}
+\begin{samepage}
+    \begin{center}
+        \begin{minipage}{.3\textwidth}
+            \begin{prooftree}[$+$-form]
+                \AxiomC{$\Gamma \vdash A~\type, B~\type$}
+                \UnaryInfC{$\Gamma \vdash A + B~\type$}
+            \end{prooftree}
+        \end{minipage}
+        \begin{minipage}{.3\textwidth}
+            \begin{prooftree}[$+$-intro$_\inl$]
+                \AxiomC{$\Gamma \vdash x : A$}
+                \UnaryInfC{$\Gamma \vdash \inl (x) : A + B$}
+            \end{prooftree}
+        \end{minipage}
+        \begin{minipage}{.3\textwidth}
+            \begin{prooftree}[$+$-intro$_\inr$]
+                \AxiomC{$\Gamma \vdash y : B$}
+                \UnaryInfC{$\Gamma \vdash \inr (y) : A + B$}
+            \end{prooftree}
+        \end{minipage}
+        \\*
+        \bigskip%
+        \begin{minipage}{\textwidth}
+            \begin{prooftree}[$+$-ind]
+                \def\fCenter{\Gamma}
+                \Axiom$\fCenter, z : A + B \vdash P(z)~\type$
+                \noLine%
+                \UnaryInf$\fCenter\ \vdash p_\inl : \prod_{(x : A)} P(\inl (x))$
+                \noLine%
+                \UnaryInf$\fCenter\ \vdash p_\inr : \prod_{(y : B)} P(\inr (y))$
+                \UnaryInf$\fCenter\ z : A + B \vdash \ind{+} (p_\inl, p_\inr) : \prod_{( z : A + B )} P(z)$
+            \end{prooftree}
+        \end{minipage}
+        \\*
+        \bigskip%
+        \begin{minipage}{\textwidth}
+            \begin{prooftree}[$+$-comp]
+                \def\fCenter{\Gamma}
+                \Axiom$\fCenter, z : A + B \vdash P(z)~\type$
+                \noLine%
+                \UnaryInf$\fCenter\ \vdash p_\inl : \prod_{(x : A)} P(\inl (x))$
+                \noLine%
+                \UnaryInf$\fCenter\ \vdash p_\inr : \prod_{(y : B)} P(\inr (y))$
+                \UnaryInf$\fCenter\ z : A + B \vdash \ind{+} (p_\inl, p_\inr, \inl (x)) = p_\inl (x) : P(z)$
+                \noLine%
+                \UnaryInf$\fCenter\ z : A + B \vdash \ind{+} (p_\inl, p_\inr, \inr (y)) = p_\inr (y) : P(z)$
+            \end{prooftree}
+        \end{minipage}
+    \end{center}
+\end{samepage}
 
-\subsubsection{Nat tipovi}
-\subsubsection{Hijerarhija univerzuma i univerzum tipovi}
-\subsection{Типови зависних парова}
+Специјални случај типа копроизвода је Буловски тип $\2 := \1 + \1$, чије једине елементе дефинишемо као $\true := \inl (\star)$, $\false := \inr (\star)$.
 
-\section{Tipovi identiteti}
+\subsubsection{Типови зависних парова}
+
+\begin{samepage}
+    \begin{center}
+        \begin{minipage}{.40\textwidth}
+            \begin{prooftree}[$\sum$-form]
+                \AxiomC{$\Gamma, x : A \vdash B(x)~\type$}
+                \UnaryInfC{$\Gamma \vdash \sum_{(x : A)} B(x)~\type$}
+            \end{prooftree}
+        \end{minipage}
+        \begin{minipage}{.45\textwidth}
+            \begin{prooftree}[$\sum$-intro]
+                \AxiomC{$\Gamma, x : A \vdash y(x) : B(x)$}
+                \UnaryInfC{$\Gamma \vdash (x, y(x)) : \sum_{(x : A)} B(x)$}
+            \end{prooftree}
+        \end{minipage}
+        \\*
+        \bigskip%
+        \begin{minipage}{\textwidth}
+            \begin{prooftree}[$\sum$-ind]
+                \def\fCenter{\Gamma}
+                \Axiom$\fCenter, (x, y) : \sum_{(x : A)} B(x) \vdash P((x, y))~\type$
+                \noLine%
+                \UnaryInf$\fCenter\ \vdash p : \prod_{(x : A)} \prod_{(y : B(a))} P((x, y))$
+                \UnaryInf$\fCenter\ \vdash \ind{\sum} (p) : \prod_{(z : \sum_{(x:A)} B(x))} P(z)$
+            \end{prooftree}
+        \end{minipage}
+        \\*
+        \bigskip%
+        \begin{minipage}{\textwidth}
+            \begin{prooftree}[$\sum$-comp]
+                \def\fCenter{\Gamma}
+                \Axiom$\fCenter, (x, y) : \sum_{(x : A)} B(x) \vdash P((x, y))~\type$
+                \noLine%
+                \UnaryInf$\fCenter\ \vdash p : \prod_{(x : A)} \prod_{(y : B(a))} P((x, y))$
+                \UnaryInf$\fCenter\ (x, y) : \sum_{(x : A)} B(x) \vdash \ind{\sum} (p, (x, y)) \equiv p(x, y) : P((x, y))$
+            \end{prooftree}
+        \end{minipage}
+    \end{center}
+\end{samepage}
+
+\begin{definition} 
+    Нека је $B$ фамилија типова над $A$. Тада тип $\mathsf{pr_1} : \sum_{(x : A)} B(x) \to A$ \emph{пројекције на први елемент} дефинишемо као: 
+    \begin{equation}
+        \mathsf{pr_1} ((a, b)):= a,
+    \end{equation}
+    а тип $\mathsf{pr_2} : \prod_{z : \sum_{(x : A)} B(x)} B(\mathsf{pr_1}(z))$ \emph{пројекције на други елемент} дефинишемо као:
+    \begin{equation}
+        \mathsf{pr_2} ((a, b)):= b.
+    \end{equation}
+\end{definition}
+
+Специјални случај типа зависних парова је тип (независних) \emph{парова} или \emph{(Декартов) производ} $A \times B := \sum_{(x : A)} B$.
+
+\subsubsection{Хијерархија универзума и универзум типови}
+
+{\color{red}Hmm, da li ovo raspisivati?}
+
+\subsection{Искази као типови}
+
+Кари\--Хавардова интерпретација посматра исказе као типове, доказе као елементе типова, и предикате као фамилије типова. Да би показали да је исказ тачан у теорији типова треба конструисати елемент који настањује одговарајући тип. У табели~\ref{table:curry_howard} приказани су искази заједно са њиховим одговарајућом интерпретацијом у теорији типова.
+
+Прокоментаришимо неке интерпретације из табеле~\ref{table:curry_howard}. Да би показали да важи $A \implies B$ треба претпоставити да важи $A$ и доказати да важи $B$. У теорији типова треба конструисати елемент типа $A \to B$, тј. треба конструисати елемент типа $B$ који потенцијално користи претпостављени елемент типа $A$. Слично, да би показали $\exists x. P(x)$ y теорији типова треба конструисати елемент типа $\sum_{(x : A)} P(x)$. У овом случају теорија типова нам даје и више од тога. Наиме, $P$ је фамилија типова, што значи да $P(x)$ не мора да буде типa $\2$, тј. $P$ не мора да буде предикат. Поред тога, тип $\sum_{(x : A)} P(x)$ можемо схватити као тип свих елемената $x : A$ za koje $P (x)$. 
+
+\begin{table}
+    \begin{center}
+        \begin{tabular}[c]{c c}
+            Искази & Типови \\
+            \hline%
+            $\bot$ & $\0$ \\
+            $\top$ & $\1$ \\
+            $A \lor B$ & $A + B$ \\
+            $A \land B$ & $A \times B$ \\
+            $A \implies B$ & $A \to B$ \\
+            $A \iff B$ & $(A \to B) \times (B \to A)$ \\
+            $\neg A$ & $A \to \0$ \\
+            $\forall x. P(x)$ & $\prod_{(x : A)} P(x)$ \\
+            $\exists x. P(x)$ & $\sum_{(x : A)} P(x)$
+        \end{tabular}
+    \end{center}
+    \caption{Кари\--Хавардова интерпретација}
+    \label{table:curry_howard}
+\end{table}
+
+\section{Типови идентитети}
 
 \subsection{Homotopna invarijantnost}
 

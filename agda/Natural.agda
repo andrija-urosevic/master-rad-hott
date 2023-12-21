@@ -1,8 +1,33 @@
 {-# OPTIONS --without-K --safe #-}
 
-module Arithmetic where
+module Natural where
 
 open import MLTT public
+
+data ℕ : 𝓤₀ ̇ where
+    zero : ℕ
+    succ : ℕ → ℕ
+    
+{-# BUILTIN NATURAL ℕ #-}
+
+ℕ-induction : (P : ℕ → 𝓤 ̇ )
+            → P 0
+            → ((n : ℕ) → P n → P (succ n))
+            → (n : ℕ) → P n
+ℕ-induction P p₀ pₛ zero     = p₀
+ℕ-induction P p₀ pₛ (succ n) = pₛ n (ℕ-induction P p₀ pₛ n)
+
+ℕ-recursion : (A : 𝓤 ̇ )
+            → A 
+            → (ℕ → A → A)
+            → ℕ → A
+ℕ-recursion A = ℕ-induction (λ _ → A)
+
+ℕ-iteration : (A : 𝓤 ̇ )
+            → A
+            → (A → A)
+            → ℕ → A 
+ℕ-iteration A a f = ℕ-recursion A a (λ _ a → f a)
 
 infixl 20 _+ℕ_
 infixl 21 _*ℕ_
