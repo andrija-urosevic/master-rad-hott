@@ -258,8 +258,8 @@ x ==⟨ p ⟩ q = p · q
 _∎ : {X : 𝓤 ̇ } (x : X) → x == x
 x ∎ = refl x
 
-inv : {X : 𝓤 ̇ } {x y : X} → x == y → y == x 
-inv (refl x) = refl x
+_⁻¹ : {X : 𝓤 ̇ } {x y : X} → x == y → y == x 
+(refl x) ⁻¹ = refl x
 
 assoc : {X : 𝓤 ̇ } {x y z w : X} 
         (p : x == y) (q : y == z) (r : z == w)
@@ -275,11 +275,11 @@ right-unit : {X : 𝓤 ̇ } {x y : X} (p : x == y)
 right-unit (refl x) = refl (refl x)
 
 left-inv : {X : 𝓤 ̇ } {x y : X} (p : x == y)
-         → (inv p) · p == refl y
+         → p ⁻¹ · p == refl y
 left-inv (refl x) = refl (refl x)
 
 right-inv : {X : 𝓤 ̇ } {x y : X} (p : x == y)
-          → p · (inv p) == refl x 
+          → p · p ⁻¹ == refl x 
 right-inv (refl x) = refl (refl x)
   
 ap : {X : 𝓤 ̇ } {Y : 𝓥 ̇ } (f : X → Y) {x y : X} 
@@ -299,7 +299,7 @@ ap-refl : {X : 𝓤 ̇ } {Y : 𝓥 ̇ } (f : X → Y) (x : X)
 ap-refl f x = refl (refl (f x))
 
 ap-inv : {X : 𝓤 ̇ } {Y : 𝓥 ̇ } (f : X → Y) {x y : X} (p : x == y) 
-       → ap f (inv p) == inv (ap f p)
+       → ap f (p ⁻¹) == (ap f p) ⁻¹
 ap-inv f (refl x) = refl (ap f (refl x))
 
 ap-concat : {X : 𝓤 ̇ } {Y : 𝓥 ̇ } (f : X → Y) {x y z : X} (p : x == y) (q : y == z)
@@ -311,5 +311,27 @@ apd : {X : 𝓤 ̇ } {Y : X → 𝓥 ̇ } (f : (x : X) → Y x) {x y : X} (p : x
 apd f (refl x) = refl (f x)
 
 uniqueness-refl : {X : 𝓤 ̇ } (x y : X) (p : x == y) 
-                → x , refl x == y , p 
+                → (x , refl x) == (y , p) 
 uniqueness-refl x x (refl x) = refl (x , (refl x))
+
+distributive-inv-concat : {X : 𝓤 ̇ } {x y z : X} (p : x == y) (q : y == z)
+                        → (p · q) ⁻¹ == q ⁻¹ · p ⁻¹
+distributive-inv-concat (refl x) (refl x) = refl (refl x)
+
+inv-concat : {X : 𝓤 ̇ } {x y z : X} (p : x == y) (q : y == z) (r : x == z)
+           → p · q == r → q == p ⁻¹ · r 
+inv-concat (refl x) q r = λ α → α
+
+concat-inv : {X : 𝓤 ̇ } {x y z : X} (p : x == y) (q : y == z) (r : x == z)
+           → p · q == r → p == r · q ⁻¹
+concat-inv p (refl y) r = λ α → p             ==⟨ (right-unit p) ⁻¹ ⟩ 
+                                ((p · refl y) ==⟨ α ⟩ 
+                                (r            ==⟨ (right-unit r) ⁻¹ ⟩ 
+                                ((r · refl y) ∎)))
+
+lift : {A : 𝓤 ̇ } {B : A → 𝓥 ̇ } {x y : A} (p : x == y) (b : B x) 
+     → (x , b) == (y , tr B p b)
+lift (refl x) b = refl (x , b)
+
+
+

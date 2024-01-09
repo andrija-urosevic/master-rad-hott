@@ -39,7 +39,7 @@ m +ℕ 0        = m
 m +ℕ (succ n) = succ (m +ℕ n)
 
 _*ℕ_ : ℕ → ℕ → ℕ
-m *ℕ 0        = m 
+m *ℕ 0        = 0 
 m *ℕ (succ n) = m +ℕ m *ℕ n
 
 _^ℕ_ : ℕ → ℕ → ℕ
@@ -94,3 +94,64 @@ mul m n = ℕ-recursion ℕ 0 (λ _ x → add m x) n
 
 pow : ℕ → ℕ → ℕ
 pow m n = ℕ-recursion ℕ 1 (λ _ x → mul m x) n
+
+left-unit-law-+ℕ : (n : ℕ) → 0 +ℕ n == n 
+left-unit-law-+ℕ 0        = refl 0 
+left-unit-law-+ℕ (succ n) = ap succ (left-unit-law-+ℕ n)
+
+right-unit-law-+ℕ : (n : ℕ) → n +ℕ 0 == n
+right-unit-law-+ℕ = refl
+
+left-succ-law-+ℕ : (m n : ℕ) → succ m +ℕ n == succ (m +ℕ n)
+left-succ-law-+ℕ m 0        = refl (succ m)
+left-succ-law-+ℕ m (succ n) = ap succ (left-succ-law-+ℕ m n)
+
+right-succ-law-+ℕ : (m n : ℕ) → m +ℕ succ n == succ (m +ℕ n)
+right-succ-law-+ℕ m n = refl (succ (m +ℕ n))
+
+associative-+ℕ : (m n k : ℕ) → (m +ℕ n) +ℕ k == m +ℕ (n +ℕ k) 
+associative-+ℕ m n 0        = refl (m +ℕ n)
+associative-+ℕ m n (succ k) = ap succ (associative-+ℕ m n k)
+
+commutative-+ℕ : (m n : ℕ) → m +ℕ n == n +ℕ m 
+commutative-+ℕ 0 n        = left-unit-law-+ℕ n
+commutative-+ℕ (succ m) n = (succ m +ℕ n)  ==⟨ left-succ-law-+ℕ m n ⟩ 
+                            (succ (m +ℕ n) ==⟨ ap succ (commutative-+ℕ m n) ⟩ 
+                            (succ (n +ℕ m) ∎))
+
+left-zero-law-*ℕ : (n : ℕ) → 0 *ℕ n == 0
+left-zero-law-*ℕ 0        = refl 0 
+left-zero-law-*ℕ (succ n) = (0 +ℕ 0 *ℕ n) ==⟨ left-unit-law-+ℕ (0 *ℕ n) ⟩ 
+                            ((0 *ℕ n)     ==⟨ left-zero-law-*ℕ n ⟩ 
+                            (0            ∎))
+
+right-zero-law-*ℕ : (m : ℕ) → m *ℕ 0 == 0
+right-zero-law-*ℕ m = refl 0
+
+left-unit-law-*ℕ : (n : ℕ) → 1 *ℕ n == n 
+left-unit-law-*ℕ 0        = refl 0 
+left-unit-law-*ℕ (succ n) = (1 +ℕ 1 *ℕ n)            ==⟨ left-succ-law-+ℕ zero (1 *ℕ n) ⟩ 
+                            ((succ (zero +ℕ 1 *ℕ n)) ==⟨ (ap succ (left-unit-law-+ℕ (1 *ℕ n))) ⟩ 
+                            ((succ (1 *ℕ n))         ==⟨ ap succ (left-unit-law-*ℕ n) ⟩ 
+                            ((succ n)                ∎))) 
+                        
+right-unit-law-*ℕ : (m : ℕ) → m *ℕ 1 == m 
+right-unit-law-*ℕ m = refl m
+
+left-succ-law-*ℕ : (m n : ℕ) → m *ℕ (succ n) == m +ℕ m *ℕ n 
+left-succ-law-*ℕ m n = refl (m +ℕ m *ℕ n)
+
+right-succ-law-*ℕ : (m n : ℕ) → (succ m) *ℕ n == m *ℕ n +ℕ n 
+right-succ-law-*ℕ m 0        = refl 0 
+right-succ-law-*ℕ m (succ n) = (succ m +ℕ succ m *ℕ n)      ==⟨ ap (λ x → succ m +ℕ x) (right-succ-law-*ℕ m n) ⟩ 
+                               ((succ m +ℕ (m *ℕ n +ℕ n))   ==⟨ left-succ-law-+ℕ m (m *ℕ n +ℕ n) ⟩ 
+                               ((succ (m +ℕ (m *ℕ n +ℕ n))) ==⟨ ap succ (associative-+ℕ m (m *ℕ n) n ⁻¹) ⟩ 
+                               ((succ (m +ℕ m *ℕ n +ℕ n))   ∎))) 
+
+commutative-*ℕ : (m n : ℕ) → m *ℕ n == n *ℕ m 
+commutative-*ℕ m 0        = (left-zero-law-*ℕ m) ⁻¹ 
+commutative-*ℕ m (succ n) = (m +ℕ m *ℕ n)  ==⟨ commutative-+ℕ m (m *ℕ n) ⟩ 
+                            ((m *ℕ n +ℕ m) ==⟨ ap (λ x → x +ℕ m) (commutative-*ℕ m n) ⟩ 
+                            ((n *ℕ m +ℕ m) ==⟨ right-succ-law-*ℕ n m ⁻¹ ⟩ 
+                            ((succ n *ℕ m) ∎)))
+
