@@ -24,8 +24,8 @@ domain {𝓤} {𝓥} {X} {Y} f = X
 codomain : {X : 𝓤 ̇ } {Y : 𝓥 ̇ } → (X → Y) → 𝓥 ̇
 codomain {𝓤} {𝓥} {X} {Y} f = Y
 
-type_of : {X : 𝓤 ̇ } → X → 𝓤 ̇
-type_of {𝓤} {X} x = X 
+type-of : {X : 𝓤 ̇ } → X → 𝓤 ̇
+type-of {𝓤} {X} x = X 
 
 data 𝟘 : 𝓤₀ ̇ where
 
@@ -185,8 +185,8 @@ X ↔ Y = (X → Y) × (Y → X)
 -- ¬¬-+-↔-¬-¬-×-¬ : (X : 𝓤 ̇ ) (Y : 𝓥 ̇ ) → ¬¬ (X + Y) ↔ ¬ (¬ X × ¬ Y)
 -- ¬¬-+-↔-¬-¬-×-¬ X Y = (λ nnxpy nxcny → nnxpy λ xpy → Σ.x {! nxcny  !}) , λ nnxcny nxpy → nnxcny ((λ x → nxpy (inl x)) , λ y → nxpy (inr y))
 
-Π : {X : 𝓤 ̇ } (A : X → 𝓥 ̇ ) → 𝓤 ⊔ 𝓥 ̇ 
-Π {𝓤} {𝓥} {X} A = (x : X) → A x
+Π : {X : 𝓤 ̇ } (P : X → 𝓥 ̇ ) → 𝓤 ⊔ 𝓥 ̇ 
+Π {𝓤} {𝓥} {X} P = (x : X) → P x
 
 -Π : {𝓤 𝓥 : Universe} (X : 𝓤 ̇ ) (Y : X → 𝓥 ̇ ) → 𝓤 ⊔ 𝓥 ̇ 
 -Π X Y = Π Y
@@ -196,11 +196,120 @@ syntax -Π A (λ x → b) = Π x ꞉ A , b
 data Id {𝓤} (X : 𝓤 ̇ ) : X → X → 𝓤 ̇ where
     refl : (x : X) → Id X x x
 
+infixl 10 _==_
+infixr 11 _·_
+
 _==_ : {X : 𝓤 ̇ } → X → X → 𝓤 ̇
 x == y = Id _ x y
 
-𝕁 : (X : 𝓤 ̇ ) (A : (x y : X) → x == y → 𝓥 ̇ )
-  → ((x : X) → A x x (refl x))
-  → ((x y : X) (p : x == y) → A x y p)
-𝕁 X A f x y (refl x) = f x
-             
+𝕁 : (X : 𝓤 ̇ ) (P : (x y : X) → x == y → 𝓥 ̇ )
+  → ((x : X) → P x x (refl x))
+  → ((x y : X) (p : x == y) → P x y p)
+𝕁 X P f x y (refl x) = f x
+
+ℍ : {X : 𝓤 ̇ } (x : X) (P : (y : X) → x == y → 𝓥 ̇ )
+  → P x (refl x)
+  → (y : X) (p : x == y)
+  → P y p 
+ℍ x P p-refl y (refl x) = p-refl
+
+ℍ-recursion : {X : 𝓤 ̇ } (x : X) (P : X → 𝓥 ̇ )
+            → P x
+            → (y : X) 
+            → (x == y)
+            → P y
+ℍ-recursion x P = ℍ x λ y _ → P y 
+
+𝕁' : (X : 𝓤 ̇ ) (P : (x y : X) → x == y → 𝓥 ̇ )
+   → ((x : X) → P x x (refl x))
+   → ((x y : X) (p : x == y) → P x y p) 
+𝕁' X P f x = ℍ x (P x) (f x)
+
+𝕁-same-as-𝕁' : (X : 𝓤 ̇ ) (P : (x y : X) → x == y → 𝓥 ̇ ) (f : (x : X) → P x x (refl x)) (x y : X) (p : x == y) 
+            → 𝕁 X P f x y p == 𝕁' X P f x y p 
+𝕁-same-as-𝕁' X P f x x (refl x) = refl (f x)
+
+tr : {A : 𝓤 ̇ } (B : A → 𝓥 ̇ ) {x y : A}
+   → x == y → B x → B y
+tr B (refl x) = λ x → x
+
+tr-𝕁 : {A : 𝓤 ̇ } (B : A → 𝓥 ̇ ) {x y : A}
+     → x == y → B x → B y
+tr-𝕁 {𝓤} {𝓥} {X} B {x} {y} = 𝕁 X (λ x y _ → B x → B y) (λ x bₓ → bₓ) x y
+
+tr-ℍ : {A : 𝓤 ̇ } (B : A → 𝓥 ̇ ) {x y : A}
+     → x == y → B x → B y
+tr-ℍ B {x} {y} p bₓ = ℍ-recursion x B bₓ y p
+
+tr-𝕁-same-as-tr : {A : 𝓤 ̇ } (B : A → 𝓥 ̇ ) {x y : A} (p : x == y)
+                → tr-𝕁 B p == tr B p
+tr-𝕁-same-as-tr B (refl x) = refl (λ bₓ → bₓ)
+
+tr-ℍ-same-as-tr : {A : 𝓤 ̇ } (B : A → 𝓥 ̇ ) {x y : A} (p : x == y)
+                → tr-ℍ B p == tr B p
+tr-ℍ-same-as-tr B (refl x) = refl (λ bₓ → bₓ)
+
+_·_ : {X : 𝓤 ̇ } {x y z : X} → x == y → y == z → x == z
+refl _ · q = q
+
+_==⟨_⟩_ : {X : 𝓤 ̇ } (x : X) {y z : X} → x == y → y == z → x == z
+x ==⟨ p ⟩ q = p · q
+
+_∎ : {X : 𝓤 ̇ } (x : X) → x == x
+x ∎ = refl x
+
+inv : {X : 𝓤 ̇ } {x y : X} → x == y → y == x 
+inv (refl x) = refl x
+
+assoc : {X : 𝓤 ̇ } {x y z w : X} 
+        (p : x == y) (q : y == z) (r : z == w)
+      → (p · q) · r == p · (q · r)
+assoc (refl _) q r = refl (q · r)
+
+left-unit : {X : 𝓤 ̇ } {x y : X} (p : x == y)
+          → (refl x) · p == p 
+left-unit (refl x) = refl (refl x)
+
+right-unit : {X : 𝓤 ̇ } {x y : X} (p : x == y)
+           → p · (refl y) == p
+right-unit (refl x) = refl (refl x)
+
+left-inv : {X : 𝓤 ̇ } {x y : X} (p : x == y)
+         → (inv p) · p == refl y
+left-inv (refl x) = refl (refl x)
+
+right-inv : {X : 𝓤 ̇ } {x y : X} (p : x == y)
+          → p · (inv p) == refl x 
+right-inv (refl x) = refl (refl x)
+  
+ap : {X : 𝓤 ̇ } {Y : 𝓥 ̇ } (f : X → Y) {x y : X} 
+   → x == y → f x == f y 
+ap f (refl x) = refl (f x)
+
+ap-id : {X : 𝓤 ̇ } {x y : X} (p : x == y) 
+      → p == ap id p
+ap-id (refl x) = refl (refl x)
+
+ap-comp : {X : 𝓤 ̇ } (f g : X → X) {x y z : X} (p : x == y)
+        → ap g (ap f p) == ap (g ∘ f) p
+ap-comp f g (refl x) = refl (refl (g (f x)))
+
+ap-refl : {X : 𝓤 ̇ } {Y : 𝓥 ̇ } (f : X → Y) (x : X) 
+        → ap f (refl x) == refl (f x)
+ap-refl f x = refl (refl (f x))
+
+ap-inv : {X : 𝓤 ̇ } {Y : 𝓥 ̇ } (f : X → Y) {x y : X} (p : x == y) 
+       → ap f (inv p) == inv (ap f p)
+ap-inv f (refl x) = refl (ap f (refl x))
+
+ap-concat : {X : 𝓤 ̇ } {Y : 𝓥 ̇ } (f : X → Y) {x y z : X} (p : x == y) (q : y == z)
+          → ap f (p · q) == ap f p · ap f q 
+ap-concat f (refl x) q = refl (ap f q)
+
+apd : {X : 𝓤 ̇ } {Y : X → 𝓥 ̇ } (f : (x : X) → Y x) {x y : X} (p : x == y)
+    → tr Y p (f x) == f y
+apd f (refl x) = refl (f x)
+
+uniqueness-refl : {X : 𝓤 ̇ } (x y : X) (p : x == y) 
+                → x , refl x == y , p 
+uniqueness-refl x x (refl x) = refl (x , (refl x))
