@@ -155,3 +155,27 @@ commutative-*ℕ m (succ n) = (m +ℕ m *ℕ n)  ==⟨ commutative-+ℕ m (m *�
                             ((n *ℕ m +ℕ m) ==⟨ right-succ-law-*ℕ n m ⁻¹ ⟩ 
                             ((succ n *ℕ m) ∎)))
 
+right-distirbutive-ℕ : (m n k : ℕ) → (m +ℕ n) *ℕ k == m *ℕ k +ℕ n *ℕ k 
+right-distirbutive-ℕ m n 0        = refl 0
+right-distirbutive-ℕ m n (succ k) = (m +ℕ n +ℕ (m +ℕ n) *ℕ k)       ==⟨ ap (λ x → m +ℕ n +ℕ x) (right-distirbutive-ℕ m n k) ⟩ 
+                                    ((m +ℕ n +ℕ (m *ℕ k +ℕ n *ℕ k)) ==⟨ associative-+ℕ (m +ℕ n) (m *ℕ k) (n *ℕ k) ⁻¹ ⟩ 
+                                    ((m +ℕ n +ℕ m *ℕ k +ℕ n *ℕ k)   ==⟨ ap (λ x → x +ℕ n *ℕ k) (associative-+ℕ m n (m *ℕ k)) ⟩ 
+                                    ((m +ℕ (n +ℕ m *ℕ k) +ℕ n *ℕ k) ==⟨ ap (λ x → m +ℕ x +ℕ n *ℕ k) (commutative-+ℕ n (m *ℕ k)) ⟩ 
+                                    ((m +ℕ (m *ℕ k +ℕ n) +ℕ n *ℕ k) ==⟨ ap (λ x → x +ℕ n *ℕ k) (associative-+ℕ m (m *ℕ k) n ⁻¹) ⟩ 
+                                    ((m +ℕ m *ℕ k +ℕ n +ℕ n *ℕ k)   ==⟨ associative-+ℕ (m +ℕ m *ℕ k) n (n *ℕ k) ⟩ 
+                                    ((m +ℕ m *ℕ k +ℕ (n +ℕ n *ℕ k)) ∎)))))) 
+
+left-distirbutive-ℕ : (m n k : ℕ) → m *ℕ (n +ℕ k) == m *ℕ n +ℕ m *ℕ k 
+left-distirbutive-ℕ m n k = (m *ℕ (n +ℕ k))     ==⟨ commutative-*ℕ m (n +ℕ k) ⟩ 
+                            (((n +ℕ k) *ℕ m)    ==⟨ (right-distirbutive-ℕ n k m) ⟩ 
+                            ((n *ℕ m +ℕ k *ℕ m) ==⟨ ap (λ x → x +ℕ k *ℕ m) (commutative-*ℕ n m) ⟩ 
+                            ((m *ℕ n +ℕ k *ℕ m) ==⟨ ap (λ x → m *ℕ n +ℕ x) (commutative-*ℕ k m) ⟩ 
+                            ((m *ℕ n +ℕ m *ℕ k) ∎))))
+
+associative-*ℕ : (m n k : ℕ) → (m *ℕ n) *ℕ k == m *ℕ (n *ℕ k)
+associative-*ℕ m n 0        = refl 0
+associative-*ℕ m n (succ k) = (m *ℕ n +ℕ m *ℕ n *ℕ k)    ==⟨  ap (λ x → m *ℕ n +ℕ x) (associative-*ℕ m n k) ⟩ 
+                              ((m *ℕ n +ℕ m *ℕ (n *ℕ k)) ==⟨ (left-distirbutive-ℕ m n (n *ℕ k)) ⁻¹ ⟩ 
+                              ((m *ℕ (n +ℕ n *ℕ k))      ∎))
+
+ 
