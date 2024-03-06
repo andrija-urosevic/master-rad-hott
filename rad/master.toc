@@ -1,0 +1,34 @@
+\babel@toc {serbianc}{}\relax 
+\contentsline {chapter}{\chapternumberline {1}Увод}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Интуиционистичка теорија типова}{3}{section.1.1}%
+\contentsline {subsection}{Правила закључивања}{4}{section*.2}%
+\contentsline {subsection}{Зависни типови}{4}{section*.3}%
+\contentsline {subsection}{Типови зависних функција}{5}{section*.4}%
+\contentsline {subsection}{Индуктивни типови}{6}{section*.5}%
+\contentsline {subsubsection}{Тип природних бројева}{7}{section*.6}%
+\contentsline {subsubsection}{Празни тип}{7}{section*.7}%
+\contentsline {subsubsection}{Јединични тип}{7}{section*.8}%
+\contentsline {subsubsection}{Типови копроизвода}{8}{section*.9}%
+\contentsline {subsubsection}{Типови зависних парова}{8}{section*.10}%
+\contentsline {subsubsection}{Хијерархија универзума и универзум типови}{9}{section*.11}%
+\contentsline {subsection}{Искази као типови}{9}{section*.12}%
+\contentsline {section}{\numberline {1.2}Типови идентитети}{10}{section.1.2}%
+\contentsline {subsection}{Homotopna invarijantnost}{10}{section*.13}%
+\contentsline {subsection}{Transport}{10}{section*.14}%
+\contentsline {subsection}{Indukcija putanje}{10}{section*.15}%
+\contentsline {subsection}{Akcije nad putanjama}{10}{section*.16}%
+\contentsline {section}{\numberline {1.3}Homotopni nivoi}{10}{section.1.3}%
+\contentsline {subsection}{Kontraktibilnost}{10}{section*.17}%
+\contentsline {subsection}{n types}{10}{section*.18}%
+\contentsline {subsection}{Osobina vs.~struktura}{10}{section*.19}%
+\contentsline {subsection}{Trunkacija}{10}{section*.20}%
+\contentsline {subsubsection}{Logika}{10}{section*.21}%
+\contentsline {section}{\numberline {1.4}Ekvivalentnosti}{10}{section.1.4}%
+\contentsline {subsection}{Functional extentionality}{10}{section*.22}%
+\contentsline {subsection}{Ekvivalentnosti i univerzalna osobina}{10}{section*.23}%
+\contentsline {section}{\numberline {1.5}Aksioma univalentnosti}{10}{section.1.5}%
+\contentsline {subsection}{Neke posledice univalentnosti}{10}{section*.24}%
+\contentsline {chapter}{\chapternumberline {2}Разрада}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Neki deo HoTTa koji će se formalizovati}{11}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Neki drugi deo HoTTa koji će se formalizovati}{11}{section.2.2}%
+\contentsline {chapter}{\chapternumberline {3}Закључак}{12}{chapter.3}%

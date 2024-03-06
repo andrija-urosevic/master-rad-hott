@@ -24,10 +24,10 @@ pattern -1ℤ = inl 0
             → P +1ℤ
             → ((n : ℕ) → P (+ℤ n) → P (+ℤ (succ n)))
             → (k : ℤ) → P k
-ℤ-induction P p-neg-1 p-neg-succ p-zero p-pos-1 p-pos-succ (inl zero)           = p-neg-1
+ℤ-induction P p-neg-1 p-neg-succ p-zero p-pos-1 p-pos-succ -1ℤ                  = p-neg-1
 ℤ-induction P p-neg-1 p-neg-succ p-zero p-pos-1 p-pos-succ (inl (succ x))       = p-neg-succ x (ℤ-induction P p-neg-1 p-neg-succ p-zero p-pos-1 p-pos-succ (inl x))
-ℤ-induction P p-neg-1 p-neg-succ p-zero p-pos-1 p-pos-succ (inr true)           = p-zero
-ℤ-induction P p-neg-1 p-neg-succ p-zero p-pos-1 p-pos-succ (inr (inr zero))     = p-pos-1
+ℤ-induction P p-neg-1 p-neg-succ p-zero p-pos-1 p-pos-succ 0ℤ                   = p-zero
+ℤ-induction P p-neg-1 p-neg-succ p-zero p-pos-1 p-pos-succ +1ℤ                  = p-pos-1
 ℤ-induction P p-neg-1 p-neg-succ p-zero p-pos-1 p-pos-succ (inr (inr (succ x))) = p-pos-succ x (ℤ-induction P p-neg-1 p-neg-succ p-zero p-pos-1 p-pos-succ (inr (inr x))) 
 
 succℤ : ℤ → ℤ

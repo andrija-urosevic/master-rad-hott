@@ -82,35 +82,6 @@ data _+_ (X : 𝓤 ̇ ) (Y : 𝓥 ̇ ) : 𝓤 ⊔ 𝓥 ̇ where
 +-induction P pₗ pᵣ (inl x) = pₗ x
 +-induction P pₗ pᵣ (inr y) = pᵣ y
 
-𝟚 : 𝓤₀ ̇ 
-𝟚 = 𝟙 + 𝟙
-
-pattern true  = inl ⋆
-pattern false = inr ⋆
-
-𝟚-induction : (P : 𝟚 → 𝓤 ̇ ) 
-            → (P true)
-            → (P false)
-            → (b : 𝟚) → (P b)
-𝟚-induction P p₀ p₁ true  = p₀
-𝟚-induction P p₀ p₁ false = p₁
-
-𝟚-¬ : 𝟚 → 𝟚
-𝟚-¬ true  = false
-𝟚-¬ false = true
-
-_∧_ : 𝟚 → 𝟚 → 𝟚
-true  ∧ true  = true
-true  ∧ false = false
-false ∧ true  = false
-false ∧ false = false
-
-_∨_ : 𝟚 → 𝟚 → 𝟚
-true  ∨ true  = true
-true  ∨ false = true
-false ∨ true  = true
-false ∨ false = false
-
 record Σ {𝓤 𝓥} {X : 𝓤 ̇ } (Y : X → 𝓥 ̇ ) : 𝓤 ⊔ 𝓥 ̇  where
     constructor
         _,_
