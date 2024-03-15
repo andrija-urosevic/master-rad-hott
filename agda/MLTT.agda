@@ -82,8 +82,21 @@ data _+_ (X : 𝓤 ̇ ) (Y : 𝓥 ̇ ) : 𝓤 ⊔ 𝓥 ̇ where
 +-induction P pₗ pᵣ (inl x) = pₗ x
 +-induction P pₗ pᵣ (inr y) = pᵣ y
 
-+-recursion : {X : 𝓤 ̇ } {Y : 𝓤 ̇ } (A : 𝓤 ̇ ) → A → X + Y → A 
-+-recursion A a z = +-induction (λ _ → A) (λ x → a) (λ y → a) z
++-recursion : {X : 𝓤 ̇ } {Y : 𝓤 ̇ } (A : 𝓤 ̇ ) 
+            → (X → A) 
+            → (Y → A) 
+            → X + Y → A
++-recursion A f g (inl x) = f x
++-recursion A f g (inr x) = g x
+
+n-n-n+ : {A : 𝓤 ̇ } {B : 𝓥 ̇ } → ¬ A → ¬ B → ¬ (A + B)
+n-n-n+ f g (inl a) = f a
+n-n-n+ f g (inr b) = g b
+
+_+→_ : {X X' : 𝓤 ̇ } {Y Y' : 𝓤 ̇ } (f : X → X') (g : Y → Y') 
+     → (X + Y) → (X' + Y')
+(f +→ g) (inl x) = inl (f x)
+(f +→ g) (inr x) = inr (g x)
 
 record Σ {𝓤 𝓥} {X : 𝓤 ̇ } (Y : X → 𝓥 ̇ ) : 𝓤 ⊔ 𝓥 ̇  where
     constructor
@@ -312,10 +325,6 @@ decidable-𝟘 = inr (λ x → x)
 
 decidable-𝟙 : decidable 𝟙
 decidable-𝟙 = inl ⋆
-
-n-n-n+ : {A : 𝓤 ̇ } {B : 𝓥 ̇ } → ¬ A → ¬ B → ¬ (A + B)
-n-n-n+ na nb (inl a) = na a
-n-n-n+ na nb (inr b) = nb b
  
 decidable-+ : {A : 𝓤 ̇ } {B : 𝓥 ̇ } → decidable A → decidable B → decidable (A + B)
 decidable-+ (inl a) (inl b) = inl (inl a)
@@ -341,4 +350,12 @@ decidable-↔                 (inl a) (inr g) = inr (λ x → g (fst x a))
 decidable-↔                 (inr f) (inl b) = inr (λ x → f (snd x b))
 decidable-↔ {𝓤} {𝓥} {A} {B} (inr f) (inr g) = inl ((λ x → 𝟘-recursion B (f x)) , (λ x → 𝟘-recursion A (g x)))
 
- 
+decidable-¬ : {A : 𝓤 ̇ } {B : 𝓥 ̇ } → decidable A → decidable (¬ A)
+decidable-¬ (inl a) = inr (λ f → f a)
+decidable-¬ (inr f) = inl f
+
+decidable-== : (A : 𝓤 ̇ ) → A → A → 𝓤 ̇ 
+decidable-== A = λ x y → decidable (x == y)
+
+decidable-iff : {A : 𝓤 ̇ } {B : 𝓤 ̇ } → (A ↔ B) → (decidable A ↔ decidable B) 
+decidable-iff (f , g) = (f +→ ¬-functor g) , (g +→ (¬-functor f))

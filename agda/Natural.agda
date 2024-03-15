@@ -209,6 +209,12 @@ Eq-ℕ-id (succ m) (succ n) eq = ap succ (Eq-ℕ-id m n eq)
 injective-succ-ℕ : (m n : ℕ) → succ m == succ n → m == n
 injective-succ-ℕ m n e = Eq-ℕ-id m n (id-Eq-ℕ e)
 
+decidable-Eq-ℕ : (m n : ℕ) → decidable (Eq-ℕ m n)
+decidable-Eq-ℕ 0        0        = inl ⋆
+decidable-Eq-ℕ 0        (succ n) = inr (λ x → x)
+decidable-Eq-ℕ (succ m) 0        = inr (λ x → x)
+decidable-Eq-ℕ (succ m) (succ n) = decidable-Eq-ℕ m n
+
 peano-7-axiom : (n m : ℕ) → (m == n) ↔ (succ m == succ n)
 peano-7-axiom n m = ap succ , injective-succ-ℕ m n
 
@@ -312,9 +318,10 @@ transitive-≤ℕ 0        n        k        p q = ⋆
 transitive-≤ℕ (succ m) (succ n) 0        p q = q
 transitive-≤ℕ (succ m) (succ n) (succ k) p q = transitive-≤ℕ m n k p q
 
-decidable-≤ℕ : (m n : ℕ) → (m ≤ℕ n) + (n ≤ℕ m)
-decidable-≤ℕ 0        n        = inl ⋆
-decidable-≤ℕ (succ m) 0        = inr ⋆
+decidable-≤ℕ : (m n : ℕ) → decidable (m ≤ℕ n)
+decidable-≤ℕ 0        0        = inl ⋆
+decidable-≤ℕ 0        (succ n) = inl ⋆
+decidable-≤ℕ (succ m) 0        = inr (λ x → x)
 decidable-≤ℕ (succ m) (succ n) = decidable-≤ℕ m n
 
 preserve-order-+ℕ : (k m n : ℕ) → (m ≤ℕ n) → ((k +ℕ m) ≤ℕ (k +ℕ n))
@@ -379,6 +386,12 @@ antisymmetric-<ℕ (succ m) (succ n) p q = ap succ (antisymmetric-<ℕ m n p q)
 transitive-<ℕ : (m n k : ℕ) → m <ℕ n → n <ℕ k → m <ℕ k 
 transitive-<ℕ 0        (succ n) (succ k) p q = ⋆
 transitive-<ℕ (succ m) (succ n) (succ k) p q = transitive-<ℕ m n k p q
+
+decidable-<ℕ : (m n : ℕ) → decidable (m <ℕ n)
+decidable-<ℕ 0        0        = inr (λ x → x)
+decidable-<ℕ 0        (succ n) = inl ⋆
+decidable-<ℕ (succ m) 0        = inr (λ x → x)
+decidable-<ℕ (succ m) (succ n) = decidable-<ℕ m n
 
 succ-law-<ℕ : (n : ℕ) → n <ℕ succ n 
 succ-law-<ℕ zero = ⋆
@@ -508,6 +521,12 @@ Eq-id-Fin {succ k} {inl x} {inl y} p = ap inl (Eq-id-Fin p)
 Eq-id-Fin {succ k} {inl x} {inr ⋆} ()
 Eq-id-Fin {succ k} {inr ⋆} {inr ⋆} ⋆ = refl (inr ⋆) 
 
+decidable-Eq-Fin : {k : ℕ} (x y : Fin k) → decidable (Eq-Fin x y)
+decidable-Eq-Fin {succ k} (inl x) (inl y) = decidable-Eq-Fin x y
+decidable-Eq-Fin {succ k} (inl x) (inr ⋆) = decidable-𝟘
+decidable-Eq-Fin {succ k} (inr ⋆) (inl y) = decidable-𝟘
+decidable-Eq-Fin {succ k} (inr ⋆) (inr ⋆) = decidable-𝟙 
+
 injective-inclusion-Fin : {k : ℕ} → {x y : Fin k} → inclusion-Fin k x == inclusion-Fin k y → x == y 
 injective-inclusion-Fin p = Eq-id-Fin (id-Eq-Fin p)
 
@@ -543,7 +562,7 @@ pred-Fin {succ k} (inl x) = skip-neg-two-Fin (pred-Fin x)
 pred-Fin {succ k} (inr x) = neg-two-Fin
 
 pred-zero-Fin : {k : ℕ} → pred-Fin {succ k} zero-Fin == neg-one-Fin
-pred-zero-Fin {zero} = refl (inr ⋆)
+pred-zero-Fin {0}      = refl (inr ⋆)
 pred-zero-Fin {succ k} = ap skip-neg-two-Fin pred-zero-Fin
 
 succ-skip-neg-two-Fin : {k : ℕ} → (x : Fin k) → succ-Fin (skip-neg-two-Fin x) == inl (succ-Fin  x)
@@ -562,3 +581,4 @@ pred-succ-id-Fin {succ 0}        (inr ⋆)       = refl (inr ⋆)
 pred-succ-id-Fin {succ (succ k)} (inl (inl x)) = ap skip-neg-two-Fin (pred-succ-id-Fin (inl x))
 pred-succ-id-Fin {succ (succ k)} (inl (inr ⋆)) = refl (inl (inr ⋆)) 
 pred-succ-id-Fin {succ (succ k)} (inr ⋆)       = pred-zero-Fin
+
