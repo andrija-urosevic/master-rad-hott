@@ -82,6 +82,9 @@ data _+_ (X : 𝓤 ̇ ) (Y : 𝓥 ̇ ) : 𝓤 ⊔ 𝓥 ̇ where
 +-induction P pₗ pᵣ (inl x) = pₗ x
 +-induction P pₗ pᵣ (inr y) = pᵣ y
 
++-recursion : {X : 𝓤 ̇ } {Y : 𝓤 ̇ } (A : 𝓤 ̇ ) → A → X + Y → A 
++-recursion A a z = +-induction (λ _ → A) (λ x → a) (λ y → a) z
+
 record Σ {𝓤 𝓥} {X : 𝓤 ̇ } (Y : X → 𝓥 ̇ ) : 𝓤 ⊔ 𝓥 ̇  where
     constructor
         _,_
@@ -152,9 +155,6 @@ X ↔ Y = (X → Y) × (Y → X)
 
 ¬¬-×-↔-¬¬-×-¬¬ : (X : 𝓤 ̇ ) (Y : 𝓥 ̇ ) → ¬¬ (X × Y) ↔ (¬¬ X × ¬¬ Y)
 ¬¬-×-↔-¬¬-×-¬¬ X Y = (λ nnxcy → (λ nx → nnxcy (λ xcy → nx (Σ.x xcy))) , λ ny → nnxcy λ xcy → ny (Σ.y xcy)) , λ nnxcnny nxcy → Σ.x nnxcnny (λ x → Σ.y nnxcnny (λ y → nxcy (x , y)))
-
--- ¬¬-+-↔-¬-¬-×-¬ : (X : 𝓤 ̇ ) (Y : 𝓥 ̇ ) → ¬¬ (X + Y) ↔ ¬ (¬ X × ¬ Y)
--- ¬¬-+-↔-¬-¬-×-¬ X Y = (λ nnxpy nxcny → nnxpy λ xpy → Σ.x {! nxcny  !}) , λ nnxcny nxpy → nnxcny ((λ x → nxpy (inl x)) , λ y → nxpy (inr y))
 
 Π : {X : 𝓤 ̇ } (P : X → 𝓥 ̇ ) → 𝓤 ⊔ 𝓥 ̇ 
 Π {𝓤} {𝓥} {X} P = (x : X) → P x
@@ -304,5 +304,41 @@ lift : {A : 𝓤 ̇ } {B : A → 𝓥 ̇ } {x y : A} (p : x == y) (b : B x)
      → (x , b) == (y , tr B p b)
 lift (refl x) b = refl (x , b)
 
+decidable : (A : 𝓤 ̇ ) → 𝓤 ⊔ 𝓤 ̇ 
+decidable A = A + ¬ A
 
+decidable-𝟘 : decidable 𝟘
+decidable-𝟘 = inr (λ x → x)
 
+decidable-𝟙 : decidable 𝟙
+decidable-𝟙 = inl ⋆
+
+n-n-n+ : {A : 𝓤 ̇ } {B : 𝓥 ̇ } → ¬ A → ¬ B → ¬ (A + B)
+n-n-n+ na nb (inl a) = na a
+n-n-n+ na nb (inr b) = nb b
+ 
+decidable-+ : {A : 𝓤 ̇ } {B : 𝓥 ̇ } → decidable A → decidable B → decidable (A + B)
+decidable-+ (inl a) (inl b) = inl (inl a)
+decidable-+ (inl a) (inr g) = inl (inl a)
+decidable-+ (inr f) (inl b) = inl (inr b)
+decidable-+ (inr f) (inr g) = inr (n-n-n+ f g)
+
+decidable-× : {A : 𝓤 ̇ } {B : 𝓥 ̇ } → decidable A → decidable B → decidable (A × B)
+decidable-× (inl a) (inl b) = inl (a , b)
+decidable-× (inl a) (inr g) = inr (λ x → g (snd x))
+decidable-× (inr f) (inl b) = inr (λ x → f (fst x))
+decidable-× (inr f) (inr g) = inr (λ x → f (fst x))
+
+decidable-→ : {A : 𝓤 ̇ } {B : 𝓥 ̇ } → decidable A → decidable B → decidable (A → B)
+decidable-→                 (inl a) (inl b) = inl (λ x → b)
+decidable-→                 (inl a) (inr g) = inr (λ h → g (h a))
+decidable-→ {𝓤} {𝓥} {A} {B} (inr f) (inl b) = inl (λ x → 𝟘-recursion B (f x))
+decidable-→ {𝓤} {𝓥} {A} {B} (inr f) (inr g) = inl (λ x → 𝟘-recursion B (f x))
+
+decidable-↔ : {A : 𝓤 ̇ } {B : 𝓥 ̇ } → decidable A → decidable B → decidable (A ↔ B)
+decidable-↔                 (inl a) (inl b) = inl ((λ x → b) , (λ x → a))
+decidable-↔                 (inl a) (inr g) = inr (λ x → g (fst x a))
+decidable-↔                 (inr f) (inl b) = inr (λ x → f (snd x b))
+decidable-↔ {𝓤} {𝓥} {A} {B} (inr f) (inr g) = inl ((λ x → 𝟘-recursion B (f x)) , (λ x → 𝟘-recursion A (g x)))
+
+ 

@@ -380,6 +380,10 @@ transitive-<ℕ : (m n k : ℕ) → m <ℕ n → n <ℕ k → m <ℕ k
 transitive-<ℕ 0        (succ n) (succ k) p q = ⋆
 transitive-<ℕ (succ m) (succ n) (succ k) p q = transitive-<ℕ m n k p q
 
+succ-law-<ℕ : (n : ℕ) → n <ℕ succ n 
+succ-law-<ℕ zero = ⋆
+succ-law-<ℕ (succ n) = succ-law-<ℕ n
+
 unit-law-<ℕ : (n : ℕ) → n <ℕ (n +ℕ 1)
 unit-law-<ℕ 0        = ⋆
 unit-law-<ℕ (succ n) = unit-law-<ℕ n
@@ -387,6 +391,10 @@ unit-law-<ℕ (succ n) = unit-law-<ℕ n
 right-unit-law-<ℕ : (m n : ℕ) → m <ℕ n → m <ℕ (n +ℕ 1)
 right-unit-law-<ℕ 0        (succ n) p = ⋆
 right-unit-law-<ℕ (succ m) (succ n) p = right-unit-law-<ℕ m n p 
+
+neq-<ℕ : (m n : ℕ) → m <ℕ n → ¬ (m == n)
+neq-<ℕ zero (succ n) p = λ ()
+neq-<ℕ (succ m) (succ n) p q = neq-<ℕ m n p (injective-succ-ℕ m n q)
 
 distℕ : ℕ → ℕ → ℕ
 distℕ 0        n        = n
@@ -440,3 +448,117 @@ triangle-inequality (succ m) (succ n) 0        = right-succ-law-≤ℕ (distℕ 
                                                         (right-succ-law-≤ℕ (distℕ m n) (m +ℕ n) (dist-leq-+ℕ m n)) 
                                                         (right-succ-law-+ℕ m n ⁻¹))
 triangle-inequality (succ m) (succ n) (succ k) = triangle-inequality m n k
+
+Fin : ℕ → 𝓤₀ ̇
+Fin 0         = 𝟘
+Fin (succ k) = Fin k + 𝟙
+
+inclusion-Fin : (k : ℕ) → Fin k → Fin (succ k) 
+inclusion-Fin k = inl
+
+Fin-nat : {k : ℕ} → Fin k → ℕ
+Fin-nat {succ k} (inl x) = Fin-nat x
+Fin-nat {succ k} (inr x) = k
+
+upper-bound-Fin-nat : {k : ℕ} → (x : Fin k) → Fin-nat x <ℕ k 
+upper-bound-Fin-nat {succ k} (inl x) = transitive-<ℕ (Fin-nat x) k (succ k) (upper-bound-Fin-nat x) (succ-law-<ℕ k)
+upper-bound-Fin-nat {succ k} (inr x) = succ-law-<ℕ k
+
+injective-Fin-nat : {k : ℕ} → {x y : Fin k} → Fin-nat x == Fin-nat y → x == y 
+injective-Fin-nat {succ k} {inl x} {inl y} p = ap inl (injective-Fin-nat p)
+injective-Fin-nat {succ k} {inl x} {inr ⋆} p = 𝟘-recursion (inl x == inr ⋆) (neq-<ℕ (Fin-nat x) k (upper-bound-Fin-nat x) p)  
+injective-Fin-nat {succ k} {inr ⋆} {inl y} p = 𝟘-recursion (inr ⋆ == inl y) (neq-<ℕ (Fin-nat y) k (upper-bound-Fin-nat y) (p ⁻¹)) 
+injective-Fin-nat {succ k} {inr ⋆} {inr ⋆} p = refl (inr ⋆)    
+
+zero-Fin : {k : ℕ} → Fin (succ k) 
+zero-Fin {0}      = inr ⋆ 
+zero-Fin {succ k} = inl zero-Fin
+
+skip-zero-Fin : {k : ℕ} → Fin k → Fin (succ k)
+skip-zero-Fin {succ k} (inl x) = inl (skip-zero-Fin x) 
+skip-zero-Fin {succ k} (inr ⋆) = inr ⋆
+
+succ-Fin : {k : ℕ} → Fin k → Fin k 
+succ-Fin {succ k} (inl x) = skip-zero-Fin x 
+succ-Fin {succ k} (inr ⋆) = zero-Fin  
+
+Fin-nat-zero : {k : ℕ} → Fin-nat (zero-Fin {k}) == 0 
+Fin-nat-zero {0}      = refl zero
+Fin-nat-zero {succ k} = Fin-nat-zero {k}
+
+Fin-nat-skip-zero : {k : ℕ} → (x : Fin k) → Fin-nat (skip-zero-Fin x) == Fin-nat x +ℕ 1
+Fin-nat-skip-zero {succ k} (inl x) = Fin-nat-skip-zero x
+Fin-nat-skip-zero {succ k} (inr ⋆) = right-unit-law-+ℕ k ⁻¹
+
+Eq-Fin : {k : ℕ} → Fin k → Fin k → 𝓤₀ ̇ 
+Eq-Fin {succ k} (inl x) (inl y) = Eq-Fin x y
+Eq-Fin {succ k} (inl x) (inr ⋆) = 𝟘
+Eq-Fin {succ k} (inr ⋆) (inl y) = 𝟘
+Eq-Fin {succ k} (inr ⋆) (inr ⋆) = 𝟙
+
+relf-Eq-Fin : {k : ℕ} → (x : Fin k) → Eq-Fin x x 
+relf-Eq-Fin {succ k} (inl x) = relf-Eq-Fin x
+relf-Eq-Fin {succ k} (inr ⋆) = ⋆
+
+id-Eq-Fin : {k : ℕ} → {x y : Fin k} → x == y → Eq-Fin x y 
+id-Eq-Fin {k} (refl _) = relf-Eq-Fin {k} _
+
+Eq-id-Fin : {k : ℕ} → {x y : Fin k} → Eq-Fin x y → x == y 
+Eq-id-Fin {succ k} {inl x} {inl y} p = ap inl (Eq-id-Fin p)
+Eq-id-Fin {succ k} {inl x} {inr ⋆} ()
+Eq-id-Fin {succ k} {inr ⋆} {inr ⋆} ⋆ = refl (inr ⋆) 
+
+injective-inclusion-Fin : {k : ℕ} → {x y : Fin k} → inclusion-Fin k x == inclusion-Fin k y → x == y 
+injective-inclusion-Fin p = Eq-id-Fin (id-Eq-Fin p)
+
+zero-neq-succ-Fin : {k : ℕ} → {x : Fin k} → ¬ (succ-Fin (inclusion-Fin k x) == zero-Fin)
+zero-neq-succ-Fin {succ k} {inl x} p = zero-neq-succ-Fin (injective-inclusion-Fin p) 
+zero-neq-succ-Fin {succ k} {inr ⋆} p = id-Eq-Fin p
+
+injective-skip-zero-Fin : {k : ℕ} → {x y : Fin k} → skip-zero-Fin x == skip-zero-Fin y → x == y
+injective-skip-zero-Fin {succ k} {inl x} {inl y} p = ap inl (injective-skip-zero-Fin (injective-inclusion-Fin p))
+injective-skip-zero-Fin {succ k} {inl x} {inr ⋆} p = 𝟘-recursion (inl x == inr ⋆) (id-Eq-Fin p)
+injective-skip-zero-Fin {succ k} {inr ⋆} {inl y} p = 𝟘-recursion (inr ⋆ == inl y) (id-Eq-Fin p)
+injective-skip-zero-Fin {succ k} {inr ⋆} {inr ⋆} p = refl (inr ⋆)
+
+injective-succ-Fin : {k : ℕ} → {x y : Fin k} → succ-Fin x == succ-Fin y → x == y
+injective-succ-Fin {succ k} {inl x} {inl y} p = ap inl (injective-skip-zero-Fin p)
+injective-succ-Fin {succ k} {inl x} {inr ⋆} p = 𝟘-recursion (inl x == inr ⋆) (zero-neq-succ-Fin p)
+injective-succ-Fin {succ k} {inr ⋆} {inl y} p = 𝟘-recursion (inr ⋆ == inl y) (zero-neq-succ-Fin (p ⁻¹))
+injective-succ-Fin {succ k} {inr ⋆} {inr ⋆} p = refl (inr ⋆)
+
+neg-one-Fin : {k : ℕ} → Fin (succ k)
+neg-one-Fin {k} = inr ⋆
+
+neg-two-Fin : {k : ℕ} → Fin (succ k)
+neg-two-Fin {0}      = inr ⋆ 
+neg-two-Fin {succ k} = inl (inr ⋆)
+
+skip-neg-two-Fin : {k : ℕ} → Fin k → Fin (succ k)
+skip-neg-two-Fin {succ k} (inl x) = inl (inl x)
+skip-neg-two-Fin {succ k} (inr ⋆) = inr ⋆
+
+pred-Fin : {k : ℕ} → Fin k → Fin k 
+pred-Fin {succ k} (inl x) = skip-neg-two-Fin (pred-Fin x)
+pred-Fin {succ k} (inr x) = neg-two-Fin
+
+pred-zero-Fin : {k : ℕ} → pred-Fin {succ k} zero-Fin == neg-one-Fin
+pred-zero-Fin {zero} = refl (inr ⋆)
+pred-zero-Fin {succ k} = ap skip-neg-two-Fin pred-zero-Fin
+
+succ-skip-neg-two-Fin : {k : ℕ} → (x : Fin k) → succ-Fin (skip-neg-two-Fin x) == inl (succ-Fin  x)
+succ-skip-neg-two-Fin {succ k} (inl x) = refl (inl (skip-zero-Fin x))
+succ-skip-neg-two-Fin {succ k} (inr ⋆) = refl (inl zero-Fin)
+
+succ-pred-id-Fin : {k : ℕ} → (x : Fin k) → succ-Fin (pred-Fin x) == x
+succ-pred-id-Fin {succ 0}        (inr ⋆) = refl (inr ⋆)
+succ-pred-id-Fin {succ (succ k)} (inl x) = (succ-Fin (skip-neg-two-Fin (pred-Fin x)))   ==⟨ succ-skip-neg-two-Fin (pred-Fin x) ⟩
+                                           (inl (succ-Fin (pred-Fin x))                 ==⟨ ap inl (succ-pred-id-Fin x) ⟩
+                                           ((inl x)                                     ∎))
+succ-pred-id-Fin {succ (succ k)} (inr ⋆) = refl (inr ⋆)
+
+pred-succ-id-Fin : {k : ℕ} → (x : Fin k) → pred-Fin (succ-Fin x) == x 
+pred-succ-id-Fin {succ 0}        (inr ⋆)       = refl (inr ⋆)
+pred-succ-id-Fin {succ (succ k)} (inl (inl x)) = ap skip-neg-two-Fin (pred-succ-id-Fin (inl x))
+pred-succ-id-Fin {succ (succ k)} (inl (inr ⋆)) = refl (inl (inr ⋆)) 
+pred-succ-id-Fin {succ (succ k)} (inr ⋆)       = pred-zero-Fin
