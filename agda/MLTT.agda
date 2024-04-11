@@ -35,11 +35,11 @@ data 𝟘 : 𝓤₀ ̇ where
 𝟘-recursion : (A : 𝓤 ̇ ) → 𝟘 → A 
 𝟘-recursion A p = 𝟘-induction (λ _ → A) p
 
-!𝟘 : (A : 𝓤 ̇) → 𝟘 → A 
-!𝟘 = 𝟘-recursion
+!𝟘 : {A : 𝓤 ̇ } → 𝟘 → A 
+!𝟘 {𝓤} {A} = 𝟘-recursion A
 
-is-empty : 𝓤 ̇ → 𝓤 ̇ 
-is-empty X = X → 𝟘
+empty : 𝓤 ̇ → 𝓤 ̇ 
+empty X = X → 𝟘
 
 ¬ : 𝓤 ̇ → 𝓤 ̇
 ¬ X = X → 𝟘
@@ -66,7 +66,7 @@ data 𝟙 : 𝓤₀ ̇ where
 𝟙-induction P p ⋆ = p
 
 𝟙-recursion : (A : 𝓤 ̇ ) → A → 𝟙 → A
-𝟙-recursion A a x = 𝟙-induction (λ _ → A) a x
+𝟙-recursion A = 𝟙-induction (λ _ → A)
 
 !𝟙 : {A : 𝓤 ̇ } → A → 𝟙
 !𝟙 a = ⋆
@@ -93,10 +93,20 @@ n-n-n+ : {A : 𝓤 ̇ } {B : 𝓥 ̇ } → ¬ A → ¬ B → ¬ (A + B)
 n-n-n+ f g (inl a) = f a
 n-n-n+ f g (inr b) = g b
 
-_+→_ : {X X' : 𝓤 ̇ } {Y Y' : 𝓤 ̇ } (f : X → X') (g : Y → Y') 
-     → (X + Y) → (X' + Y')
+_+→_ : {A X : 𝓤 ̇ } {B Y : 𝓤 ̇ } (f : A → X) (g : B → Y) 
+     → (A + B) → (X + Y)
 (f +→ g) (inl x) = inl (f x)
 (f +→ g) (inr x) = inr (g x)
+
++-left-empty : {X : 𝓤 ̇ } {Y : 𝓤 ̇ } 
+             → empty X 
+             → X + Y → Y
++-left-empty {𝓤} {X} {Y} ex = +-recursion Y (!𝟘 ∘ ex) id 
+
++-rigth-empty : {X : 𝓤 ̇ } {Y : 𝓤 ̇ }
+              → empty Y
+              → X + Y → X 
++-rigth-empty {𝓤} {X} {Y} ex = +-recursion X id (!𝟘 ∘ ex)
 
 record Σ {𝓤 𝓥} {X : 𝓤 ̇ } (Y : X → 𝓥 ̇ ) : 𝓤 ⊔ 𝓥 ̇  where
     constructor
@@ -119,7 +129,7 @@ syntax -Σ X (λ x → y) = Σ x ꞉ X , y
 Σ-induction : {X : 𝓤 ̇ } {Y : X → 𝓥 ̇ } {P : Σ Y → 𝓦 ̇ }
             → ((x : X) (y : Y x) → P (x , y))
             → ((x , y) : Σ Y) → P (x , y)
-Σ-induction p (x , y) = p x y
+Σ-induction f (x , y) = f x y
 
 carry : {X : 𝓤 ̇ } {Y : X → 𝓥 ̇ } {P : Σ Y → 𝓦 ̇ }
       → (((x , y) : Σ Y) → P (x , y))
@@ -128,6 +138,11 @@ carry f x y = f (x , y)
 
 _×_ : 𝓤 ̇ → 𝓥 ̇ → 𝓤 ⊔ 𝓥 ̇
 X × Y = Σ x ꞉ X , Y
+
+×-induction : {X : 𝓤 ̇ } {Y : 𝓥 ̇ } {P : X × Y → 𝓦 ̇ }
+            → ((x : X) (y : Y) → P (x , y))
+            → ((x , y) : X × Y) → P (x , y)
+×-induction f (x , y) = f x y   
 
 _↔_ : 𝓤 ̇ → 𝓥 ̇ → 𝓤 ⊔ 𝓥 ̇
 X ↔ Y = (X → Y) × (Y → X)
@@ -358,4 +373,4 @@ decidable-== : (A : 𝓤 ̇ ) → A → A → 𝓤 ̇
 decidable-== A = λ x y → decidable (x == y)
 
 decidable-iff : {A : 𝓤 ̇ } {B : 𝓤 ̇ } → (A ↔ B) → (decidable A ↔ decidable B) 
-decidable-iff (f , g) = (f +→ ¬-functor g) , (g +→ (¬-functor f))
+decidable-iff (f , g) = (f +→ ¬-functor g) , (g +→ (¬-functor f)) 

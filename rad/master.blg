@@ -1,0 +1,16 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'master.blg'
+[107] biber:340> INFO - === Fri Apr 12, 2024, 00:43:58
+[134] Biber.pm:419> INFO - Reading 'master.bcf'
+[221] Biber.pm:976> INFO - Using all citekeys in bib section 0
+[245] Biber.pm:4419> INFO - Processing section 0
+[260] Biber.pm:4610> INFO - Looking for bibtex file 'master.bib' for section 0
+[262] bibtex.pm:1713> INFO - LaTeX decoding ...
+[277] bibtex.pm:1519> INFO - Found BibTeX data source 'master.bib'
+[438] UCollate.pm:68> INFO - Overriding locale 'sr-Cyrl' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[438] UCollate.pm:68> INFO - Overriding locale 'sr-Cyrl' defaults 'variable = shifted' with 'variable = non-ignorable'
+[438] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'sr-Cyrl'
+[463] bbl.pm:660> INFO - Writing 'master.bbl' with encoding 'UTF-8'
+[469] bbl.pm:763> INFO - Output to master.bbl
+[469] Biber.pm:131> WARN - legacy month field 'nov' in entry 'wadler2015props' is not an integer - this will probably not sort properly.
+[469] Biber.pm:133> INFO - WARNINGS: 1
