@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.27)  12 APR 2024 00:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.27)  18 APR 2024 17:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1420,7 +1420,7 @@ LaTeX Font Warning: Font shape `T2A/fos/m/n' undefined
 LaTeX Font Warning: Font shape `T2A/fos/m/n' in size <16> not available
 (Font)              size <17.28> substituted on input line 30.
 
-<matf.png, id=50, 346.29375pt x 409.53pt>
+<matf.png, id=66, 346.29375pt x 409.53pt>
 File: matf.png Graphic file (type png)
 <use matf.png>
 Package pdftex.def Info: matf.png  used on input line 30.
@@ -1512,7 +1512,7 @@ e 59.
 
 (/usr/share/texmf-dist/tex/latex/cmsrb/t2acmsrbt.fd
 File: t2acmsrbt.fd 
-)
+) [3]
 \myBox1=\box70
 \myScoreStart1=\dimen288
 \myCenter1=\dimen289
@@ -1529,12 +1529,14 @@ File: t2acmsrbt.fd
 \myScoreStart4=\dimen297
 \myCenter4=\dimen298
 \myScoreEnd4=\dimen299
- [3]
+ [4
+
+]
 Overfull \hbox (5.2652pt too wide) in paragraph at lines 99--102
  [] 
  []
 
-[4] [5] [6]
+[5] [6] [7]
 Overfull \hbox (7.21216pt too wide) in paragraph at lines 260--263
  [] 
  []
@@ -1549,31 +1551,33 @@ Overfull \hbox (0.73796pt too wide) in paragraph at lines 279--287
  [] 
  []
 
-[7] [8] [9] [10] [11] [12] [13] [14
+[8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18
+
+] [19
 
 ]
-Overfull \hbox (6.99309pt too wide) in paragraph at lines 668--668
+Overfull \hbox (6.99309pt too wide) in paragraph at lines 786--786
 []\T2A/cmsrbr/m/n/12 Mart[]^^Yn H[]otzel Escard[]o. ½  Introduction to univalen
 t foundations of mathematics
  []
 
 
-Overfull \hbox (10.46333pt too wide) in paragraph at lines 668--668
+Overfull \hbox (10.46333pt too wide) in paragraph at lines 786--786
 []\T2A/cmsrbr/m/n/12 Per Martin-L[]of è Giovanni Sambin. \T2A/cmsrbr/m/it/12 In
 tuitionistic type theory\T2A/cmsrbr/m/n/12 . Ñâ. 9. Bibliopolis
  []
 
 
-Overfull \hbox (23.50264pt too wide) in paragraph at lines 668--668
+Overfull \hbox (23.50264pt too wide) in paragraph at lines 786--786
 []\T2A/cmsrbr/m/n/12 Andrea Vezzosi, Anders M[]ortberg è Andreas Abel. ½  Cubic
 al Agda: A dependently
  []
 
-[15
+[20
 
-] [16] [17
+] [21] [22
 
-] [18
+] [23
 
 
 ]
@@ -1588,61 +1592,43 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-Package rerunfilecheck Warning: File `master.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `master.out':
-(rerunfilecheck)             Before: 2BB97A0C3EA01C29D1F0ADE7F7FBDB2E;1768
-(rerunfilecheck)             After:  FE5CB3F0DD4CE0844E78B64E2B58C6DC;1095.
+Package rerunfilecheck Info: File `master.out' has not changed.
+(rerunfilecheck)             Checksum: 495272BC58D5191FB0D976F761BA1B79;2544.
 Package logreq Info: Writing requests to 'master.run.xml'.
 \openout1 = `master.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26234 strings out of 476872
- 436159 string characters out of 5820377
- 1873388 words of memory out of 5000000
- 46155 multiletter control sequences out of 15000+600000
+ 26240 strings out of 476872
+ 436194 string characters out of 5820377
+ 1875388 words of memory out of 5000000
+ 46158 multiletter control sequences out of 15000+600000
  557427 words of font info for 94 fonts, out of 8000000 for 9000
  725 hyphenation exceptions out of 8191
- 79i,12n,89p,1208b,1603s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{chapter.3} has been referenced but does not exist, 
-replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.2.2} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.2.1} has been referenced but does not exist
-, replaced by a fixed one
-
-</usr/share/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/share/t
-exmf-dist/fonts/type1/public/bbold-type1/bbold5.pfb></usr/share/texmf-dist/font
-s/type1/public/bbold-type1/bbold7.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmex
-tra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
-b></usr/share/texmf-dist/fonts/type1/public/cmsrb/cmsrbrb.pfb></usr/share/texmf
--dist/fonts/type1/public/cmsrb/cmsrbrc.pfb></usr/share/texmf-dist/fonts/type1/p
-ublic/cmsrb/cmsrbri.pfb></usr/share/texmf-dist/fonts/type1/public/cmsrb/cmsrbrr
-.pfb></usr/share/texmf-dist/fonts/type1/public/cmsrb/cmsrbtr.pfb></usr/share/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y8.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/sh
-are/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/
-fonts/type1/public/cm-super/sfrm2074.pfb>
-Output written on master.pdf (26 pages, 420894 bytes).
+ 79i,12n,89p,1400b,1603s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/share
+/texmf-dist/fonts/type1/public/bbold-type1/bbold5.pfb></usr/share/texmf-dist/fo
+nts/type1/public/bbold-type1/bbold7.pfb></usr/share/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
+extra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pf
+b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
+pfb></usr/share/texmf-dist/fonts/type1/public/cmsrb/cmsrbrb.pfb></usr/share/tex
+mf-dist/fonts/type1/public/cmsrb/cmsrbrc.pfb></usr/share/texmf-dist/fonts/type1
+/public/cmsrb/cmsrbri.pfb></usr/share/texmf-dist/fonts/type1/public/cmsrb/cmsrb
+rr.pfb></usr/share/texmf-dist/fonts/type1/public/cmsrb/cmsrbtr.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy8.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/
+share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dis
+t/fonts/type1/public/cm-super/sfrm2074.pfb>
+Output written on master.pdf (31 pages, 431404 bytes).
 PDF statistics:
- 388 PDF objects out of 1000 (max. 8388607)
- 307 compressed objects within 4 object streams
- 92 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 423 PDF objects out of 1000 (max. 8388607)
+ 337 compressed objects within 4 object streams
+ 95 named destinations out of 1000 (max. 500000)
+ 118 words of extra memory for PDF output out of 10000 (max. 10000000)
 

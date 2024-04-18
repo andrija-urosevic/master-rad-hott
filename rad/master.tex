@@ -61,7 +61,7 @@
     \item{Раселов парадокс као мотивација за теорију типова.}
 \end{itemize}
 
-\section{Интуиционистичка теорија типова}
+\chapter{Интуиционистичка теорија типова}
 
 Интуиционистичка теорија типова или Пер Мартин-Луф теорија типова је математичка теорија конструкција. Тип представља врсту конструкције. Елемент, терм или тачка представља резултат конструкције неког типа. Прецизније, елемент $a$ типа $A$ записујемо као $a : A$, и кажемо да елемент $a$ настањује тип $A$. Битно је напоменути да терм не може да ``живи самостално'' тј. терм увек мора да настањује неки тип. 
 
@@ -87,7 +87,7 @@
 Контекст је коначна листа \emph{декларисаних променљивих} облика \[x_1 : A_1, x_2 : A_2 (x_1), \ldots, x_n : A_n(x_1, \ldots, x_{n-1}),\] под условом да за свако $1 \le k \le n$ можемо да изведемо расуђивање \[x_1 : A_1, x_2 : A_2(x_1), \ldots, x_{k-1} : A_{k-1}(x_1, \ldots, x_{k-2}) \vdash A_k(x_1, x_2, \ldots, x_{k-1}),\] применом правила закључивања.
 \end{definition}
 
-\subsection{Правила закључивања}
+\section{Правила закључивања}
 
 Интуиционистичка теорија типова, као и други математички формализми, захтева скуп правила закључивања на којим ће се формализам заснивати. Та правила називамо \emph{структурна правила}.
 
@@ -141,7 +141,7 @@
 
 Исцрпна листа структурних правила закључивања у интуиционистичкој теорији типова се може наћи у \cite{rijke2022intro}. {\color{red}Da li sada ovo raspisivati?}
 
-\subsection{Зависни типови}
+\section{Зависни типови}
 
 Из дефиниције контекста можемо видети да неки типови зависе од других термова. На пример, $A_2(x_1)$ зависи од $x_1 : A_1$, тј. за разне термове $x_1 : A_1$ имамо разне типове $A_2(x_1)$. Ову идеју можемо уопштити помоћу следећих дефиниција:
 
@@ -165,9 +165,9 @@
     Нека је $b$ секција фамилије типова $B$ над $A$ у контексту $\Gamma$. Кажемо да је $b[a/x]$ \emph{вредност} од $b$ за параметар $a$, где $b[a/x]$ представља замену свих појављивања $x$ у $b$ са $a$. Такође, вредност од $b$ за параметар $a$ крађе записујемо као $b(a)$.
 \end{definition}
 
-\subsection{Типови зависних функција}
+\section{Типови зависних функција}
 
-У математици заснованој на теорији скупова функција $f : A \to B$ дефинисана је над одређеним доменом $A$ и кодоменом $B$. У теорији типова то не мора да буде случај, тј. кодомен може зависити од елемента над којим се функција примељује. Прецизније, посматрајмо секцију $b$ фамилије типова $B$ над $A$ у контексту $\Gamma$. Један начин је да $b$ посматрамо као функцију $x \mapsto b(x)$. Тада $b(x)$ настањује тип $B(x)$ који зависи од $x : A$. Због тога за разне елементе $x : A$ домена имамо разне кодомене, те има смисла говорити о типу \emph{зависних функција} $\prod_{(x : A)} B(x)$. 
+У математици заснованој на теорији скупова функција $f : A \to B$ дефинисана је над одређеним доменом $A$ и кодоменом $B$. У теорији типова то не мора да буде случај, тј. кодомен може зависити од елемента над којим се функција примељује. Прецизније, посматрајмо секцију $b$ фамилије типова $B$ над $A$ у контексту $\Gamma$. Један начин је да $b$ посматрамо као функцију $mapsto b(x)$. Тада $b(x)$ настањује тип $B(x)$ који зависи од $x : A$. Због тога за разне елементе $x : A$ домена имамо разне кодомене, те има смисла говорити о типу \emph{зависних функција} $\prod_{(x : A)} B(x)$. 
 
 Спецификација типа зависних функција $\prod_{(x:A)} B(x)$ је дата следећим правилима закључивања:
 
@@ -217,15 +217,15 @@
 \end{definition}
 
 \begin{definition}
-    За сваки тип $A$ дефинишемо \emph{функцију идентитета} $\mathsf{id}_A : A \to A$ као $\mathsf{id}_A := \lambda x.x$.
+    За сваки тип $A$ дефинишемо \emph{функцију идентитета} $\mathsf{id}_A : A \to A$ као $\mathsf{id}_A :\equiv \lambda x.x$.
 \end{definition}
 
 \begin{definition}
-    За свака три типа $A$, $B$, и $C$ дефинишемо \emph{композицију} $\mathsf{comp} : (B \to C) \to (A \to B) \to A \to C$ као $\mathsf{comp} := \lambda g.\lambda f.\lambda x.g(f(x))$.
+    За свака три типа $A$, $B$, и $C$ дефинишемо \emph{композицију} $\mathsf{comp} : (B \to C) \to (A \to B) \to A \to C$ као $\mathsf{comp} :\equiv \lambda g.\lambda f.\lambda  g(f(x))$.
 \end{definition}
 Може се показати да је композиција асоцијативна, као и да је функција идентитета неутрал за композицију функција. Због сагласности типова имамо леви неутрал $\mathsf{id}_B$ и десни неутрал $\mathsf{id}_A$.
 
-\subsection{Индуктивни типови}
+\section{Индуктивни типови}
 
 Поред типова зависних функција постоји и класа \emph{индуктивних типова}. Сваки индуктивни тип се дефинише помоћу следеће спецификације: 
 
@@ -240,7 +240,7 @@
 
 Сада ће бити дате спецификације за неке уобичајене индуктивне типове.
 
-\subsubsection{Тип природних бројева}
+\subsection{Тип природних бројева}
 
 \begin{samepage}
     \begin{center}
@@ -276,7 +276,7 @@
             \end{prooftree}
         \end{minipage}
         \begin{minipage}{.49\textwidth}
-            \begin{prooftree}[$\mathbb{N}$-comp$_{\zeroN}$]
+            \begin{prooftree}[$\mathbb{N}$-comp$_{\zeroN}^{\ind{\N}}$]
                 \def\fCenter{\Gamma}
                 \Axiom$\fCenter, n:\N \vdash P(n)~\type$
                 \noLine%
@@ -289,7 +289,7 @@
         \\*
         \bigskip%
         \begin{minipage}{\textwidth}
-            \begin{prooftree}[$\mathbb{N}$-comp$_{\succN}$]
+            \begin{prooftree}[$\mathbb{N}$-comp$_{\succN}^{\ind{\N}}$]
                 \def\fCenter{\Gamma}
                 \Axiom$\fCenter, n:\N \vdash P(n)~\type$
                 \noLine%
@@ -312,6 +312,31 @@
                 \UnaryInf$\fCenter\  \vdash \rec{\N} (a_{\zeroN}, a_{\succN}) : \N \to A$
             \end{prooftree}
         \end{minipage}
+        \begin{minipage}{0.49\textwidth}
+            \begin{prooftree}[$\mathbb{N}$-comp$_{\zeroN}^{\rec{\N}}$]
+                \def\fCenter{\Gamma}
+                \Axiom$\fCenter\ \vdash A~\type$
+                \noLine%
+                \UnaryInf$\fCenter\ \vdash a_{\zeroN} : A$
+                \noLine%
+                \UnaryInf$\fCenter\ \vdash a_{\succN}: \N \to A \to A$
+                \UnaryInf$\fCenter\  \vdash \rec{\N} (a_{\zeroN}, a_{\succN}, \zeroN) \equiv a_{\zeroN} : A$
+                \noLine%
+            \end{prooftree}
+        \end{minipage}
+        \\*
+        \bigskip%
+        \begin{minipage}{\textwidth}
+            \begin{prooftree}[$\mathbb{N}$-comp$_{\succN}^{\rec{\N}}$]
+                \def\fCenter{\Gamma}
+                \Axiom$\fCenter\ \vdash A~\type$
+                \noLine%
+                \UnaryInf$\fCenter\ \vdash a_{\zeroN} : A$
+                \noLine%
+                \UnaryInf$\fCenter\ \vdash a_{\succN}: \N \to A \to A$
+                \UnaryInf$\fCenter, n : \N \vdash \rec{\N} (a_{\zeroN}, a_{\succN}, \succN(n)) \equiv a_{\succN} (n, \rec{\N} (a_{\zeroN}, a_{\succN}, n)) : A$
+            \end{prooftree}
+        \end{minipage}
     \end{center}
 \end{samepage}
 
@@ -321,10 +346,32 @@
 
 Специјални случај индукције типа природних бројева је рекурзија типа природних бројева, у којој тип $P$ не зависи од $\N$. Тада добијамо функцију $\rec{\N}(a_{\zeroN}, a_{\succN}) : \N \to A$, под условом да имамо елементе $a_{\zeroN} : A$ и $a_{\succN} : \N \to A \to A$. 
 
-Правило индукције, заједно са правилом рекурзије, правило израчунавања, омогућава дефинисање разних функција над природним бројевима. 
-    {\color{blue}Definisi plus, puta, preko indukcije i rekurzije. Onda pattern matching. Da li ovo opisivati ovde? ili napraviti kasnije posebnu sekciju o pattern matching-{}u? }
+Правило индукције, заједно са правилом рекурзије, омогућава дефинисање разних функција над природним бројевима. Да би дефинисали операцију сабирања природних бројева $+_{\N} : \N \to \N \to \N$ можемо искористити правило рекурзије, тј. функцију $\rec{\N}: A \to (\N \to A \to A) \to \N \to A$. За тип $A$ узећемо $\N$. Због тога, сабирање природних бројева дефинишемо као
+\[m +_{\N} n :\equiv \rec{\N} (m, \lambda n.\lambda r.\succN(r), n).\] 
+Заиста, за овако дефинисану операцију сабирања важи:
+\begin{align*}
+    m +_{\N} \zeroN{} &\equiv{} m; \\
+    m +_{\N} \succN(n) &\equiv{} \succN(m +_{\N} n).
+\end{align*}
 
-\subsubsection{Празни тип}
+Слично, множење природних бројева $\times_{\N} : \N \to \N \to \N$ можемо дефинисати као 
+\[m \times_{\N} m :\equiv \rec{\N} (\zeroN, \lambda n.\lambda r.m +_{\N} r, n).\] 
+Такође, за овако дефинисану операцију множења важи:
+\begin{align*}
+    m \times_{\N} \zeroN{} &\equiv{} \zeroN{}; \\
+    m \times_{\N} \succN(n) &\equiv{} (m +_{\N} (m \times_{N} n)).
+\end{align*}
+
+Можемо приметити шаблон између дефинисања операција преко рекурзивног правила и правила која захтевамо да веже по конструкторима. Наиме, уколико желимо да дефинишемо функцију $f : \N \to A$ за коју важи:
+\begin{align*}
+    f (\zeroN) &\equiv{} \Phi_{\zeroN}; \\
+    f (\succN(n)) &\equiv{} \Phi_{\succN},
+\end{align*}
+где је $\Phi_{\zeroN}$ израз типа $A$, и $\Phi_{\succN}$ израз типа $A$ који може садржати $n$ и $f(n)$. Тада функцију $f : \N \to A$ дефинишемо као 
+\[f :\equiv \rec{\N} ({\Phi}_{\zeroN}, \lambda n. \lambda r. \Phi_{\succN}'),\] 
+где $\Phi_{\succN}'$ добијемо из $\Phi_{\succN}$ тако што сва појављивања $f(n)$ заменимо са $r$. Овај поступак дефинисања можемо уопштити и на индуктивно правило, и тада се он назива \emph{упаривање шаблона} (енгл.~\emph{pattern matching}). {\color{red}hmm, da li se ovo ovako prevodi? pitanje za Čukića} 
+
+\subsection{Празни тип}
 
 \begin{samepage}
     \begin{center}
@@ -337,8 +384,8 @@
         \begin{minipage}{.4\textwidth}
             \begin{prooftree}[$\0$-ind]
                 \def\fCenter{\Gamma}
-                \Axiom$\fCenter, x:\0 \vdash P(x)~\type$
-                \UnaryInf$\fCenter\ \vdash \ind{\0} : \prod_{(x:\0)} P(x)$
+                \Axiom$\fCenter, 0 \vdash P(x)~\type$
+                \UnaryInf$\fCenter\ \vdash \ind{\0} : \prod_{(0)} P(x)$
             \end{prooftree}
         \end{minipage}
         \begin{minipage}{.33\textwidth}
@@ -359,7 +406,7 @@
 
 Приметимо да је \emph{дупла негација} од $A$ дефинисана као $\neg \neg A := (A \to \0) \to \0$. Због тога, не мора да важи $\neg \neg A \to A$, те није могуће изводити доказе контрадикцијом.
 
-\subsubsection{Јединични тип}
+\subsection{Јединични тип}
 
 \begin{samepage}
     \begin{center}
@@ -389,7 +436,7 @@
         \begin{minipage}{.5\textwidth}
             \begin{prooftree}[$\1$-comp]
                 \def\fCenter{\Gamma}
-                \Axiom$\fCenter, x:\1 \vdash P(x)~\type$
+                \Axiom$\fCenter, 1 \vdash P(x)~\type$
                 \noLine%
                 \UnaryInf$\fCenter\ \vdash p_\star : P(\star)$
                 \UnaryInf$\fCenter\ \vdash \ind{\1} (p_\star, \star) \equiv p_\star :  P(\star)$
@@ -419,7 +466,7 @@
 
 У хомотопној теоријити типова за вакумску функцију важи да је јединствена. 
 
-\subsubsection{Типови копроизвода}
+\subsection{Типови копроизвода}
 
 \begin{samepage}
     \begin{center}
@@ -474,7 +521,7 @@
         \begin{minipage}{\textwidth}
             \begin{prooftree}[$+$-rec]
                 \def\fCenter{\Gamma}
-                \Axiom$\fCenter\ \vdash X~\type$
+                \Axiom$\fCenter\ \vdash type$
                 \noLine%
                 \UnaryInf$\fCenter\ \vdash f : A \to X$
                 \noLine%
@@ -489,7 +536,7 @@
 
 Специјални случај правила индукције типа $A + B$ је правило рекурзије типа $A + B$, које добијамо када фамилија типова $P$ над $A + B$ не зависи од $z : A + B$. Тада за сваку функцију $f : A \to X$ и за сваку функцију $g : B \to X$ имамо функцију $\rec{+}(f, g) : A + B \to X$. Из правила индукције, за свако $f : A \to X$ и за свако $g : B \to Y$, имамо функцију $f + g : A + B \to X + Y$.
 
-Специјални случај типа копроизвода је Буловски тип $\2 := \1 + \1$, чије једине елементе дефинишемо као $\true := \inl (\star)$, $\false := \inr (\star)$. Из спецификације типа копроизвода можемо извући правило индукције и правило израчунавања, за Буловски тип $\2$. Правило индукције $\2$-ind се назива и \emph{if-{}then-{}else}.
+Специјални случај типа копроизвода је Буловски тип $\2 := \1 + \1$, чије једине елементе дефинишемо као $\true :\equiv \inl (\star)$, $\false :\equiv \inr (\star)$. Из спецификације типа копроизвода можемо извући правило индукције и правило израчунавања, за Буловски тип $\2$. Правило индукције $\2$-ind се назива и \emph{if-{}then-{}else}.
 
 \begin{samepage}
     \begin{center}
@@ -522,7 +569,7 @@
     \end{center}
 \end{samepage}
 
-\subsubsection{Типови зависних парова}
+\subsection{Типови зависних парова}
 
 \begin{samepage}
     \begin{center}
@@ -570,15 +617,15 @@
 \begin{definition} 
     Нека је $B$ фамилија типова над $A$. Тада тип $\mathsf{pr_1} : \sum_{(x : A)} B(x) \to A$ \emph{пројекције на први елемент} дефинишемо као: 
     \begin{equation}
-        \mathsf{pr_1} ((a, b)):= a,
+        \mathsf{pr_1} ((a, b)):\equiv~a,
     \end{equation}
     а тип $\mathsf{pr_2} : \prod_{p : \sum_{(x : A)} B(x)} B(\mathsf{pr_1}(p))$ \emph{пројекције на други елемент} дефинишемо као:
     \begin{equation}
-        \mathsf{pr_2} ((a, b)):= b.
+        \mathsf{pr_2} ((a, b)):\equiv~b.
     \end{equation}
 \end{definition}
 
-Ако претпоставимо да имамо елемент $f : \prod_{((x, y) : \sum_{(x : A)} B(x))} P((x, y))$ тада конструишемо елемент типа $\prod_{(x : A)} \prod_{(y : B(x))} P((x, y))$ као $\lambda x. \lambda y.f ((x, y))$. Ова конструкција се назива \emph{каријевање}, и како је супртона правилу $\sum$-ind, правило $\sum$-ind често наивамо \emph{одкаријевање} ({\color{red} je l je ovo uopste rec, kako se prevodi uncarry}).
+Ако претпоставимо да имамо елемент $f : \prod_{((x, y) : \sum_{(x : A)} B(x))} P((x, y))$ тада конструишемо елемент типа $\prod_{(x : A)} \prod_{(y : B(x))} P((x, y))$ као $\lambda  x.\lambda y.f((x, y))$. Ова конструкција се назива \emph{каријевање}, и како је супртона правилу $\sum$-ind, правило $\sum$-ind често наивамо \emph{одкаријевање} ({\color{red} je l je ovo uopste rec, kako se prevodi uncarry}).
 
 Специјални случај типа зависних парова је тип (независних) \emph{парова} или \emph{(Декартов) производ} $A \times B := \sum_{(x : A)} B$. 
 
@@ -607,13 +654,36 @@
     \end{center}
 \end{samepage}
 
-\subsection{Хијерархија универзума и универзум типови}
+\section{Хијерархија универзума и универзум типови}
 
 {\color{red}Hmm, da li ovo raspisivati?}
 
-\subsection{Искази као типови}
+Хијерархија универзума:
+\begin{equation}
+    \mathcal{U}_0,\quad\mathcal{U}_1,\quad\mathcal{U}_2,\quad\ldots\
+\end{equation}
 
-Кари\--Хавардова интерпретација посматра исказе као типове, доказе као елементе типова, и предикате као фамилије типова. Да би показали да је исказ тачан у теорији типова треба конструисати елемент који настањује одговарајући тип. У табели~\ref{table:curry_howard} приказани су искази заједно са њиховим одговарајућом интерпретацијом у теорији типова.
+
+\begin{samepage}
+    \begin{center}
+        \begin{minipage}{0.45\textwidth}
+            \begin{prooftree}[$\mathcal{U}$-intro]
+                \AxiomC{}
+                \UnaryInfC{$\Gamma \vdash \mathcal{U}_i : \mathcal{U}_{i+1}$}
+            \end{prooftree}
+        \end{minipage}
+        \begin{minipage}{0.45\textwidth}
+            \begin{prooftree}[$\mathcal{U}$-cumul]
+                \AxiomC{$\Gamma \vdash A : \mathcal{U}_i$}
+                \UnaryInfC{$\Gamma \vdash A : \mathcal{U}_{i+1}$}
+            \end{prooftree}
+        \end{minipage}
+    \end{center}
+\end{samepage}
+
+\section{Искази као типови}
+
+Кари-{}Хавардова интерпретација неформално посматра исказе као типове, доказе као елементе типова, и предикате као фамилије типова. Да би показали да је исказ тачан у теорији типова треба конструисати елемент који настањује одговарајући тип. Прецизније, за дати исказ $A$ (добро-формирани тип) уколико конструишемо елемент $x : A$ (кога често називамо и \emph{сведок} за $A$) тада сматрамо да је исказ $A$ тачан. Приметимо да исказ није тачан или нетачан, већ да представља колекцију својих сведока који сведоче о његовој истинитости. Због тога докази нису начин на који се комуницира о математичким објектима, већ су и они сами математички објекти. У табели~\ref{table:curry_howard} приказани су искази заједно са њиховим одговарајућом интерпретацијом у теорији типова.
 
 Прокоментаришимо неке интерпретације из табеле~\ref{table:curry_howard}. Да би показали да важи $A \implies B$ треба претпоставити да важи $A$ и доказати да важи $B$. У теорији типова треба конструисати елемент типа $A \to B$, тј. треба конструисати елемент типа $B$ који потенцијално користи претпостављени елемент типа $A$. Слично, да би показали $\exists x. P(x)$ y теорији типова треба конструисати елемент типа $\sum_{(x : A)} P(x)$. У овом случају теорија типова нам даје и више од тога. Наиме, $P$ је фамилија типова, што значи да $P(x)$ не мора да буде типa $\2$, тј. $P$ не мора да буде предикат. Поред тога, тип $\sum_{(x : A)} P(x)$ можемо схватити као тип свих елемената $x : A$ za koje $P (x)$. 
 
@@ -639,11 +709,55 @@
 
 \section{Типови идентитети}
 
-\subsection{Homotopna invarijantnost}
+Шта значи да су елементи неког типа једнаки?
 
-\subsection{Transport}
+
+\begin{samepage}
+    \begin{center}
+        \begin{minipage}{0.49\textwidth}
+            \begin{prooftree}[$=$-form]
+                \AxiomC{$\Gamma \vdash A~\type$}
+                \AxiomC{$\Gamma \vdash x : A$}
+                \AxiomC{$\Gamma \vdash y : A$}
+                \TrinaryInfC{$\Gamma \vdash x=_{A}y~\type$}
+            \end{prooftree}
+        \end{minipage}
+        \begin{minipage}{0.49\textwidth}
+            \begin{prooftree}[$=$-intro]
+                \AxiomC{$\Gamma \vdash A~\type$}
+                \AxiomC{$\Gamma \vdash x : A$}
+                \BinaryInfC{$\Gamma \vdash \refl{x} : x=_{A}x$}
+            \end{prooftree}
+        \end{minipage}
+    \end{center}
+\end{samepage}
 
 \subsection{Indukcija putanje}
+
+\begin{samepage}
+    \begin{center}
+        \begin{minipage}{\textwidth}
+            \begin{prooftree}[$=$-ind]
+                \def\fCenter{\Gamma}
+                \Axiom$\fCenter, x : A, y : A, p : x =_{A} y \vdash P(x, y, p)~\type$
+                \noLine%
+                \UnaryInf$\fCenter\ \vdash f : \prod_{(x : A)} P(x, x, \refl{x})$
+                \UnaryInf$\fCenter\ \vdash \ind{=} : \prod_{(x, y : A)} \prod_{(p : x =_{A} y)} P(x, y, p)$
+            \end{prooftree}
+        \end{minipage}
+        \begin{minipage}{\textwidth}
+            \begin{prooftree}[$=$-comp]
+                \def\fCenter{\Gamma}
+                \Axiom$\fCenter, x : A, y : A, p : x =_{A} y \vdash P(x, y, p)~\type$
+                \noLine%
+                \UnaryInf$\fCenter\ \vdash f : \prod_{(x : A)} P(x, x, \refl{x})$
+                \UnaryInf$\fCenter, x : A \vdash \ind{=} (x, x, \refl{x}) \equiv f(x) : P(x, x, \refl{x})$
+            \end{prooftree}
+        \end{minipage}
+    \end{center}
+\end{samepage}
+
+\subsection{Transport}
 
 \subsection{Akcije nad putanjama}
 
@@ -656,6 +770,10 @@
 \section{Aksioma univalentnosti}
 
 \subsection{Neke posledice univalentnosti}
+
+% ------------------------------------------------------------------------------
+\chapter{Агда}
+% ------------------------------------------------------------------------------
 
 % ------------------------------------------------------------------------------
 \chapter{Закључак}
