@@ -532,7 +532,7 @@
     \end{center}
 \end{samepage}
 
-За типове $A$ и $B$ из контекста $\Gamma$ можемо дефинисати тип копроизвода $A + B$ кога ће настањивати елементи из типа $A$ или из типа $B$. Због тога тип копроизвода $A + B$ има два конструктора $\inl : A \to A + B$ i $\inl : B \to A + B$. Правило индукције тврди да за било коју фамилију типова $P$ над $A + B$ постоји елемент $\ind{+} (p_{\inl}, p_{\inr}) : \prod_{(z : A + B)} P (z)$ уколико постоје елементи $p_{\inl} : \prod_{(a:A)} P (\inl (a))$ и $p_{\inr} : \prod_{(b:B)} P(\inr(b))$. Како постоје два конструктора, имамо два правила израчунавања која треба да се сложе са правилом индукције, и то као $\ind{+}(p_{\inl}, p_{\inr}, \inl(a)) \equiv p_{\inl} (a) : P(\inl(a))$ и $\ind{+}(p_{\inl}, p_{\inr}, \inl(a)) \equiv p_{\inl} (a) : P(\inl(a))$.
+За типове $A$ и $B$ из контекста $\Gamma$ можемо дефинисати тип копроизвода $A + B$ кога ће настањивати елементи из типа $A$ или из типа $B$. Због тога тип копроизвода $A + B$ има два конструктора $\inl : A \to A + B$ i $\inl : B \to A + B$. Правило индукције тврди да за било коју фамилију типова $P$ над $A + B$ постоји елемент $\ind{+} (p_{\inl}, p_{\inr}) : \prod_{(z : A + B)} P (z)$ уколико постоје елементи $p_{\inl} : \prod_{(a:A)} P (\inl (a))$ и $p_{\inr} : \prod_{(b:B)} P(\inr(b))$. Како постоје два конструктора, имамо два правила израчунавања која треба да се сложе са правилом индукције, и то као $\ind{+}(p_{\inl}, p_{\inr}, \inl(a)) \equiv p_{\inl} (a) : P(\inl(a))$ и $\ind{+}(p_{\inl}, p_{\inr}, \inr(b)) \equiv p_{\inr} (b) : P(\inr(b))$.
 
 Специјални случај правила индукције типа $A + B$ је правило рекурзије типа $A + B$, које добијамо када фамилија типова $P$ над $A + B$ не зависи од $z : A + B$. Тада за сваку функцију $f : A \to X$ и за сваку функцију $g : B \to X$ имамо функцију $\rec{+}(f, g) : A + B \to X$. Из правила индукције, за свако $f : A \to X$ и за свако $g : B \to Y$, имамо функцију $f + g : A + B \to X + Y$.
 
@@ -615,17 +615,51 @@
 Правило индукције нам омогућава да дефинишемо следеће функције:
 
 \begin{definition} 
-    Нека је $B$ фамилија типова над $A$. Тада тип $\mathsf{pr_1} : \sum_{(x : A)} B(x) \to A$ \emph{пројекције на први елемент} дефинишемо као: 
+    Нека је $B$ фамилија типова над $A$. Тада елемент $\mathsf{pr_1} : \sum_{(x : A)} B(x) \to A$ \emph{пројекције на први елемент} дефинишемо као: 
     \begin{equation}
         \mathsf{pr_1} ((a, b)):\equiv~a,
     \end{equation}
-    а тип $\mathsf{pr_2} : \prod_{p : \sum_{(x : A)} B(x)} B(\mathsf{pr_1}(p))$ \emph{пројекције на други елемент} дефинишемо као:
+    а елемент $\mathsf{pr_2} : \prod_{p : \sum_{(x : A)} B(x)} B(\mathsf{pr_1}(p))$ \emph{пројекције на други елемент} дефинишемо као:
     \begin{equation}
         \mathsf{pr_2} ((a, b)):\equiv~b.
     \end{equation}
 \end{definition}
 
 Ако претпоставимо да имамо елемент $f : \prod_{((x, y) : \sum_{(x : A)} B(x))} P((x, y))$ тада конструишемо елемент типа $\prod_{(x : A)} \prod_{(y : B(x))} P((x, y))$ као $\lambda  x.\lambda y.f((x, y))$. Ова конструкција се назива \emph{каријевање}, и како је супртона правилу $\sum$-ind, правило $\sum$-ind често наивамо \emph{одкаријевање} ({\color{red} je l je ovo uopste rec, kako se prevodi uncarry}).
+
+\begin{figure}[!ht]
+    \centering
+    \begin{tikzpicture}
+        \tikzstyle{every node}=[font=\normalsize]
+        \draw (6.5,11.5) ellipse (2.25cm and 1cm);
+        \draw (4.25,9.5) -- (8.75,9.5);
+        \node [font=\normalsize] at (2.5,9.75) {Основни простор};
+        \node [font=\normalsize] at (2.5,11.75) {Тотални простор};
+        \node [font=\normalsize] at (2.5,11.25) {$\sum_{(x : A)} B(x)$};
+        \draw [color=gray, smooth, tension=1.5] plot coordinates {(4.25,11.5) (6.5,11) (8.75,11.5)};
+        \node [font=\normalsize] at (10.25,11.75) {Секција над $B$};
+        \node [font=\normalsize] at (2.5,9.25) {$A$};
+        \node [font=\normalsize] at (10,11.25) {$b$};
+        \node [font=\normalsize] at (8.25,11.5) {$b$};
+        \draw (6,11.5) ellipse (0.35cm and 0.98cm);
+        \draw (7,11.5) ellipse (0.35cm and 0.98cm);
+        \node [font=\normalsize] at (6,12.75) {$B(x)$};
+        \node [font=\normalsize] at (7,12.75) {$B(y)$};
+        \filldraw (6,9.5) circle (1.5pt);
+        \filldraw (7,9.5) circle (1.5pt);
+        \node [font=\normalsize] at (6,9.25) {$x$};
+        \node [font=\normalsize] at (7,9.25) {$y$};
+        \draw [color=gray, dashed] (6,9.5) -- (6,11);
+        \draw [color=gray, dashed] (7,9.5) -- (7,11);
+        \filldraw (6,11) circle (1.5pt);
+        \filldraw (7,11) circle (2pt);
+        \node [font=\small] at (6,11.5) {$b(x)$};
+        \node [font=\small] at (7,11.5) {$b(y)$};
+        \node [font=\normalsize] at (6.5,13.25) {Влакна};
+    \end{tikzpicture}
+    \label{fig:geo_sum}
+    \caption{Геометријска репрезентација типа зависних парова.}
+\end{figure}
 
 Специјални случај типа зависних парова је тип (независних) \emph{парова} или \emph{(Декартов) производ} $A \times B := \sum_{(x : A)} B$. 
 
@@ -649,33 +683,6 @@
                 \noLine%
                 \UnaryInf$\fCenter\ \vdash f : \prod_{(x : A)} \prod_{(y : B)} P((x, y))$
                 \UnaryInf$\fCenter, (x, y) : A \times B \vdash \ind{\times} (f, (x, y)) \equiv f(x, y) : P((x, y))$
-            \end{prooftree}
-        \end{minipage}
-    \end{center}
-\end{samepage}
-
-\section{Хијерархија универзума и универзум типови}
-
-{\color{red}Hmm, da li ovo raspisivati?}
-
-Хијерархија универзума:
-\begin{equation}
-    \mathcal{U}_0,\quad\mathcal{U}_1,\quad\mathcal{U}_2,\quad\ldots\
-\end{equation}
-
-
-\begin{samepage}
-    \begin{center}
-        \begin{minipage}{0.45\textwidth}
-            \begin{prooftree}[$\mathcal{U}$-intro]
-                \AxiomC{}
-                \UnaryInfC{$\Gamma \vdash \mathcal{U}_i : \mathcal{U}_{i+1}$}
-            \end{prooftree}
-        \end{minipage}
-        \begin{minipage}{0.45\textwidth}
-            \begin{prooftree}[$\mathcal{U}$-cumul]
-                \AxiomC{$\Gamma \vdash A : \mathcal{U}_i$}
-                \UnaryInfC{$\Gamma \vdash A : \mathcal{U}_{i+1}$}
             \end{prooftree}
         \end{minipage}
     \end{center}
@@ -707,10 +714,40 @@
     \label{table:curry_howard}
 \end{table}
 
+\section{Хијерархија универзума и универзум типови}
+
+\emph{Универзум типови} се могу сматрати као типови кога настањују други типови. Универзум тип $\mathcal{U}$ омогућава да се исказ $A~\type$ запише формално као $A : \mathcal{U}$. Поред тога, омогућава да се фамилија типова $B$ над типом $A$ дефинише као функција $B : A \to \mathcal{U}$. 
+
+Желимо да типови који могу да се формирају из празног контекста настањују универзум $\mathcal{U}$ (то су, на пример, $\0$, $\1$, и $\N$). Штавише како универзум $\mathcal{U}$ настањују и други типова, желимо да универзум $\mathcal{U}$ буде затворен по свим конструкторима који користе типове универзума $\mathcal{U}$. На пример, ако је $A : \mathcal{U}$ и $B : A \to \mathcal{U}$, онда $\prod_{(x : A)} B(x) : \mathcal{U}$. Међутим, не сме дођи то тога да универзум настањује сам себе, тј. не сме да важи $\mathcal{U} : \mathcal{U}$ (Раселов парадокс). 
+
+У многим случајевима довољно је постојање једног универзума $\mathcal{U}$, међутим, некада желимо да универзум настањује неки други универзум. Како би избегли Раселов парадокс захтевамо постојање \emph{хијерархије универзума}
+\begin{equation}
+    \mathcal{U}_0,\quad\mathcal{U}_1,\quad\mathcal{U}_2,\quad\ldots\
+\end{equation}
+за коју важе следећа правила:
+\begin{samepage}
+    \begin{center}
+        \begin{minipage}{0.45\textwidth}
+            \begin{prooftree}[$\mathcal{U}$-intro]
+                \AxiomC{}
+                \UnaryInfC{$\Gamma \vdash \mathcal{U}_i : \mathcal{U}_{i+1}$}
+            \end{prooftree}
+        \end{minipage}
+        \begin{minipage}{0.45\textwidth}
+            \begin{prooftree}[$\mathcal{U}$-cumul]
+                \AxiomC{$\Gamma \vdash A : \mathcal{U}_i$}
+                \UnaryInfC{$\Gamma \vdash A : \mathcal{U}_{i+1}$}
+            \end{prooftree}
+        \end{minipage}
+    \end{center}
+\end{samepage}
+
+Универзум $\mathcal{U}_0$ називамо \emph{базни универзум}. Базни универзум настањују типови који могу да се формирају из празног контекста, као и сви типови чији конструктори користе типове који се већ налазе у базном универзуму. За универзум $\mathcal{U}_i$ има смисла посматрати и $\mathcal{U}_{i+1}$ кога називамо и \emph{универзум следбеник}. Често није битно знати редни број универзума у хијерархији, те се следбеник универзума $\mathcal{U}$ обележава са $\mathcal{U}^{+}$. За два универзума
+$\mathcal{U}$ и $\mathcal{V}$ можемо дефинисати њихову најмању горња границу $\mathcal{U} \sqcup \mathcal{V}$. На пример, за $\mathcal{U}_0$ i $\mathcal{U}_1$, најмања горња граница $\mathcal{U}_0 \sqcup \mathcal{U}_1$ је $\mathcal{U}_1$.
+
 \section{Типови идентитети}
 
 Шта значи да су елементи неког типа једнаки?
-
 
 \begin{samepage}
     \begin{center}
