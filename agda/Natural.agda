@@ -279,13 +279,13 @@ right-neq-+ℕ : (m n : ℕ) → ¬ (m == m +ℕ succ n)
 right-neq-+ℕ (succ m) n p = right-neq-+ℕ m n (injective-succ-ℕ  m (m +ℕ succ n) p)
 
 left-neq-+ℕ : (m n : ℕ) → ¬ (m == succ n +ℕ m)
-left-neq-+ℕ m n p = right-neq-+ℕ m n (m ==⟨ p ⟩ 
+left-neq-+ℕ m n p = right-neq-+ℕ m n (m               ==⟨ p ⟩ 
                                      ((succ (n +ℕ m)) ==⟨ ap succ (commutative-+ℕ n m) ⟩ 
                                      ((succ (m +ℕ n)) ==⟨ right-succ-law-+ℕ m n ⁻¹ ⟩ 
                                      ((m +ℕ succ n)   ∎))))
 
 right-neq-*ℕ : (m n : ℕ) → ¬ (succ m == succ m *ℕ (succ (succ n)))
-right-neq-*ℕ m n p = right-neq-+ℕ (succ m) (m *ℕ succ n +ℕ n) ((succ m) ==⟨ p ⟩ 
+right-neq-*ℕ m n p = right-neq-+ℕ (succ m) (m *ℕ succ n +ℕ n) (succ m                                ==⟨ p ⟩ 
                                                               ((m *ℕ succ (succ n) +ℕ succ (succ n)) ==⟨ right-succ-law-+ℕ (m *ℕ succ (succ n)) (succ n) ⟩ 
                                                               ((succ (m *ℕ succ (succ n) +ℕ succ n)) ==⟨ ap (λ x → succ (x +ℕ succ n)) (right-succ-law-*ℕ m (succ n)) ⟩ 
                                                               ((succ (m *ℕ succ n +ℕ m +ℕ succ n))   ==⟨ ap (λ x → succ (x +ℕ succ n)) (commutative-+ℕ (m *ℕ succ n) m) ⟩ 
@@ -573,7 +573,7 @@ succ-pred-id-Fin : {k : ℕ} → (x : Fin k) → succ-Fin (pred-Fin x) == x
 succ-pred-id-Fin {succ 0}        (inr ⋆) = refl (inr ⋆)
 succ-pred-id-Fin {succ (succ k)} (inl x) = (succ-Fin (skip-neg-two-Fin (pred-Fin x)))   ==⟨ succ-skip-neg-two-Fin (pred-Fin x) ⟩
                                            (inl (succ-Fin (pred-Fin x))                 ==⟨ ap inl (succ-pred-id-Fin x) ⟩
-                                           ((inl x)                                     ∎))
+                                           (inl x                                       ∎))
 succ-pred-id-Fin {succ (succ k)} (inr ⋆) = refl (inr ⋆)
 
 pred-succ-id-Fin : {k : ℕ} → (x : Fin k) → pred-Fin (succ-Fin x) == x 
@@ -582,3 +582,4 @@ pred-succ-id-Fin {succ (succ k)} (inl (inl x)) = ap skip-neg-two-Fin (pred-succ-
 pred-succ-id-Fin {succ (succ k)} (inl (inr ⋆)) = refl (inl (inr ⋆)) 
 pred-succ-id-Fin {succ (succ k)} (inr ⋆)       = pred-zero-Fin
 
+ 

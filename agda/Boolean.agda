@@ -17,6 +17,14 @@ pattern false = inr ⋆
 𝟚-induction P p₀ p₁ true  = p₀
 𝟚-induction P p₀ p₁ false = p₁
 
+if_then_else : {P : 𝟚 → 𝓤 ̇ }
+             → (b : 𝟚)
+             → (P true)
+             → (P false)
+             → (P b)
+if true  then x else y = x
+if false then x else y = y
+
 ¬𝟚 : 𝟚 → 𝟚
 ¬𝟚 true  = false
 ¬𝟚 false = true

@@ -7,7 +7,7 @@ open import Universes public
 variable 𝓤 𝓥 𝓦 : Universe 
 
 _∘_ : {X : 𝓤 ̇ } {Y : 𝓥 ̇ } {Z : Y → 𝓦 ̇ }
-    → ((y : Y) → Z y)
+    → (g : (y : Y) → Z y)
     → (f : X → Y)
     → (x : X) → Z (f x)
 (g ∘ f) x = g (f x) 
