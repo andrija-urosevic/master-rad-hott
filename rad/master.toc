@@ -3,24 +3,26 @@
 \contentsline {chapter}{\chapternumberline {2}Интуиционистичка теорија типова}{4}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Правила закључивања}{5}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Зависни типови}{6}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Типови зависних функција}{6}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Индуктивни типови}{7}{section.2.4}%
+\contentsline {section}{\numberline {2.3}Типови зависних функција}{7}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Индуктивни типови}{8}{section.2.4}%
 \contentsline {subsection}{Тип природних бројева}{9}{section*.2}%
 \contentsline {subsection}{Празни тип}{11}{section*.3}%
 \contentsline {subsection}{Јединични тип}{12}{section*.4}%
 \contentsline {subsection}{Типови копроизвода}{13}{section*.5}%
 \contentsline {subsection}{Типови зависних парова}{14}{section*.6}%
-\contentsline {section}{\numberline {2.5}Искази као типови}{15}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Хијерархија универзума и универзум типови}{16}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Типови идентитети}{17}{section.2.7}%
-\contentsline {subsection}{Indukcija putanje}{18}{section*.7}%
-\contentsline {subsection}{Transport}{18}{section*.8}%
-\contentsline {subsection}{Akcije nad putanjama}{18}{section*.9}%
-\contentsline {section}{\numberline {2.8}Ekvivalentnosti}{18}{section.2.8}%
-\contentsline {subsection}{Functional extentionality}{18}{section*.10}%
-\contentsline {subsection}{Ekvivalentnosti i univerzalna osobina}{18}{section*.11}%
-\contentsline {section}{\numberline {2.9}Aksioma univalentnosti}{18}{section.2.9}%
-\contentsline {subsection}{Neke posledice univalentnosti}{18}{section*.12}%
-\contentsline {chapter}{\chapternumberline {3}Агда}{19}{chapter.3}%
-\contentsline {chapter}{\chapternumberline {4}Закључак}{20}{chapter.4}%
-\contentsline {chapter}{Литература}{21}{section*.14}%
+\contentsline {section}{\numberline {2.5}Искази као типови}{16}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Хијерархија универзума и универзум типови}{17}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Типови идентитети}{18}{section.2.7}%
+\contentsline {subsection}{Индукција путање}{18}{section*.7}%
+\contentsline {subsection}{Особине типова идентитета}{19}{section*.8}%
+\contentsline {subsection}{Акције над путањама}{19}{section*.9}%
+\contentsline {subsection}{Транспорт}{19}{section*.10}%
+\contentsline {subsection}{Друге врсте једнакости}{19}{section*.11}%
+\contentsline {section}{\numberline {2.8}Ekvivalentnosti}{20}{section.2.8}%
+\contentsline {subsection}{Functional extentionality}{20}{section*.12}%
+\contentsline {subsection}{Ekvivalentnosti i univerzalna osobina}{20}{section*.13}%
+\contentsline {section}{\numberline {2.9}Aksioma univalentnosti}{20}{section.2.9}%
+\contentsline {subsection}{Neke posledice univalentnosti}{20}{section*.14}%
+\contentsline {chapter}{\chapternumberline {3}Агда}{21}{chapter.3}%
+\contentsline {chapter}{\chapternumberline {4}Закључак}{22}{chapter.4}%
+\contentsline {chapter}{Литература}{23}{section*.16}%
