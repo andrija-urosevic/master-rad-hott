@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.27)  23 MAY 2024 02:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.27)  24 MAY 2024 03:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -289,6 +289,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--54
  []
 
 
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 54--55
+[]  
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 60--92
 
  []
@@ -298,13 +303,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--92
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts
 /enc/dvips/cm-super/cm-super-t2a.enc}] (./formular.aux) ) 
 Here is how much of TeX's memory you used:
- 1353 strings out of 476872
- 21963 string characters out of 5820377
- 1859388 words of memory out of 5000000
- 21769 multiletter control sequences out of 15000+600000
+ 1354 strings out of 476872
+ 21971 string characters out of 5820377
+ 1860388 words of memory out of 5000000
+ 21770 multiletter control sequences out of 15000+600000
  517786 words of font info for 45 fonts, out of 8000000 for 9000
  725 hyphenation exceptions out of 8191
- 42i,6n,51p,1457b,243s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 42i,6n,51p,2286b,236s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
@@ -317,7 +322,7 @@ m10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/s
 hare/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf-dist
 /fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/pu
 blic/cm-super/sfti1000.pfb>
-Output written on formular.pdf (1 page, 168123 bytes).
+Output written on formular.pdf (1 page, 169526 bytes).
 PDF statistics:
  74 PDF objects out of 1000 (max. 8388607)
  44 compressed objects within 1 object stream
