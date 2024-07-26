@@ -25,4 +25,3 @@
 \contentsline {subsection}{Neke posledice univalentnosti}{20}{section*.14}%
 \contentsline {chapter}{\chapternumberline {3}Агда}{21}{chapter.3}%
 \contentsline {chapter}{\chapternumberline {4}Закључак}{22}{chapter.4}%
-\contentsline {chapter}{Литература}{23}{section*.16}%
