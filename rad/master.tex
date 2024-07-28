@@ -7,12 +7,12 @@
 \bib{master}
 
 \autor{Андрија Д. Урошевић}
-\naslov{Хомотопна теорија типова}
+\naslov{Интуиционистичка теорија типова као увод у хомотопну теорију типова}
 \godina{2024}
 
 \mentor{др Сана \textsc{Стојановић-Ђурђевић}, доцент\\ Универзитет у Београду, Математички факултет}
-\komisijaA{др Филип \textsc{Марић}, редовни професор\\ Универзитет у Београду, Математички факултет}
-\komisijaB{др Лаза \textsc{Лазић}, доцент\\ Универзитет у Београду, Математички факултет}
+\komisijaA{проф. др Филип \textsc{Марић}, редовни професор\\ Универзитет у Београду, Математички факултет}
+\komisijaB{др Иван \textsc{Чукић}, доцент\\ Универзитет у Београду, Математички факултет}
 
 \datumodbrane{29. фебруар 2024.}
 
@@ -246,13 +246,13 @@
 \end{definition}
 
 \begin{definition}
-    За сваки тип $A$ дефинишемо \emph{функцију идентитета} $\mathsf{id}_A : A \to A$ као $\mathsf{id}_A :\equiv \lambda x.x$.
+    За сваки тип $A$ дефинишемо \emph{функцију идентитета} $\id{A} : A \to A$ као $\id{A} :\equiv \lambda x.x$.
 \end{definition}
 
 \begin{definition}
     За свака три типа $A$, $B$, и $C$ дефинишемо \emph{композицију} $\mathsf{comp} : (B \to C) \to (A \to B) \to A \to C$ као $\mathsf{comp} :\equiv \lambda g.\lambda f.\lambda  g(f(x))$.
 \end{definition}
-Може се показати да је композиција асоцијативна, као и да је функција идентитета неутрал за композицију функција. Због сагласности типова имамо леви неутрал $\mathsf{id}_B$ и десни неутрал $\mathsf{id}_A$.
+Може се показати да је композиција асоцијативна, као и да је функција идентитета неутрал за композицију функција. Због сагласности типова имамо леви неутрал $\id{B}$ и десни неутрал $\id{A}$.
 
 \section{Индуктивни типови}
 
@@ -388,7 +388,7 @@
 \end{align*}
 
 Слично, множење природних бројева $\times_{\N} : \N \to \N \to \N$ можемо дефинисати као 
-\[m \times_{\N} m :\equiv \rec{\N} (\zeroN, \lambda n.\lambda r.m +_{\N} r, n).\] 
+\[m \times_{\N} n :\equiv \rec{\N} (\zeroN, \lambda n.\lambda r.m +_{\N} r, n).\] 
 Такође, за овако дефинисану операцију множења важи:
 \begin{align*}
     m \times_{\N} \zeroN{} &\equiv{} \zeroN{}; \\
@@ -420,7 +420,7 @@
             \begin{prooftree}[$\0$-ind]
                 \def\fCenter{\Gamma}
                 \Axiom$\fCenter, 0 \vdash P(x)~\type$
-                \UnaryInf$\fCenter\ \vdash \ind{\0} : \prod_{(0)} P(x)$
+                \UnaryInf$\fCenter\ \vdash \ind{\0} : \prod_{(x : \0)} P(x)$
             \end{prooftree}
         \end{minipage}
         \begin{minipage}{.33\textwidth}
@@ -769,7 +769,7 @@
         \draw[color=gray, dashed] (6,9.5)-- (6,10.5);
         \draw[color=gray, dashed] (7,9.5)-- (7,10.5);
     \end{tikzpicture}
-    \label{fig:geo_sum}
+    \label{fig:geo_prod}
     \caption{Геометријска репрезентација типа независних парова.}
 \end{figure}
 
@@ -834,7 +834,7 @@ $\mathcal{U}$ и $\mathcal{V}$ можемо дефинисати њихову н
 
 \section{Типови идентитети}
 
-Шта значи да су елементи неког типа једнаки?
+Подсетимо се да из дефиниције операције $+_\N$ важи $m +_\N \zeroN \equiv m$. Природно се намеће питање: Да ли важи $\zeroN +_\N m \equiv m$? Јасно је да одговор на ово питање треба да буде позитиван, али то није случај у интуиционистичкој теорији типова. Тиме долазимо до фундаменталног проблема интуиционистичке теорије типова: Шта значи да су елементи неког типа једнаки?
 
 \begin{samepage}
     \begin{center}
@@ -882,38 +882,204 @@ $\mathcal{U}$ и $\mathcal{V}$ можемо дефинисати њихову н
     \end{samepage}
 
 \subsection{Особине типова идентитета}
-    
-Надовезивање, инверз, неутрал, асоцијативност.
+
+\begin{lemma}
+    Нека је $A$ тип у контексту $\Gamma$. Тада можемо конструисати функцију \[\inv{A} : \prod_{(x, y : A)} (x =_A y) \to (y =_A x)\] индукцијом путање $p : x =_A y$ као $\inv{A} (x, x, \refl{x}) :\equiv \refl{x}$. Функцију $\inv{A}$ називамо \emph{инверз путањи}. Често, за дату путању $p : x =_A y$, њен инверз означавамо са $p^{-1} :\equiv \inv{A}(x, y, p)$.
+\end{lemma}
+\begin{proof}
+    Да би констурисали елемент типа $\prod_{(x,y : A)} (x =_A y) \to (y =_A x)$, конструишемо функцију \[ f(x) : \prod_{(y : A)} (x =_A y) \to (y =_A x)\] за било који елемент $x : A$. По индукцији путање $p : x =_A y$ довољно је конструисати путању \[ f(x, x, \refl{x}) : x =_A x \] за било који елемент $x : A$. Конструкција ове путање је тривијална и због тога узимамо да је $f (x, x, \refl{x}) :\equiv \refl{x}$. Коначно, имамо да је \[ \inv{A} (x, x, \refl{x}) :\equiv \refl{x} \]. 
+\end{proof}
+
+\begin{lemma}
+    Нека је $A$ тип у контексту $\Gamma$. Тада можемо конструисати функцију \[\conc{A} : \prod_{(x, y, z : A)} (x =_A y) \to (y =_A z) \to (x =_A z)\] индукцијом путање $p : x =_A y$ као $\conc{A} (x, x, z, \refl{x}, q) :\equiv q$. Функцију $\conc{A}$ називамо \emph{надовезивање путања}. Често, за дате путање $p : x =_A y$ и $q : y =_A z$, надовезану путању отначавамо са $p \cdot q :\equiv \conc{A} (x, y, z, p, q)$.
+\end{lemma}
+\begin{proof}
+    Прво конструишемо функцију
+    \[f(x) : \prod_{(y : A)} (x =_A y) \to \prod_{(z : A)} (y =_A z) \to (x =_A z)\] за било који елемент $x : A$. По индукцији путање $p : (x =_A y)$ довољно је конструисати функцију \[ f(x, x, \refl{x}) : \prod_{(z : A)} (x =_A z) \to (x =_A z) \] за било који елемент $x : A$. Даље, довољно је конструисати функцију \[ f(x, x, \refl{x}, z) : (x =_A z) \to (x =_A z) \] за било које елементе $x, z : A$. Конструисање ове функције је тривијална и због тога имамо да је $f(x, x, \refl{x}, z, q) :\equiv q$. Коначно, имамо да је \[\conc{A}(x, x, z, \refl{x}, q) :\equiv f(x, x, \refl{x}, z, q) :\equiv q. \]
+\end{proof}
+
+\begin{lemma}
+    Нека је $A$ тип, нека су елементи $x, y, z, w : A$ и нека су путање $p : x =_A y,\, q : y =_A z$ и $r : z =_A w$ у контексту $\Gamma$. Тада важи:
+    \begin{enumerate}[(i)]
+        \item $\refl{x} \cdot p = p$ и $p \cdot \refl{y} = p$
+        \item $p^{-1} \cdot p = \refl{y}$ и $p \cdot p^{-1} = \refl{x}$
+        \item $(p^{-1})^{-1} = p$
+        \item $(p \cdot q) \cdot r = p \cdot (q \cdot r)$
+    \end{enumerate}
+\end{lemma}
+\begin{enumerate}[(i)]
+    \item 
+    \begin{proof}
+        Желимо да конструишемо путању
+        \begin{align*}
+            \mathsf{unit_l}(p) &: \refl{x} \cdot p = p, \\
+            \mathsf{unit_r}(p) &: p \cdot \refl{y} = p. \\
+        \end{align*} 
+        Индукцијом по путањи $p : x =_A y$ довољно је конструисати
+        \begin{align*}
+            \mathsf{unit_l}(\refl{x}) &: \refl{x} \cdot \refl{x} = \refl{x}, \\
+            \mathsf{unit_r}(\refl{x}) &: \refl{x} \cdot \refl{x} = \refl{x}.
+        \end{align*} 
+        Обе путање је тривијално конструисати као $\refl{\refl{x}}$.
+    \end{proof}
+    \item 
+    \begin{proof}
+        Желимо да конструишемо путању
+        \begin{align*}
+            \mathsf{inv_l}(p) &: p^{-1} \cdot p = \refl{y}, \\
+            \mathsf{inv_r}(p) &: p \cdot p^{-1} = \refl{x}.
+        \end{align*}
+        Индукцијом по путањи $p : x =_A y$ довољно је конструисати путању
+        \begin{align*}
+            \mathsf{inv_l}(\refl{x}) &: \refl{x}^{-1} \cdot \refl{x} = \refl{x}, \\
+            \mathsf{inv_r}(\refl{x}) &: \refl{x} \cdot \refl{x}^{-1} = \refl{x}.
+        \end{align*}
+        Али како је $\refl{x}^{-1} \equiv \refl{x}$ претходне путање се своде на оне као и у претходном доказу. Због тога обе путање тривијално конструишемо као $\refl{\refl{x}}$.
+    \end{proof}
+    \item
+    \begin{proof}
+        Желимо да конструишемо путању
+        \[ \mathsf{doubleInv} (p) : (p^{-1})^{-1} = p. \]
+        Индукцијом по путањи $p : x =_A y$ довољно је конструисати путању
+        \[ \mathsf{doubleInv} (\refl{x}) : (\refl{x}^{-1})^{-1} = \refl{x}. \]
+        Али како је $(\refl{x}^{-1})^{-1} \equiv \refl{x}^{-1} \equiv \refl{x}$ претходна путања се своди на $\refl{x} = \refl{x}$. Због тога путању тривијално конструишемо као $\refl{\refl{x}}$. 
+    \end{proof} 
+    \item
+    \begin{proof}
+        Желимо да конструишемо путању
+        \[ \assoc{A} (p, q, r) : (p \cdot q) \cdot r = p \cdot (q \cdot r). \]
+        Индукцијом по путањи $p : x =_A y$ довољно је конструисати путању
+        \[ \assoc{A} (\refl{x}, q, r) : (\refl{x} \cdot q) \cdot r = \refl{x} \cdot (q \cdot r) \]
+        Али како је $\refl{x} \cdot q \equiv q$ и $\refl{x} \cdot (q \cdot r) \equiv q \cdot r$ претходна путања се своди на
+        \[ \assoc{A} (\refl{x}, q, r) : q \cdot r = q \cdot r. \]
+        Због тога путању тривијално конструишемо као $\assoc{A} (\refl{x}, q, r) :\equiv \refl{q \cdot r}.$
+    \end{proof}
+\end{enumerate}
+
+\begin{table}
+    \begin{center}
+        \begin{tabular}[c]{c c c}
+            Једнакости & Хомотопија & $\infty$-Групоид \\
+            \hline%
+            рефлексивност & константна путања & идентички морфизам \\
+            симетричност & обртање путања & инверз морфизма \\
+            транзитивност & надовезивање путања & компоизиција морфизама\\
+        \end{tabular}
+    \end{center}
+    \caption{Разне интерпретације особина типова идентитета}
+    \label{table:inftygroupoid}
+\end{table}
+
+\begin{figure}[!ht]
+    \centering\
+    \begin{tikzpicture}
+        \tikzstyle{every node}=[font=\normalsize]
+        \node (X) at (0,2) {$x$};
+        \node (Y) at (9,0) {$y$};
+        \node (Z) at (9,5) {$z$};
+        \draw[->] (X) -- (Y) node[midway, below] (P) {$p$};
+        \draw[->] (Y) -- (Z) node[midway, left] {$q$};
+        \draw[->] (X) -- (Z) node[midway, above] {$p \cdot q$};
+        \draw[<-] (X) to[bend right] node[midway, below] {$p^{-1}$} (Y);
+        \draw[->] (X) to[bend left] node[midway, above] (P') {$p'$} (Y);
+        \draw[<-] (Y) to[bend right] node[midway, right]  {$q^{-1}$} (Z);
+        \draw[<-] (X) to[bend left] node[midway, above] (PQ) {$(p \cdot q)^{-1}$} (Z);
+        \draw[->, double] (P) to[bend left] node[midway, left] {$\alpha$} (P');
+        \draw[<-, double] (P) to[bend right] node[midway, right] {$\alpha^{-1}$} (P');
+        \draw[->, loop above] (X) to[out=250, in=160, looseness=8] node[left] {$\refl{x}$} (X);
+        \draw[->, loop above] (Y) to[out=300, in=380, looseness=8] node[right] {$\refl{y}$} (Y);
+        \draw[->, loop above] (Z) to[out=110, in=20, looseness=8] node[above] {$\refl{z}$} (Z);
+    \end{tikzpicture}
+    \label{fig:infty_groupoid}
+    \caption{Групоидална структура типова.}
+\end{figure}
 
 \subsection{Акције над путањама}
 
-\begin{definition}
+\begin{lemma}
     Нека су $A$ и $B$ типови, и нека је $f : A \to B$ функција у контексту $\Gamma$. Тада можемо конструисати функцију 
     \[\ap{f} : \prod_{(x,y:A)} (x =_{A} y) \to (f (x) =_{B} f (y))\]
     индукцијом путање $p : x =_{A} y$ као $\ap{f} (\refl{x}) = \refl{f(x)}$. Функцију $\ap{f}$ називамо \emph{акција над путањамa} функције $f : A \to B$.
-\end{definition}
+\end{lemma}
+\begin{proof}
+    Индукцијом по путањи $p : x =_{A} y$ треба конструисати путању
+    \[\ap{f} (x, x, \refl{x}) : f(x) =_B f(x).\]
+    Тривијално конструишемо ову путању као $\ap{f} (x, x, \refl{x}) :\equiv \refl{f(x)}$.
+\end{proof}
+
+\begin{lemma}
+    Нека су $A, B$ и $C$ типови, нека су елементи $x, y, z : A$ и нека су путање $p : x =_A y$ и $q : y =_A z$ у контексту $\Gamma$. Тада важи:
+    \begin{enumerate}[(i)]
+        \item $\ap{f} (p \cdot q) = \ap{f}(p) \cdot \ap{f}(q)$
+        \item $\ap{f} (p^{-1}) = \ap{f}(p)^{-1}$
+        \item $\ap{g} (\ap{f} (p)) = \ap{g \circ f} (p)$
+        \item $\ap{\id{A}} (p) = p$
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    Доказ изостављамо како је сличан претходним.
+\end{proof}
 
 \subsection{Транспорт}
 
-\begin{definition}
+\begin{lemma}
     Нека је $A$ тип и $B$ фамилија типова над $A$ у контексту $\Gamma$. Тада можемо конструисати функцију
     \[\tr{B} : \prod_{(x,y:A)} (x =_{A} y) \to B(x) \to B(y)\]
     индукцијом путање $p : x =_{A} y$ као $\tr{B}(\refl{x}) :\equiv \mathsf{id}_{B(x)}$.
 Функцију $\tr{B}$ називамо \emph{транспорт} над $B$.
-\
-\end{definition}
+\end{lemma}
+\begin{proof}
+    
+\end{proof}
 
 \subsection{Друге врсте једнакости}
 
 \begin{definition}
-    {\color{red}\emph{Посматрачка једнакост}} (енгл.~\emph{observational equality}) над природним бројевима $\N$ се може дефинисати као бинарна релација $\Eq{\N} : \N \to \N \to \mathcal{U}_0$ тако да задовољава следеће расуђивачке једнакости:
+    \label{def:code}
+    {\color{red}\emph{Простор кодова}} над природним бројевима $\N$ се може дефинисати као бинарна релација $\code{\N} : \N \to \N \to \mathcal{U}_0$ тако да задовољава следеће расуђивачке једнакости:
     \begin{align*}
-        \Eq{\N} (\zeroN, \zeroN) &\equiv\1 \\
-        \Eq{\N} (\zeroN, \succN(m)) &\equiv\0 \\
-        \Eq{\N} (\succN(n), \zeroN) &\equiv\0 \\
-        \Eq{\N} (\succN(n), \succN(m)) &\equiv\Eq{\N} (n, m) \\
+        \code{\N} (\zeroN, \zeroN) &\equiv\1 \\
+        \code{\N} (\zeroN, \succN(m)) &\equiv\0 \\
+        \code{\N} (\succN(n), \zeroN) &\equiv\0 \\
+        \code{\N} (\succN(n), \succN(m)) &\equiv\code{\N} (n, m) \\
     \end{align*}
 \end{definition}
+
+\begin{lemma}
+    Простор кодова је рефлексивна релација, тј.~можемо конструисати функцију
+    \[\refl{}\code{\N} : \prod_{(n : \N)} \code{\N} (n, n).\]
+\end{lemma}
+\begin{proof}
+    Функцију конструишемо индукцијом по $n : \N$ као
+    \begin{align*}
+        \refl{}\code{\N} (\zeroN) &:\equiv \star \\
+        \refl{}\code{\N} (\succN(n)) &:\equiv \refl{}\code{\N} (n).
+    \end{align*}
+\end{proof}
+
+\begin{lemma}
+    За било које природне бројеве $n, m : \N$ важи $m =_{\N} n \to \code{\N} (m, n)$ и $\code{\N} (m, n) \to m =_{\N} n$.
+\end{lemma}
+\begin{proof}
+    Прво конструишемо
+    \[ \encode{\N} : \prod_{(m, n : \N)} m =_{\N} n \to \code{\N}(m, n). \]
+    Индукцијом по путањи $p : m =_{\N} n$ треба конструисати 
+    \[ \encode{\N} (m, m, \refl{m}) : \code{\N} (m, m). \]
+    Што смо констуисали у претходној леми, тако да $\encode{\N} (m, m, \refl{m}) :\equiv \refl{}\code{\N} (m)$.
+    Даље конструишемо
+    \[ \decode{\N} : \prod_{(m, n : \N)} \code{\N}(m, n) \to m =_{\N} n \]
+    индукцијом по $m : \N$ и $n : \N$. У случају када су оба природна броја нуле, онда $\decode{\N} (\zeroN, \zeroN, c) : \zeroN =_{\N} \zeroN$ конструишемо као $\decode{\N} (\zeroN, \zeroN, c) :\equiv \refl{\zeroN}$.
+    У случају када је тачно један од њих нула, тада конструишемо елемент типа $\0 \to m =_{\N} n$. Овај елемент је тривијално конструисати правилом индукције празног типа. На крају, у случају када су оба различита од нуле, треба конструисати  
+    \[ \code{\N} (\succN(m), \succN(n)) \to \succN(m) =_{\N} \succN(n). \]
+    Ову конструкцију изводимо на следећи начин:
+    \begin{align*}
+        \code{\N} (\succN(m), \succN(n)) &\equiv \code{\N} (m, n) &\qquad (\text{by }\ref{def:code})\\
+                                         &\to  m =_{\N} n &\qquad (\text{by } \decode{\N}(m, n)) \\
+                                         &\to \succN(m) =_{\N} \succN(n). &\qquad (\text{by }\ap{\succN})
+    \end{align*}
+    Коначно, завршавамо конструкцију са 
+    \[ \decode{\N}(\succN(m), \succN(n), c) :\equiv \ap{\succN} (\decode{\N}(m, n, c)). \]
+\end{proof}
 
 \section{Ekvivalentnosti}
 
