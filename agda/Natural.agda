@@ -200,7 +200,7 @@ relf-Eq-ℕ 0        = ⋆
 relf-Eq-ℕ (succ n) = relf-Eq-ℕ n
 
 id-Eq-ℕ : {m n : ℕ} → m == n → Eq-ℕ m n 
-id-Eq-ℕ {n} {.n} (refl .n) = relf-Eq-ℕ n
+id-Eq-ℕ {m} {n} p = tr (Eq-ℕ m) p (relf-Eq-ℕ m)
 
 Eq-ℕ-id : (m n : ℕ) → Eq-ℕ m n → m == n
 Eq-ℕ-id 0        0        eq = refl 0
@@ -581,5 +581,3 @@ pred-succ-id-Fin {succ 0}        (inr ⋆)       = refl (inr ⋆)
 pred-succ-id-Fin {succ (succ k)} (inl (inl x)) = ap skip-neg-two-Fin (pred-succ-id-Fin (inl x))
 pred-succ-id-Fin {succ (succ k)} (inl (inr ⋆)) = refl (inl (inr ⋆)) 
 pred-succ-id-Fin {succ (succ k)} (inr ⋆)       = pred-zero-Fin
-
- 

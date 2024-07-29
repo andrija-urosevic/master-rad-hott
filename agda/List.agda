@@ -22,6 +22,16 @@ tail : {X : 𝓤 ̇ } → (List X) → List X
 tail nil         = nil
 tail (cons x xs) = xs
 
+is-nil : {X : 𝓤 ̇ } → (List X) → 𝓤₀ ̇
+is-nil nil         = 𝟙
+is-nil (cons x xs) = 𝟘
+
+is-nonnil : {X : 𝓤 ̇ } → (List X) → 𝓤₀ ̇
+is-nonnil xs = ¬ (is-nil xs)
+
+is-nonnil-cons : {X : 𝓤 ̇ } → (x : X) → (xs : List X) → (List X) → is-nonnil (cons x xs)
+is-nonnil-cons x xs = λ _ z → z
+
 fold : {X : 𝓤 ̇ } {Y : 𝓥 ̇ } (f : X → Y → Y) → List X → Y → Y
 fold f nil         acc = acc
 fold f (cons x xs) acc = fold f xs (f x acc) 
