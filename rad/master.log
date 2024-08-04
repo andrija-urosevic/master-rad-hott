@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.26)  30 JUL 2024 01:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.26)  4 AUG 2024 02:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1589,7 +1589,7 @@ LaTeX Warning: Citation 'crc40' on page 2 undefined on input line 82.
 LaTeX Warning: Citation 'crc41' on page 2 undefined on input line 82.
 
 
-LaTeX Warning: Citation 'pml98' on page 2 undefined on input line 82.
+LaTeX Warning: Citation 'automath' on page 2 undefined on input line 82.
 
 
 LaTeX Warning: Citation 'pml75' on page 2 undefined on input line 82.
@@ -1601,24 +1601,66 @@ LaTeX Warning: Citation 'pml82' on page 2 undefined on input line 82.
 LaTeX Warning: Citation 'pml84' on page 2 undefined on input line 82.
 
 
+LaTeX Warning: Citation 'pml98' on page 2 undefined on input line 82.
+
+
+LaTeX Warning: Citation 'agda' on page 2 undefined on input line 82.
+
+
+LaTeX Warning: Citation 'coq' on page 2 undefined on input line 82.
+
+
+LaTeX Warning: Citation 'epigram' on page 2 undefined on input line 82.
+
+
+LaTeX Warning: Citation 'idris' on page 2 undefined on input line 82.
+
+
+LaTeX Warning: Citation 'hs98' on page 2 undefined on input line 82.
+
+
+LaTeX Warning: Citation 'vlad06' on page 2 undefined on input line 82.
+
+
+LaTeX Warning: Citation 'aw09' on page 2 undefined on input line 82.
+
+
 
 [2
 
 ]
-LaTeX Font Info:    Trying to load font information for TS1+cmsrbr on input line 89.
+
+LaTeX Warning: Citation 'brw' on page 3 undefined on input line 84.
+
+
+LaTeX Warning: Citation 'kol32' on page 3 undefined on input line 84.
+
+
+LaTeX Warning: Citation 'hey' on page 3 undefined on input line 84.
+
+
+LaTeX Warning: Citation 'brw' on page 3 undefined on input line 86.
+
+
+Overfull \hbox (15.96565pt too wide) in paragraph at lines 86--87
+\OML/cmmsrbm/m/it/12 P \OMS/cmsy/m/n/12 _ :\OML/cmmsrbm/m/it/12 P$ \T2A/cmsrbr/m/n/12 [[]]. Ра-злог томе су \T2A/cmsrbr/m/it/12 слаби контра-примери \T2A/cmsrbr/m/n/12 (енгл. \T2A/cmsrbr/m/it/12 weak counterexamples\T2A/cmsrbr/m/n/12 ).
+ []
+
+
+
+[3]
+
+LaTeX Warning: Citation 'rob11' on page 4 undefined on input line 90.
+
+
+
+[4]
+LaTeX Font Info:    Trying to load font information for TS1+cmsrbr on input line 103.
  (c:/texlive/2024/texmf-dist/tex/latex/cmsrb/ts1cmsrbr.fd
 File: ts1cmsrbr.fd 
 )
 
-[3{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cmsrb/cmsrbts1.enc}]
-LaTeX Font Info:    Trying to load font information for U+bbold on input line 99.
- (c:/texlive/2024/texmf-dist/tex/latex/bbold/Ubbold.fd)
-LaTeX Font Info:    Trying to load font information for T2A+cmsrbt on input line 99.
- (c:/texlive/2024/texmf-dist/tex/latex/cmsrb/t2acmsrbt.fd
-File: t2acmsrbt.fd 
-)
-
-[4]
+[5{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cmsrb/cmsrbts1.enc}]
 \myBox1=\box82
 \myScoreStart1=\dimen337
 \myCenter1=\dimen338
@@ -1637,47 +1679,47 @@ File: t2acmsrbt.fd
 \myScoreEnd4=\dimen348
 
 
-[5
+[6
 
 ]
-Overfull \hbox (5.2652pt too wide) in paragraph at lines 145--148
+Overfull \hbox (5.2652pt too wide) in paragraph at lines 151--154
  [] 
  []
 
 
-LaTeX Warning: Citation 'rijke2022intro' on page 6 undefined on input line 188.
+LaTeX Warning: Citation 'rijke2022intro' on page 7 undefined on input line 194.
 
 
-
-[6]
 
 [7]
 
 [8]
 
 [9]
-Overfull \hbox (7.21216pt too wide) in paragraph at lines 311--314
+LaTeX Font Info:    Trying to load font information for U+bbold on input line 294.
+ (c:/texlive/2024/texmf-dist/tex/latex/bbold/Ubbold.fd)
+
+[10]
+Overfull \hbox (7.21216pt too wide) in paragraph at lines 317--320
  [] 
  []
 
 
-Overfull \hbox (0.73796pt too wide) in paragraph at lines 319--327
+Overfull \hbox (0.73796pt too wide) in paragraph at lines 325--333
  [] 
  []
 
 
-Overfull \hbox (0.73796pt too wide) in paragraph at lines 330--338
+Overfull \hbox (0.73796pt too wide) in paragraph at lines 336--344
  [] 
  []
 
 
-Overfull \hbox (17.90474pt too wide) in paragraph at lines 394--395
+Overfull \hbox (17.90474pt too wide) in paragraph at lines 400--401
 \T2A/cmsrbr/m/n/12 типа $\U/bbold/m/n/12 N$ \T2A/cmsrbr/m/n/12 ако jе $\OML/cmmsrbm/m/it/12 n \OT1/cmrsrbm/m/n/12 : \U/bbold/m/n/12 N$ \T2A/cmsrbr/m/n/12 ка-но-нични терм. Због тога су $\OT1/cmsssrbm/m/n/12 0[]\OML/cmmsrbm/m/it/12 ; [][]\OT1/cmrsrbm/m/n/12 (\OT1/cmsssrbm/m/n/12 0[]\OT1/cmrsrbm/m/n/12 )\OML/cmmsrbm/m/it/12 ; [][]\OT1/cmrsrbm/m/n/12 ([][](\OT1/cmsssrbm/m/n/12 0[]\OT1/cmrsrbm/m/n/12 ))\OML/cmmsrbm/m/it/12 ; []$
  []
 
 
-
-[10]
 
 [11]
 
@@ -1713,23 +1755,25 @@ Overfull \hbox (17.90474pt too wide) in paragraph at lines 394--395
 
 [27]
 
-[28
-
-]
-
-LaTeX Warning: Empty bibliography on input line 1190.
-
-
+[28]
 
 [29
 
 ]
+
+LaTeX Warning: Empty bibliography on input line 1197.
+
+
 
 [30
 
 ]
 
 [31
+
+]
+
+[32
 
 
 ]
@@ -1764,18 +1808,18 @@ Package logreq Info: Writing requests to 'master.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36818 strings out of 473583
- 666164 string characters out of 5732342
+ 36795 strings out of 473583
+ 665742 string characters out of 5732342
  1952908 words of memory out of 5000000
- 59033 multiletter control sequences out of 15000+600000
- 604420 words of font info for 104 fonts, out of 8000000 for 9000
+ 59013 multiletter control sequences out of 15000+600000
+ 606031 words of font info for 104 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,12n,101p,1352b,1604s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/bbold-type1/bbold5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/bbold-type1/bbold7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cmsrb/cmsrbrb.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cmsrb/cmsrbrc.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cmsrb/cmsrbri.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cmsrb/cmsrbrr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cmsrb/cmsrbtr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb>
-Output written on master.pdf (39 pages, 457660 bytes).
+ 99i,12n,101p,1929b,1604s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2024/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/bbold-type1/bbold5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/bbold-type1/bbold7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cmsrb/cmsrbrb.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cmsrb/cmsrbrc.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cmsrb/cmsrbri.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cmsrb/cmsrbrr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb>
+Output written on master.pdf (40 pages, 437293 bytes).
 PDF statistics:
  462 PDF objects out of 1000 (max. 8388607)
- 367 compressed objects within 4 object streams
- 118 named destinations out of 1000 (max. 500000)
+ 368 compressed objects within 4 object streams
+ 119 named destinations out of 1000 (max. 500000)
  122 words of extra memory for PDF output out of 10000 (max. 10000000)
 

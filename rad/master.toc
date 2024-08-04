@@ -1,24 +1,24 @@
 \babel@toc {serbianc}{}\relax 
 \contentsline {chapter}{\chapternumberline {1}Увод}{2}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Филозофија и историја}{3}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Циљ рада}{3}{section.1.2}%
-\contentsline {chapter}{\chapternumberline {2}Интуиционистичка теорија типова}{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Правила закључивања}{6}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Зависни типови}{7}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Типови зависних функција}{8}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Индуктивни типови}{9}{section.2.4}%
-\contentsline {subsection}{Тип природних бројева}{10}{section*.2}%
-\contentsline {subsection}{Празни тип}{12}{section*.3}%
-\contentsline {subsection}{Јединични тип}{13}{section*.4}%
-\contentsline {subsection}{Типови копроизвода}{14}{section*.5}%
-\contentsline {subsection}{Типови зависних парова}{15}{section*.6}%
-\contentsline {section}{\numberline {2.5}Искази као типови}{17}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Хијерархија универзума и универзум типови}{19}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Типови идентитети}{19}{section.2.7}%
-\contentsline {subsection}{Индукција путање}{21}{section*.7}%
-\contentsline {subsection}{Особине типова идентитета}{22}{section*.8}%
-\contentsline {subsection}{Акције над путањама}{25}{section*.9}%
-\contentsline {subsection}{Транспорт}{26}{section*.10}%
-\contentsline {subsection}{Друге врсте једнакости}{26}{section*.11}%
-\contentsline {chapter}{\chapternumberline {3}Агда}{28}{chapter.3}%
-\contentsline {chapter}{\chapternumberline {4}Закључак}{29}{chapter.4}%
+\contentsline {section}{\numberline {1.2}Циљ рада}{5}{section.1.2}%
+\contentsline {chapter}{\chapternumberline {2}Интуиционистичка теорија типова}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Правила закључивања}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Зависни типови}{8}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Типови зависних функција}{9}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Индуктивни типови}{10}{section.2.4}%
+\contentsline {subsection}{Тип природних бројева}{11}{section*.2}%
+\contentsline {subsection}{Празни тип}{13}{section*.3}%
+\contentsline {subsection}{Јединични тип}{14}{section*.4}%
+\contentsline {subsection}{Типови копроизвода}{15}{section*.5}%
+\contentsline {subsection}{Типови зависних парова}{16}{section*.6}%
+\contentsline {section}{\numberline {2.5}Искази као типови}{18}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Хијерархија универзума и универзум типови}{20}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Типови идентитети}{20}{section.2.7}%
+\contentsline {subsection}{Индукција путање}{22}{section*.7}%
+\contentsline {subsection}{Особине типова идентитета}{23}{section*.8}%
+\contentsline {subsection}{Акције над путањама}{26}{section*.9}%
+\contentsline {subsection}{Транспорт}{27}{section*.10}%
+\contentsline {subsection}{Друге врсте једнакости}{27}{section*.11}%
+\contentsline {chapter}{\chapternumberline {3}Агда}{29}{chapter.3}%
+\contentsline {chapter}{\chapternumberline {4}Закључак}{30}{chapter.4}%
