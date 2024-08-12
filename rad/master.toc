@@ -14,7 +14,7 @@
 \contentsline {subsection}{Типови зависних парова}{16}{section*.6}%
 \contentsline {section}{\numberline {2.5}Искази као типови}{18}{section.2.5}%
 \contentsline {section}{\numberline {2.6}Хијерархија универзума и универзум типови}{20}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Типови идентитети}{20}{section.2.7}%
+\contentsline {section}{\numberline {2.7}Типови идентитетa}{20}{section.2.7}%
 \contentsline {subsection}{Индукција путање}{22}{section*.7}%
 \contentsline {subsection}{Особине типова идентитета}{23}{section*.8}%
 \contentsline {subsection}{Акције над путањама}{26}{section*.9}%
@@ -22,3 +22,4 @@
 \contentsline {subsection}{Друге врсте једнакости}{27}{section*.11}%
 \contentsline {chapter}{\chapternumberline {3}Агда}{29}{chapter.3}%
 \contentsline {chapter}{\chapternumberline {4}Закључак}{30}{chapter.4}%
+\contentsline {chapter}{Литература}{31}{section*.13}%
