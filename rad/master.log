@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.27)  13 AUG 2024 03:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.27)  13 AUG 2024 13:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1804,7 +1804,7 @@ LaTeX Warning: Citation 'hey' on page 3 undefined on input line 84.
 LaTeX Warning: Citation 'brw' on page 3 undefined on input line 86.
 
 
-Overfull \hbox (13.83365pt too wide) in paragraph at lines 86--87
+Overfull \hbox (13.83365pt too wide) in paragraph at lines 86--88
 \OML/cmmsrbm/m/it/12 P \OMS/cmsy/m/n/12 _ :\OML/cmmsrbm/m/it/12 P$ \T2A/cmsrbr/
 m/n/12 [[]]. Ра-злог томе су \T2A/cmsrbr/m/it/12 слаби контра-примери \T2A/cmsr
 br/m/n/12 (енгл. \T2A/cmsrbr/m/it/12 weak counterexamples\T2A/cmsrbr/m/n/12 ).
@@ -1812,34 +1812,34 @@ br/m/n/12 (енгл. \T2A/cmsrbr/m/it/12 weak counterexamples\T2A/cmsrbr/m/n/12 ).
 
 [3]
 
-LaTeX Warning: Citation 'rob11' on page 4 undefined on input line 90.
+LaTeX Warning: Citation 'rob11' on page 4 undefined on input line 92.
 
 [4]
 
-LaTeX Warning: Citation 'ee' on page 5 undefined on input line 102.
+LaTeX Warning: Citation 'ee' on page 5 undefined on input line 105.
 
 [5]
 
-LaTeX Warning: Citation 'vlad_found' on page 6 undefined on input line 117.
+LaTeX Warning: Citation 'vlad_found' on page 6 undefined on input line 120.
 
 
-LaTeX Warning: Citation 'unimath' on page 6 undefined on input line 117.
+LaTeX Warning: Citation 'unimath' on page 6 undefined on input line 120.
 
 
-LaTeX Warning: Citation 'hottcoq' on page 6 undefined on input line 118.
+LaTeX Warning: Citation 'hottcoq' on page 6 undefined on input line 121.
 
 
-LaTeX Warning: Citation 'hottagda' on page 6 undefined on input line 118.
+LaTeX Warning: Citation 'hottagda' on page 6 undefined on input line 121.
 
 
-LaTeX Warning: Citation 'agda-unimath' on page 6 undefined on input line 119.
+LaTeX Warning: Citation 'agda-unimath' on page 6 undefined on input line 122.
 
 [6]
 
-LaTeX Warning: Citation 'cube' on page 7 undefined on input line 121.
+LaTeX Warning: Citation 'cube' on page 7 undefined on input line 124.
 
 
-LaTeX Warning: Citation 'cubi' on page 7 undefined on input line 121.
+LaTeX Warning: Citation 'cubi' on page 7 undefined on input line 124.
 
 [7]
 \myBox1=\box81
@@ -1861,30 +1861,30 @@ LaTeX Warning: Citation 'cubi' on page 7 undefined on input line 121.
  [8
 
 ]
-Overfull \hbox (5.2652pt too wide) in paragraph at lines 164--167
+Overfull \hbox (5.2652pt too wide) in paragraph at lines 167--170
  [] 
  []
 
 [9] [10] [11]
 LaTeX Font Info:    Trying to load font information for U+bbold on input line 3
-07.
+10.
  (/usr/share/texmf-dist/tex/latex/bbold/Ubbold.fd) [12]
-Overfull \hbox (7.21216pt too wide) in paragraph at lines 330--333
+Overfull \hbox (7.21216pt too wide) in paragraph at lines 333--336
  [] 
  []
 
 
-Overfull \hbox (0.73796pt too wide) in paragraph at lines 338--346
+Overfull \hbox (0.73796pt too wide) in paragraph at lines 341--349
  [] 
  []
 
 
-Overfull \hbox (0.73796pt too wide) in paragraph at lines 349--357
+Overfull \hbox (0.73796pt too wide) in paragraph at lines 352--360
  [] 
  []
 
 
-Overfull \hbox (17.90474pt too wide) in paragraph at lines 413--414
+Overfull \hbox (17.90474pt too wide) in paragraph at lines 416--417
 \T2A/cmsrbr/m/n/12 типа $\U/bbold/m/n/12 N$ \T2A/cmsrbr/m/n/12 ако jе $\OML/cmm
 srbm/m/it/12 n \OT1/cmrsrbm/m/n/12 : \U/bbold/m/n/12 N$ \T2A/cmsrbr/m/n/12 ка-н
 о-нични терм. Због тога су $\OT1/cmsssrbm/m/n/12 0[]\OML/cmmsrbm/m/it/12 ; [][]
@@ -1900,23 +1900,23 @@ n/12 ))\OML/cmmsrbm/m/it/12 ; []$
 
 ]
 LaTeX Font Info:    Trying to load font information for T2A+cmsrbt on input lin
-e 1212.
+e 1215.
  (/usr/share/texmf-dist/tex/latex/cmsrb/t2acmsrbt.fd
 File: t2acmsrbt.fd 
 )
-Overfull \hbox (6.99309pt too wide) in paragraph at lines 1212--1212
+Overfull \hbox (6.99309pt too wide) in paragraph at lines 1215--1215
 []\T2A/cmsrbr/m/n/12 Mart[]^^Yn H[]otzel Escard[]o. Ѕ  Introduction to univalen
 t foundations of mathematics
  []
 
 
-Overfull \hbox (10.46333pt too wide) in paragraph at lines 1212--1212
+Overfull \hbox (10.46333pt too wide) in paragraph at lines 1215--1215
 []\T2A/cmsrbr/m/n/12 Per Martin-L[]of и Giovanni Sambin. \T2A/cmsrbr/m/it/12 In
 tuitionistic type theory\T2A/cmsrbr/m/n/12 . Св. 9. Bibliopolis
  []
 
 
-Overfull \hbox (23.50264pt too wide) in paragraph at lines 1212--1212
+Overfull \hbox (23.50264pt too wide) in paragraph at lines 1215--1215
 []\T2A/cmsrbr/m/n/12 Andrea Vezzosi, Anders M[]ortberg и Andreas Abel. Ѕ  Cubic
 al Agda: A dependently
  []
@@ -1961,7 +1961,7 @@ Here is how much of TeX's memory you used:
  56232 multiletter control sequences out of 15000+600000
  560192 words of font info for 100 fonts, out of 8000000 for 9000
  725 hyphenation exceptions out of 8191
- 99i,12n,94p,1871b,1603s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,94p,1750b,1603s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/share
 /texmf-dist/fonts/type1/public/bbold-type1/bbold5.pfb></usr/share/texmf-dist/fo
 nts/type1/public/bbold-type1/bbold7.pfb></usr/share/texmf-dist/fonts/type1/publ
@@ -1981,7 +1981,7 @@ ts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public
 msy8.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/
 share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dis
 t/fonts/type1/public/cm-super/sfrm2074.pfb>
-Output written on master.pdf (44 pages, 488363 bytes).
+Output written on master.pdf (44 pages, 488408 bytes).
 PDF statistics:
  529 PDF objects out of 1000 (max. 8388607)
  429 compressed objects within 5 object streams
