@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.27)  14 AUG 2024 18:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.27)  15 AUG 2024 16:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1826,20 +1826,23 @@ LaTeX Warning: Citation 'vlad_found' on page 6 undefined on input line 118.
 LaTeX Warning: Citation 'unimath' on page 6 undefined on input line 118.
 
 
-LaTeX Warning: Citation 'hottcoq' on page 6 undefined on input line 119.
+LaTeX Warning: Citation 'hottcoq' on page 6 undefined on input line 118.
 
 
-LaTeX Warning: Citation 'hottagda' on page 6 undefined on input line 119.
+LaTeX Warning: Citation 'hottagda' on page 6 undefined on input line 118.
 
 
-LaTeX Warning: Citation 'agda-unimath' on page 6 undefined on input line 120.
+LaTeX Warning: Citation 'agda-unimath' on page 6 undefined on input line 118.
+
+
+LaTeX Warning: Citation 'symm' on page 6 undefined on input line 118.
 
 [6]
 
-LaTeX Warning: Citation 'cube' on page 7 undefined on input line 122.
+LaTeX Warning: Citation 'cube' on page 7 undefined on input line 120.
 
 
-LaTeX Warning: Citation 'cubi' on page 7 undefined on input line 122.
+LaTeX Warning: Citation 'cubi' on page 7 undefined on input line 120.
 
 [7]
 \myBox1=\box81
@@ -1861,30 +1864,30 @@ LaTeX Warning: Citation 'cubi' on page 7 undefined on input line 122.
  [8
 
 ]
-Overfull \hbox (5.2652pt too wide) in paragraph at lines 165--168
+Overfull \hbox (5.2652pt too wide) in paragraph at lines 163--166
  [] 
  []
 
 [9] [10] [11]
 LaTeX Font Info:    Trying to load font information for U+bbold on input line 3
-09.
+07.
  (/usr/share/texmf-dist/tex/latex/bbold/Ubbold.fd) [12]
-Overfull \hbox (7.21216pt too wide) in paragraph at lines 332--335
+Overfull \hbox (7.21216pt too wide) in paragraph at lines 330--333
  [] 
  []
 
 
-Overfull \hbox (0.73796pt too wide) in paragraph at lines 340--348
+Overfull \hbox (0.73796pt too wide) in paragraph at lines 338--346
  [] 
  []
 
 
-Overfull \hbox (0.73796pt too wide) in paragraph at lines 351--359
+Overfull \hbox (0.73796pt too wide) in paragraph at lines 349--357
  [] 
  []
 
 
-Overfull \hbox (17.90474pt too wide) in paragraph at lines 415--416
+Overfull \hbox (17.90474pt too wide) in paragraph at lines 413--414
 \T2A/cmsrbr/m/n/12 типа $\U/bbold/m/n/12 N$ \T2A/cmsrbr/m/n/12 ако jе $\OML/cmm
 srbm/m/it/12 n \OT1/cmrsrbm/m/n/12 : \U/bbold/m/n/12 N$ \T2A/cmsrbr/m/n/12 ка-н
 о-нични терм. Због тога су $\OT1/cmsssrbm/m/n/12 0[]\OML/cmmsrbm/m/it/12 ; [][]
@@ -1894,39 +1897,39 @@ n/12 ))\OML/cmmsrbm/m/it/12 ; []$
  []
 
 [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26] [27]
-[28] [29] [30] [31] [32
+[28] [29] [30] [31] [32] [33] [34] [35
 
-] [33
+] [36
 
 ]
 LaTeX Font Info:    Trying to load font information for T2A+cmsrbt on input lin
-e 1214.
+e 1246.
 
 (/usr/share/texmf-dist/tex/latex/cmsrb/t2acmsrbt.fd
 File: t2acmsrbt.fd 
 )
-Overfull \hbox (6.99309pt too wide) in paragraph at lines 1214--1214
+Overfull \hbox (6.99309pt too wide) in paragraph at lines 1246--1246
 []\T2A/cmsrbr/m/n/12 Mart[]^^Yn H[]otzel Escard[]o. Ѕ  Introduction to univalen
 t foundations of mathematics
  []
 
 
-Overfull \hbox (10.46333pt too wide) in paragraph at lines 1214--1214
+Overfull \hbox (10.46333pt too wide) in paragraph at lines 1246--1246
 []\T2A/cmsrbr/m/n/12 Per Martin-L[]of и Giovanni Sambin. \T2A/cmsrbr/m/it/12 In
 tuitionistic type theory\T2A/cmsrbr/m/n/12 . Св. 9. Bibliopolis
  []
 
 
-Overfull \hbox (23.50264pt too wide) in paragraph at lines 1214--1214
+Overfull \hbox (23.50264pt too wide) in paragraph at lines 1246--1246
 []\T2A/cmsrbr/m/n/12 Andrea Vezzosi, Anders M[]ortberg и Andreas Abel. Ѕ  Cubic
 al Agda: A dependently
  []
 
-[34
+[37
 
-] [35] [36
+] [38] [39
 
-] [37
+] [40
 
 
 ]
@@ -1956,13 +1959,13 @@ Package logreq Info: Writing requests to 'master.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36558 strings out of 476872
- 660739 string characters out of 5820377
+ 36561 strings out of 476872
+ 660759 string characters out of 5820377
  1876388 words of memory out of 5000000
  56232 multiletter control sequences out of 15000+600000
  560192 words of font info for 100 fonts, out of 8000000 for 9000
  725 hyphenation exceptions out of 8191
- 99i,12n,94p,1750b,1603s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,94p,1818b,1603s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/share
 /texmf-dist/fonts/type1/public/bbold-type1/bbold5.pfb></usr/share/texmf-dist/fo
 nts/type1/public/bbold-type1/bbold7.pfb></usr/share/texmf-dist/fonts/type1/publ
@@ -1982,10 +1985,10 @@ ts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public
 msy8.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/
 share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dis
 t/fonts/type1/public/cm-super/sfrm2074.pfb>
-Output written on master.pdf (45 pages, 491519 bytes).
+Output written on master.pdf (48 pages, 501856 bytes).
 PDF statistics:
- 533 PDF objects out of 1000 (max. 8388607)
- 432 compressed objects within 5 object streams
- 141 named destinations out of 1000 (max. 500000)
+ 547 PDF objects out of 1000 (max. 8388607)
+ 443 compressed objects within 5 object streams
+ 144 named destinations out of 1000 (max. 500000)
  138 words of extra memory for PDF output out of 10000 (max. 10000000)
 

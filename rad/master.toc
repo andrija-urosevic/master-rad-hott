@@ -15,12 +15,12 @@
 \contentsline {subsection}{Типови зависних парова}{18}{section*.6}%
 \contentsline {section}{\numberline {2.5}Искази као типови}{20}{section.2.5}%
 \contentsline {section}{\numberline {2.6}Хијерархија универзума и универзум типови}{22}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Типови идентитетa}{22}{section.2.7}%
+\contentsline {section}{\numberline {2.7}Типови идентитетa}{23}{section.2.7}%
 \contentsline {subsection}{Индукција путање}{24}{section*.7}%
-\contentsline {subsection}{Особине типова идентитета}{25}{section*.8}%
-\contentsline {subsection}{Акције над путањама}{28}{section*.9}%
-\contentsline {subsection}{Транспорт}{29}{section*.10}%
-\contentsline {subsection}{Друге врсте једнакости}{30}{section*.11}%
-\contentsline {chapter}{\chapternumberline {3}Агда}{32}{chapter.3}%
-\contentsline {chapter}{\chapternumberline {4}Закључак}{33}{chapter.4}%
-\contentsline {chapter}{Литература}{34}{section*.13}%
+\contentsline {subsection}{Особине типова идентитета}{26}{section*.8}%
+\contentsline {subsection}{Акције над путањама}{31}{section*.9}%
+\contentsline {subsection}{Транспорт}{32}{section*.10}%
+\contentsline {subsection}{Друге врсте једнакости}{32}{section*.11}%
+\contentsline {chapter}{\chapternumberline {3}Агда}{35}{chapter.3}%
+\contentsline {chapter}{\chapternumberline {4}Закључак}{36}{chapter.4}%
+\contentsline {chapter}{Литература}{37}{section*.13}%

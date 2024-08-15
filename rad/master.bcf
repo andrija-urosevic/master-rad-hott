@@ -2391,10 +2391,11 @@
     <bcf:citekey order="24" intorder="1">hottagda</bcf:citekey>
     <bcf:citekey order="25" intorder="1">hottbook</bcf:citekey>
     <bcf:citekey order="26" intorder="1">agda-unimath</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">cube</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">cubi</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">rijke2022intro</bcf:citekey>
-    <bcf:citekey order="30" intorder="1" nocite="1">*</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">symm</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">cube</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">cubi</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">rijke2022intro</bcf:citekey>
+    <bcf:citekey order="31" intorder="1" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
