@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.27)  16 AUG 2024 06:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.27)  16 AUG 2024 16:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2020,29 +2020,29 @@ LaTeX Font Warning: Font shape `T2A/cmsrbr/m/scit' undefined
 
 [39] [40
 
-]
-Overfull \hbox (6.99309pt too wide) in paragraph at lines 1265--1265
+] [41]
+Overfull \hbox (6.99309pt too wide) in paragraph at lines 1277--1277
 []\T2A/cmsrbr/m/n/12 Mart[]^^Yn H[]otzel Escard[]o. ½  Introduction to univalen
 t foundations of mathematics
  []
 
 
-Overfull \hbox (10.46333pt too wide) in paragraph at lines 1265--1265
+Overfull \hbox (10.46333pt too wide) in paragraph at lines 1277--1277
 []\T2A/cmsrbr/m/n/12 Per Martin-L[]of è Giovanni Sambin. \T2A/cmsrbr/m/it/12 In
 tuitionistic type theory\T2A/cmsrbr/m/n/12 . Ñâ. 9. Bibliopolis
  []
 
 
-Overfull \hbox (23.50264pt too wide) in paragraph at lines 1265--1265
+Overfull \hbox (23.50264pt too wide) in paragraph at lines 1277--1277
 []\T2A/cmsrbr/m/n/12 Andrea Vezzosi, Anders M[]ortberg è Andreas Abel. ½  Cubic
 al Agda: A dependently
  []
 
-[41
+[42
 
-] [42] [43
+] [43] [44
 
-] [44
+] [45
 
 
 ]
@@ -2072,8 +2072,8 @@ Package logreq Info: Writing requests to 'master.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37578 strings out of 476872
- 678000 string characters out of 5820377
+ 37579 strings out of 476872
+ 678007 string characters out of 5820377
  1876388 words of memory out of 5000000
  57185 multiletter control sequences out of 15000+600000
  569735 words of font info for 110 fonts, out of 8000000 for 9000
@@ -2100,10 +2100,10 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/
 type1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm
 -super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm2074
 .pfb>
-Output written on master.pdf (52 pages, 561349 bytes).
+Output written on master.pdf (53 pages, 565090 bytes).
 PDF statistics:
- 592 PDF objects out of 1000 (max. 8388607)
- 479 compressed objects within 5 object streams
- 150 named destinations out of 1000 (max. 500000)
+ 597 PDF objects out of 1000 (max. 8388607)
+ 483 compressed objects within 5 object streams
+ 151 named destinations out of 1000 (max. 500000)
  154 words of extra memory for PDF output out of 10000 (max. 10000000)
 
