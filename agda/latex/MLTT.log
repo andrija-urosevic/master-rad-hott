@@ -1,0 +1,449 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.27)  1 AUG 2024 20:44
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**MLTT.tex
+(./MLTT.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22>
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 {-
+      # OPTIONS --without-K --safe #-}
+? 
+Missing character: There is no - in font nullfont!
+! You can't use `macro parameter character #' in horizontal mode.
+l.1 {-#
+        OPTIONS --without-K --safe #-}
+? 
+Missing character: There is no O in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no I in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no N in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no K in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no e in font nullfont!
+! You can't use `macro parameter character #' in horizontal mode.
+l.1 {-# OPTIONS --without-K --safe #
+                                    -}
+? 
+Missing character: There is no - in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--2
+[]
+ []
+
+
+! LaTeX Error: Environment code undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \begin{code}
+                %
+? 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \>
+      [0]\<%
+? 
+Missing character: There is no [ in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ] in font nullfont!
+! Undefined control sequence.
+l.4 \>[0]\<
+           %
+? 
+Missing character: There is no [ in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ] in font nullfont!
+! Undefined control sequence.
+l.6 \>[0]\AgdaKeyword
+                     {module}\AgdaSpace{}%
+? 
+Missing character: There is no m in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+! Undefined control sequence.
+l.6 \>[0]\AgdaKeyword{module}\AgdaSpace
+                                       {}%
+? 
+! Undefined control sequence.
+l.7 \AgdaModule
+               {MLTT}\AgdaSpace{}%
+? 
+Missing character: There is no M in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no T in font nullfont!
+! Undefined control sequence.
+l.7 \AgdaModule{MLTT}\AgdaSpace
+                               {}%
+? 
+! Undefined control sequence.
+l.8 \AgdaKeyword
+                {where}\<%
+? 
+Missing character: There is no w in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+! Undefined control sequence.
+l.8 \AgdaKeyword{where}\<
+                         %
+? 
+! Undefined control sequence.
+<argument> \AgdaEmptyExtraSkip 
+                               
+l.11 \\[\AgdaEmptyExtraSkip]
+                            %
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.11 \\[\AgdaEmptyExtraSkip]
+                            %
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.11 \\[\AgdaEmptyExtraSkip]
+                            %
+? 
+Missing character: There is no [ in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ] in font nullfont!
+! Undefined control sequence.
+l.12 \>[0]\AgdaKeyword
+                      {open}\AgdaSpace{}%
+? 
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+! Undefined control sequence.
+l.12 \>[0]\AgdaKeyword{open}\AgdaSpace
+                                      {}%
+? 
+! Undefined control sequence.
+l.13 \AgdaKeyword
+                 {import}\AgdaSpace{}%
+? 
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+! Undefined control sequence.
+l.13 \AgdaKeyword{import}\AgdaSpace
+                                   {}%
+? 
+! Undefined control sequence.
+l.14 \AgdaModule
+                {Universes}\AgdaSpace{}%
+? 
+Missing character: There is no U in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+! Undefined control sequence.
+l.14 \AgdaModule{Universes}\AgdaSpace
+                                     {}%
+? 
+! Undefined control sequence.
+l.15 \AgdaKeyword
+                 {public}\<%
+? 
+Missing character: There is no p in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+! Undefined control sequence.
+l.15 \AgdaKeyword{public}\<
+                           %
+? 
+! Undefined control sequence.
+<argument> \AgdaEmptyExtraSkip 
+                               
+l.18 \\[\AgdaEmptyExtraSkip]
+                            %
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.18 \\[\AgdaEmptyExtraSkip]
+                            %
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.18 \\[\AgdaEmptyExtraSkip]
+                            %
+? 
+Missing character: There is no [ in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ] in font nullfont!
+! Undefined control sequence.
+l.19 \>[0]\AgdaKeyword
+                      {variable}\AgdaSpace{}%
+? 
+Missing character: There is no v in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+! Undefined control sequence.
+l.19 \>[0]\AgdaKeyword{variable}\AgdaSpace
+                                          {}%
+? 
+! Undefined control sequence.
+l.20 \AgdaGeneralizable
+                       {𝓤}\AgdaSpace{}%
+? 
+
+! LaTeX Error: Unicode character 𝓤 (U+1D4E4)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \AgdaGeneralizable{𝓤
+                            }\AgdaSpace{}%
+? 
+! Undefined control sequence.
+l.20 \AgdaGeneralizable{𝓤}\AgdaSpace
+                                       {}%
+? 
+! Undefined control sequence.
+l.21 \AgdaGeneralizable
+                       {𝓥}\AgdaSpace{}%
+? 
+
+! LaTeX Error: Unicode character 𝓥 (U+1D4E5)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 \AgdaGeneralizable{𝓥
+                            }\AgdaSpace{}%
+? 
+! Undefined control sequence.
+l.21 \AgdaGeneralizable{𝓥}\AgdaSpace
+                                       {}%
+? 
+! Undefined control sequence.
+l.22 \AgdaGeneralizable
+                       {𝓦}\AgdaSpace{}%
+? 
+
+! LaTeX Error: Unicode character 𝓦 (U+1D4E6)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \AgdaGeneralizable{𝓦
+                            }\AgdaSpace{}%
+? 
+! Undefined control sequence.
+l.22 \AgdaGeneralizable{𝓦}\AgdaSpace
+                                       {}%
+? 
+! Undefined control sequence.
+l.23 \AgdaSymbol
+                {:}\AgdaSpace{}%
+? 
+Missing character: There is no : in font nullfont!
+! Undefined control sequence.
+l.23 \AgdaSymbol{:}\AgdaSpace
+                             {}%
+? 
+! Undefined control sequence.
+l.24 \AgdaPostulate
+                   {Universe}\<%
+? 
+Missing character: There is no U in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+! Undefined control sequence.
+l.24 \AgdaPostulate{Universe}\<
+                               %
+? 
+! Undefined control sequence.
+<argument> \AgdaEmptyExtraSkip 
+                               
+l.27 \\[\AgdaEmptyExtraSkip]
+                            %
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.27 \\[\AgdaEmptyExtraSkip]
+                            %
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.27 \\[\AgdaEmptyExtraSkip]
+                            %
+? 
+Missing character: There is no [ in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ] in font nullfont!
+! Undefined control sequence.
+l.28 \>[0]\AgdaOperator
+                       {\AgdaFunction{\AgdaUnderscore{}∘\AgdaUnderscore{}}}%
+? 
+! Undefined control sequence.
+l.28 \>[0]\AgdaOperator{\AgdaFunction
+                                     {\AgdaUnderscore{}∘\AgdaUnderscore{}}}%
+? 
+! Undefined control sequence.
+l.28 ...AgdaOperator{\AgdaFunction{\AgdaUnderscore
+                                                  {}∘\AgdaUnderscore{}}}%
+? 
+
+! LaTeX Error: Unicode character ∘ (U+2218)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...perator{\AgdaFunction{\AgdaUnderscore{}∘
+                                                  \AgdaUnderscore{}}}%
+? 
+! Undefined control sequence.
+l.28 ...nction{\AgdaUnderscore{}∘\AgdaUnderscore
+                                                  {}}}%
+? 
+Missing character: There is no [ in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no I in font nullfont!
+Missing character: There is no ] in font nullfont!
+! Undefined control sequence.
+l.29 \>[10I]\AgdaSymbol
+                       {:}\AgdaSpace{}%
+? 
+Missing character: There is no : in font nullfont!
+! Undefined control sequence.
+l.29 \>[10I]\AgdaSymbol{:}\AgdaSpace
+                                    {}%
+? 
+! Undefined control sequence.
+l.30 \AgdaSymbol
+                {\{}\AgdaBound{X}\AgdaSpace{}%
+? 
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 3
+0.
+(/usr/share/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 30.
+
+! Undefined control sequence.
+l.30 \AgdaSymbol{\{}\AgdaBound
+                              {X}\AgdaSpace{}%
+? 
+Missing character: There is no X in font nullfont!
+! Undefined control sequence.
+l.30 \AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace
+                                           {}%
+? 
+! Undefined control sequence.
+l.31 \AgdaSymbol
+                {:}\AgdaSpace{}%
+? 
+Missing character: There is no : in font nullfont!
+! Undefined control sequence.
+l.31 \AgdaSymbol{:}\AgdaSpace
+                             {}%
+? 
+! Undefined control sequence.
+l.32 \AgdaGeneralizable
+                       {𝓤}\AgdaSpace{}%
+? 
+
+! LaTeX Error: Unicode character 𝓤 (U+1D4E4)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 \AgdaGeneralizable{𝓤
+                            }\AgdaSpace{}%
+? 
+! Undefined control sequence.
+l.32 \AgdaGeneralizable{𝓤}\AgdaSpace
+                                       {}%
+? 
+! Emergency stop.
+l.32 
+     
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 41 strings out of 476872
+ 737 string characters out of 5820377
+ 1849388 words of memory out of 5000000
+ 20508 multiletter control sequences out of 15000+600000
+ 512287 words of font info for 32 fonts, out of 8000000 for 9000
+ 725 hyphenation exceptions out of 8191
+ 23i,1n,26p,126b,113s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!

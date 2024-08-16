@@ -193,6 +193,12 @@
 % paket tikz omogućava iscrtavanje geometrijskih figura
 \RequirePackage{tikz}
 
+% paket tikz omogućava ispisivanje agda coda
+\RequirePackage{agda}
+
+% paket newunicodechar omogućava definisanje unicode karaktera
+\RequirePackage{newunicodechar}
+
 %%%% ---------------------------------------------------------------------------
 %%%% Moje komande i postavke
 %%%% ---------------------------------------------------------------------------
@@ -452,6 +458,7 @@
 \newcommand{\oneN}{\mathsf{1}_\mathbb{N}}
 \newcommand{\twoN}{\mathsf{2}_\mathbb{N}}
 \newcommand{\succN}{\mathsf{succ}_\mathbb{N}}
+\newcommand{\Fin}[1]{\mathsf{Fin}_{#1}}
 
 % macros za prazni tipove
 \newcommand{\0}{{\mathbb{0}}}
@@ -477,10 +484,22 @@
 \newcommand{\assoc}[1]{\mathsf{assoc}_{#1}}
 \newcommand{\tr}[1]{\mathsf{tr}_{#1}}
 \newcommand{\ap}[1]{\mathsf{ap}_{#1}}
-\newcommand{\code}[1]{\mathsf{code}_{#1}}
+\newcommand{\codee}[1]{\mathsf{code}_{#1}}
 \newcommand{\encode}[1]{\mathsf{encode}_{#1}}
 \newcommand{\decode}[1]{\mathsf{decode}_{#1}}
 
+\newunicodechar{λ}{\ensuremath{\mathnormal\lambda}}
+\newunicodechar{←}{\ensuremath{\mathnormal\from}}
+\newunicodechar{→}{\ensuremath{\mathnormal\to}}
+\newunicodechar{∀}{\ensuremath{\mathnormal\forall}}
+\newunicodechar{ℕ}{\ensuremath{\mathnormal{\mathbb{N}}}}
+\newunicodechar{₀}{\ensuremath{\mathnormal{_0}}}
+\newunicodechar{ₛ}{\ensuremath{\mathnormal{_s}}}
+\newunicodechar{𝓤}{\ensuremath{\mathnormal{\mathcal{U}}}}
+\newunicodechar{𝓥}{\ensuremath{\mathnormal{\mathcal{V}}}}
+\newunicodechar{𝓦}{\ensuremath{\mathnormal{\mathcal{W}}}}
+
+\DeclareUnicodeCharacter{0307}{\ensuremath{\mathnormal{^.}}}
 
 %%%%%%%%%%%%%%% end of *.sty file
 \endinput
