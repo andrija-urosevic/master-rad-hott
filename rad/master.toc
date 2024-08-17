@@ -22,7 +22,7 @@
 \contentsline {subsection}{Транспорт}{32}{section*.10}%
 \contentsline {subsection}{Друге врсте једнакости}{32}{section*.11}%
 \contentsline {chapter}{\chapternumberline {3}\textsc {Agda}}{35}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Упутство за коришћење језика \textsc {Agda}}{35}{section.3.1}%
+\contentsline {section}{\numberline {3.1}Основе језика \textsc {Agda}}{35}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Резултат}{38}{section.3.2}%
 \contentsline {chapter}{\chapternumberline {4}Закључак}{40}{chapter.4}%
 \contentsline {chapter}{Литература}{42}{section*.13}%
