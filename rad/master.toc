@@ -25,4 +25,13 @@
 \contentsline {section}{\numberline {3.1}Основе језика \textsc {Agda}}{35}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Резултат}{38}{section.3.2}%
 \contentsline {chapter}{\chapternumberline {4}Закључак}{40}{chapter.4}%
-\contentsline {chapter}{Литература}{42}{section*.13}%
+\contentsline {appendix}{\chapternumberline {A}Издвојени делови библиотеке}{42}{appendix.A}%
+\contentsline {subsection}{Опште}{42}{section*.12}%
+\contentsline {subsection}{Празан тип}{42}{section*.13}%
+\contentsline {subsection}{Јединични тип}{43}{section*.14}%
+\contentsline {subsection}{Тип копроизвода}{43}{section*.15}%
+\contentsline {subsection}{Тип зависних парова}{45}{section*.16}%
+\contentsline {subsection}{Типови идентитета}{46}{section*.17}%
+\contentsline {subsection}{Природни бројеви}{48}{section*.18}%
+\contentsline {subsection}{Булов тип}{51}{section*.19}%
+\contentsline {chapter}{Литература}{52}{section*.21}%

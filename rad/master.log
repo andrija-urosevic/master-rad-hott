@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.27)  17 AUG 2024 02:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.27)  17 AUG 2024 19:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1718,7 +1718,7 @@ LaTeX Font Warning: Font shape `T2A/fos/m/n' undefined
 LaTeX Font Warning: Font shape `T2A/fos/m/n' in size <16> not available
 (Font)              size <17.28> substituted on input line 30.
 
-<matf.png, id=81, 346.29375pt x 409.53pt>
+<matf.png, id=85, 346.29375pt x 409.53pt>
 File: matf.png Graphic file (type png)
 <use matf.png>
 Package pdftex.def Info: matf.png  used on input line 30.
@@ -2016,33 +2016,1282 @@ LaTeX Font Warning: Font shape `T2A/cmsrbr/m/scit' undefined
 [38{/usr/share/texmf-dist/fonts/enc/dvips/cmsrb/cmsrbts1.enc}]
 
 LaTeX Font Warning: Font shape `T2A/cmsrbr/m/scit' undefined
-(Font)              using `T2A/cmsrbr/m/sc' instead on input line 1253.
+(Font)              using `T2A/cmsrbr/m/sc' instead on input line 1255.
 
 [39] [40
 
-] [41]
-Overfull \hbox (6.99309pt too wide) in paragraph at lines 1272--1272
+] [41] (./Appendix.tex
+\openout6 = `master.ptb'.
+
+\openout6 = `master.ptb'.
+
+LaTeX Font Info:    Trying to load font information for TS1+cmsrbs on input lin
+e 320.
+
+(/usr/share/texmf-dist/tex/latex/cmsrb/ts1cmsrbs.fd
+File: ts1cmsrbs.fd 
+) [42
+
+]
+\openout6 = `master.ptb'.
+
+\openout6 = `master.ptb'.
+
+ [43] [44]
+\openout6 = `master.ptb'.
+
+\openout6 = `master.ptb'.
+
+LaTeX Info: Symbol \textlangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Font Info:    Trying to load font information for T2A+cmss on input line 
+2122.
+
+(/usr/share/texmf-dist/tex/latex/cyrillic/t2acmss.fd
+File: t2acmss.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+)
+LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 
+2122.
+
+(/usr/share/texmf-dist/tex/latex/base/ts1cmss.fd
+File: ts1cmss.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)
+LaTeX Info: Symbol \textrangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textlangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textrangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textlangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textrangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textlangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textrangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textlangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textrangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textlangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textrangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textlangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textrangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textlangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textrangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2122.
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (56.25471pt too wide) in paragraph at lines 2122--2122
+ [][][][] 
+ []
+
+[45] [46{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+[47]
+\openout6 = `master.ptb'.
+
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2946.
+LaTeX Info: Symbol \textlangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2946.
+LaTeX Info: Symbol \textrangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2946.
+LaTeX Info: Symbol \textlangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2946.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2946.
+LaTeX Info: Symbol \textrangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2946.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2946.
+LaTeX Info: Symbol \textlangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2946.
+LaTeX Info: Symbol \textrangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2946.
+LaTeX Info: Symbol \textlangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2946.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2946.
+LaTeX Info: Symbol \textrangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2946.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2946.
+LaTeX Info: Symbol \textlangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2946.
+LaTeX Info: Symbol \textrangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2946.
+LaTeX Info: Symbol \textlangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2946.
+LaTeX Info: Symbol \textonesuperior not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2946.
+LaTeX Info: Symbol \textrangle not provided by
+            font family cmsrbs in TS1 encoding.
+            Default family used instead on input line 2946.
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][][][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+
+Overfull \hbox (60.18935pt too wide) in paragraph at lines 2946--2946
+ [][][][] 
+ []
+
+[48] [49] [50]
+\openout6 = `master.ptb'.
+
+
+Overfull \hbox (0.64311pt too wide) detected at line 3073
+ |  
+ []
+
+) [51]
+Overfull \hbox (6.99309pt too wide) in paragraph at lines 1281--1281
 []\T2A/cmsrbr/m/n/12 Mart[]^^Yn H[]otzel Escard[]o. ½  Introduction to univalen
 t foundations of mathematics
  []
 
 
-Overfull \hbox (10.46333pt too wide) in paragraph at lines 1272--1272
+Overfull \hbox (10.46333pt too wide) in paragraph at lines 1281--1281
 []\T2A/cmsrbr/m/n/12 Per Martin-L[]of è Giovanni Sambin. \T2A/cmsrbr/m/it/12 In
 tuitionistic type theory\T2A/cmsrbr/m/n/12 . Ñâ. 9. Bibliopolis
  []
 
 
-Overfull \hbox (23.50264pt too wide) in paragraph at lines 1272--1272
+Overfull \hbox (23.50264pt too wide) in paragraph at lines 1281--1281
 []\T2A/cmsrbr/m/n/12 Andrea Vezzosi, Anders M[]ortberg è Andreas Abel. ½  Cubic
 al Agda: A dependently
  []
 
-[42
+[52
 
-] [43] [44
+] [53] [54
 
-] [45
+] [55
 
 
 ]
@@ -2061,7 +3310,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `master.out' has not changed.
-(rerunfilecheck)             Checksum: 9804DCB46BA248F67431B9FA5EB9D0D5;3190.
+(rerunfilecheck)             Checksum: 734BD97EC2E46D505927251288D52BB4;3451.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                master
@@ -2072,13 +3321,13 @@ Package logreq Info: Writing requests to 'master.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37603 strings out of 476872
- 678342 string characters out of 5820377
- 1876388 words of memory out of 5000000
- 57202 multiletter control sequences out of 15000+600000
- 578185 words of font info for 125 fonts, out of 8000000 for 9000
+ 38235 strings out of 476872
+ 688905 string characters out of 5820377
+ 1911388 words of memory out of 5000000
+ 57798 multiletter control sequences out of 15000+600000
+ 580056 words of font info for 129 fonts, out of 8000000 for 9000
  725 hyphenation exceptions out of 8191
- 99i,12n,94p,2001b,1605s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,242p,2001b,1605s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/share
 /texmf-dist/fonts/type1/public/bbold-type1/bbold5.pfb></usr/share/texmf-dist/fo
 nts/type1/public/bbold-type1/bbold7.pfb></usr/share/texmf-dist/fonts/type1/publ
@@ -2099,11 +3348,11 @@ pe1/public/cmsrb/cmsrbtr.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/
 type1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm
 -super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm2074
-.pfb>
-Output written on master.pdf (53 pages, 566983 bytes).
+.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb>
+Output written on master.pdf (63 pages, 598108 bytes).
 PDF statistics:
- 599 PDF objects out of 1000 (max. 8388607)
- 485 compressed objects within 5 object streams
- 152 named destinations out of 1000 (max. 500000)
- 154 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 668 PDF objects out of 1000 (max. 8388607)
+ 540 compressed objects within 6 object streams
+ 171 named destinations out of 1000 (max. 500000)
+ 162 words of extra memory for PDF output out of 10000 (max. 10000000)
 
