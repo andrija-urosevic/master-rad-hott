@@ -23,7 +23,7 @@
 \contentsline {subsection}{Друге врсте једнакости}{32}{section*.11}%
 \contentsline {chapter}{\chapternumberline {3}\textsc {Agda}}{35}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Основе језика \textsc {Agda}}{35}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Резултат}{38}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Библиотека основа интуиционистичке теорије типова}{38}{section.3.2}%
 \contentsline {chapter}{\chapternumberline {4}Закључак}{40}{chapter.4}%
 \contentsline {appendix}{\chapternumberline {A}Издвојени делови библиотеке}{42}{appendix.A}%
 \contentsline {subsection}{Опште}{42}{section*.12}%
