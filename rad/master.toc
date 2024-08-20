@@ -23,15 +23,14 @@
 \contentsline {subsection}{Друге врсте једнакости}{33}{section*.11}%
 \contentsline {chapter}{\chapternumberline {3}\textsc {Agda}}{35}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Основе језика \textsc {Agda}}{35}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Библиотека основа интуиционистичке теорије типова}{38}{section.3.2}%
-\contentsline {chapter}{\chapternumberline {4}Закључак}{40}{chapter.4}%
-\contentsline {appendix}{\chapternumberline {A}Издвојени делови библиотеке}{42}{appendix.A}%
-\contentsline {subsection}{Опште}{42}{section*.12}%
-\contentsline {subsection}{Празан тип}{42}{section*.13}%
-\contentsline {subsection}{Јединични тип}{43}{section*.14}%
-\contentsline {subsection}{Тип копроизвода}{43}{section*.15}%
-\contentsline {subsection}{Тип зависних парова}{45}{section*.16}%
-\contentsline {subsection}{Типови идентитета}{46}{section*.17}%
-\contentsline {subsection}{Природни бројеви}{48}{section*.18}%
-\contentsline {subsection}{Булов тип}{51}{section*.19}%
-\contentsline {chapter}{Литература}{52}{section*.21}%
+\contentsline {chapter}{\chapternumberline {4}Имплементацијa библиотекe \textsc {InTT}}{39}{chapter.4}%
+\contentsline {subsection}{Тип Зависних функција}{40}{section*.12}%
+\contentsline {subsection}{Празан тип}{40}{section*.13}%
+\contentsline {subsection}{Јединични тип}{42}{section*.14}%
+\contentsline {subsection}{Тип копроизвода}{42}{section*.15}%
+\contentsline {subsection}{Тип зависних парова}{44}{section*.16}%
+\contentsline {subsection}{Типови идентитета}{45}{section*.17}%
+\contentsline {subsection}{Природни бројеви}{47}{section*.18}%
+\contentsline {subsection}{Булов тип}{50}{section*.19}%
+\contentsline {chapter}{\chapternumberline {5}Закључак}{51}{chapter.5}%
+\contentsline {chapter}{Литература}{53}{section*.21}%

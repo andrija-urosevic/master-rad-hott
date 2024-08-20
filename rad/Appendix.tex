@@ -36,11 +36,121 @@
 \end{code}
 }
 
-\subsection{Опште}
+\subsection{Тип Зависних функција}
+
+Тип зависних функција као такав постоји у језику \textsc{Agda} и није га потребно дефинисати. За фамилију типова $P$ над типом $X$, тип зависних функција $\prod_{(x : X)} P (x)$ у језику \textsc{Agda} записујемо као $(x : X) \to P~x$. \textsc{Agda} је веома изражајна и омогућава нам да дефинишемо синтаксу на коју смо навикли:
+
+\begin{code}%
+\>[0]\AgdaFunction{Π}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaGeneralizable{𝓤}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{̇}}\AgdaSpace{}%
+\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{P}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{X}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaGeneralizable{𝓥}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{̇}}\AgdaSpace{}%
+\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaGeneralizable{𝓤}\AgdaSpace{}%
+\AgdaOperator{\AgdaPrimitive{⊔}}\AgdaSpace{}%
+\AgdaGeneralizable{𝓥}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{̇}}\<%
+\\
+\>[0]\AgdaFunction{Π}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{𝓤}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{𝓥}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{X}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{P}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{X}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{P}\AgdaSpace{}%
+\AgdaBound{x}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+\>[0]\AgdaFunction{-Π}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{𝓤}\AgdaSpace{}%
+\AgdaBound{𝓥}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPostulate{Universe}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{X}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{𝓤}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{̇}}\AgdaSpace{}%
+\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{Y}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{X}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{𝓥}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{̇}}\AgdaSpace{}%
+\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{𝓤}\AgdaSpace{}%
+\AgdaOperator{\AgdaPrimitive{⊔}}\AgdaSpace{}%
+\AgdaBound{𝓥}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{̇}}\<%
+\\
+\>[0]\AgdaFunction{-Π}\AgdaSpace{}%
+\AgdaBound{X}\AgdaSpace{}%
+\AgdaBound{Y}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaFunction{Π}\AgdaSpace{}%
+\AgdaBound{Y}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+\>[0]\AgdaKeyword{syntax}\AgdaSpace{}%
+\AgdaFunction{-Π}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{(λ}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{b}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaFunction{Π}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaFunction{꞉}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSpace{}%
+\AgdaFunction{,}\AgdaSpace{}%
+\AgdaBound{b}\<%
+\end{code}
+Ова синтакса се веома ретко користи у библиотеци јер је подразумевани начин записивања зависних функција једноставнији.
+
+На основу дефиниције идентитета~\ref{def:id} можемо дефинисати следећу функцију: 
+\begin{code}%
+\>[0]\AgdaFunction{id}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaGeneralizable{𝓤}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{̇}}\AgdaSpace{}%
+\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{X}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{X}\<%
+\\
+\>[0]\AgdaFunction{id}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaBound{x}\<%
+\end{code}
+
+На основу дефиниције композиције функција~\ref{def:comp} можемо дефинисати следећу функцију:
 
 \begin{code}%
 \>[0]\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}∘\AgdaUnderscore{}}}%
-\>[14I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[96I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
@@ -59,7 +169,7 @@
 \AgdaOperator{\AgdaFunction{̇}}\AgdaSpace{}%
 \AgdaSymbol{\}}\<%
 \\
-\>[.][@{}l@{}]\<[14I]%
+\>[.][@{}l@{}]\<[96I]%
 \>[4]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaSymbol{(}\AgdaBound{g}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
@@ -96,28 +206,11 @@
 \AgdaBound{g}\AgdaSpace{}%
 \AgdaSymbol{(}\AgdaBound{f}\AgdaSpace{}%
 \AgdaBound{x}\AgdaSymbol{)}\<%
-\\
-%
-\\[\AgdaEmptyExtraSkip]%
-\>[0]\AgdaFunction{id}\AgdaSpace{}%
-\AgdaSymbol{:}\AgdaSpace{}%
-\AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
-\AgdaSymbol{:}\AgdaSpace{}%
-\AgdaGeneralizable{𝓤}\AgdaSpace{}%
-\AgdaOperator{\AgdaFunction{̇}}\AgdaSpace{}%
-\AgdaSymbol{\}}\AgdaSpace{}%
-\AgdaSymbol{→}\AgdaSpace{}%
-\AgdaBound{X}\AgdaSpace{}%
-\AgdaSymbol{→}\AgdaSpace{}%
-\AgdaBound{X}\<%
-\\
-\>[0]\AgdaFunction{id}\AgdaSpace{}%
-\AgdaBound{x}\AgdaSpace{}%
-\AgdaSymbol{=}\AgdaSpace{}%
-\AgdaBound{x}\<%
 \end{code}
 
 \subsection{Празан тип}
+
+На основу правила $\0$-form празан тип можемо формирати из празног контекста, односно $\0 : \mathcal{U}_0$. Поред тога, празан тип нема ни један конструктор. У језику \textsc{Agda} то записујемо као:
 
 \begin{code}%
 \>[0]\AgdaKeyword{data}\AgdaSpace{}%
@@ -126,9 +219,10 @@
 \AgdaPrimitive{𝓤₀}\AgdaSpace{}%
 \AgdaOperator{\AgdaFunction{̇}}\AgdaSpace{}%
 \AgdaKeyword{where}\<%
-\\
-%
-\\[\AgdaEmptyExtraSkip]%
+\end{code}
+
+Правило индукције $\0$-ind заједно са недостатком правила израчунавања у језику \textsc{Agda} записујемо као:
+\begin{code}%
 \>[0]\AgdaFunction{𝟘-induction}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{(}\AgdaBound{P}\AgdaSpace{}%
@@ -149,9 +243,11 @@
 \>[0]\AgdaFunction{𝟘-induction}\AgdaSpace{}%
 \AgdaBound{P}\AgdaSpace{}%
 \AgdaSymbol{()}\<%
-\\
-%
-\\[\AgdaEmptyExtraSkip]%
+\end{code}
+Приметимо да овде $()$ означава да празан тип нема конструкторе.
+
+Правило рекурзије $\0$-rec уводимо преко правила индукције:
+\begin{code}%
 \>[0]\AgdaFunction{𝟘-recursion}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{(}\AgdaBound{A}\AgdaSpace{}%
@@ -195,11 +291,11 @@
 \AgdaSymbol{=}\AgdaSpace{}%
 \AgdaFunction{𝟘-recursion}\AgdaSpace{}%
 \AgdaBound{A}\<%
-\\
-%
-\\[\AgdaEmptyExtraSkip]%
-%
-\\[\AgdaEmptyExtraSkip]%
+\end{code}
+Приметимо да израз $(λ~\_ \to A)$ означава да тип $A$ не зависи од $x : \0$, односно да тип $A$ није фамилија типова. Функција $!\0$ је само облик рекурзије који имплицитно закључује тип $A$.
+
+Дефиницију празног типа и негације~\ref{def:empty}, као и дефиницију дупле негације у језику \textsc{Agda} записујемо као:
+\begin{code}%
 \>[0]\AgdaFunction{empty}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
@@ -234,7 +330,25 @@
 \\
 %
 \\[\AgdaEmptyExtraSkip]%
-\>[0]\AgdaFunction{¬-functor}\AgdaSpace{}%
+\>[0]\AgdaFunction{¬¬}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaGeneralizable{𝓤}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{̇}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaGeneralizable{𝓤}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{̇}}\<%
+\\
+\>[0]\AgdaFunction{¬¬}\AgdaSpace{}%
+\AgdaBound{X}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaFunction{¬}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaFunction{¬}\AgdaSpace{}%
+\AgdaBound{X}\AgdaSymbol{)}\<%
+\end{code}
+
+Дупла негација се понаша као функтор, односно можемо конструисати елемент $\neg\neg$-$\mathsf{functor} : (X \to Y) \to (\neg \neg X \to \neg \neg Y)$. Да би то постигли, конструишимо прво елемент $\neg$-$\mathsf{inv}$-$\mathsf{functor} : (X \to Y) \to (\neg Y \to \neg X)$. Искористићемо празнине и интерактивно својство језика \textsc{Agda}:
+\begin{code}%
+\>[0]\AgdaFunction{¬-inv-functor}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
@@ -257,7 +371,37 @@
 \AgdaFunction{¬}\AgdaSpace{}%
 \AgdaBound{X}\AgdaSymbol{)}\<%
 \\
-\>[0]\AgdaFunction{¬-functor}\AgdaSpace{}%
+\>[0]\AgdaFunction{¬-inv-functor}\AgdaSpace{}%
+\AgdaBound{f}\AgdaSpace{}%
+\AgdaBound{ny}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaHole{\{!\ \ \ !\}}\<%
+\end{code}   
+Тренутно треба конструисати елемент тип $\0$, а у контексту се налази $x : X, ny : \neg Y$ и $f : X \to Y$. Због тога примењујемо функцију $ny : \neg Y :\equiv Y → \0$.
+\begin{code}%
+\>[0]\AgdaFunction{¬-inv-functor}\AgdaSpace{}%
+\AgdaBound{f}\AgdaSpace{}%
+\AgdaBound{ny}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaBound{ny}\AgdaSpace{}%
+\AgdaHole{\{!\ \ \ !\}}\<%
+\end{code}
+Тренутни циљ постаје конструисање елемента типа $Y$, за исти контекст. Због тога, примењујемо функцију $f : X \to Y$.
+\begin{code}%
+\>[0]\AgdaFunction{¬-inv-functor}\AgdaSpace{}%
+\AgdaBound{f}\AgdaSpace{}%
+\AgdaBound{ny}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaBound{ny}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{f}\AgdaSpace{}%
+\AgdaHole{\{!\ \ \ !\}}\AgdaSymbol{)}\<%
+\end{code}
+На крају треба конструисати елемент тиме $X$, за исти контекст. Како се у контексту налази одговарајућа конструкција, тј. $x : X$ је у контексту, конструкцију тривијално завршавамо:
+\begin{code}%
+\>[0]\AgdaFunction{¬-inv-functor}\AgdaSpace{}%
 \AgdaBound{f}\AgdaSpace{}%
 \AgdaBound{ny}\AgdaSpace{}%
 \AgdaBound{x}\AgdaSpace{}%
@@ -265,26 +409,9 @@
 \AgdaBound{ny}\AgdaSpace{}%
 \AgdaSymbol{(}\AgdaBound{f}\AgdaSpace{}%
 \AgdaBound{x}\AgdaSymbol{)}\<%
-\\
-%
-\\[\AgdaEmptyExtraSkip]%
-\>[0]\AgdaFunction{¬¬}\AgdaSpace{}%
-\AgdaSymbol{:}\AgdaSpace{}%
-\AgdaGeneralizable{𝓤}\AgdaSpace{}%
-\AgdaOperator{\AgdaFunction{̇}}\AgdaSpace{}%
-\AgdaSymbol{→}\AgdaSpace{}%
-\AgdaGeneralizable{𝓤}\AgdaSpace{}%
-\AgdaOperator{\AgdaFunction{̇}}\<%
-\\
-\>[0]\AgdaFunction{¬¬}\AgdaSpace{}%
-\AgdaBound{X}\AgdaSpace{}%
-\AgdaSymbol{=}\AgdaSpace{}%
-\AgdaFunction{¬}\AgdaSpace{}%
-\AgdaSymbol{(}\AgdaFunction{¬}\AgdaSpace{}%
-\AgdaBound{X}\AgdaSymbol{)}\<%
-\\
-%
-\\[\AgdaEmptyExtraSkip]%
+\end{code}
+Тражену конструкицју о функторијалности дупле негације извршавамо интерактивно на сличан начин.
+\begin{code}%
 \>[0]\AgdaFunction{¬¬-functor}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
@@ -314,7 +441,7 @@
 \AgdaBound{ny}\AgdaSpace{}%
 \AgdaSymbol{=}\AgdaSpace{}%
 \AgdaBound{nnx}\AgdaSpace{}%
-\AgdaSymbol{(}\AgdaFunction{¬-functor}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaFunction{¬-inv-functor}\AgdaSpace{}%
 \AgdaBound{f}\AgdaSpace{}%
 \AgdaBound{ny}\AgdaSymbol{)}\<%
 \end{code}
@@ -457,7 +584,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{+-induction}%
-\>[309I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[396I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
@@ -478,7 +605,7 @@
 \AgdaOperator{\AgdaFunction{̇}}\AgdaSpace{}%
 \AgdaSymbol{)}\<%
 \\
-\>[.][@{}l@{}]\<[309I]%
+\>[.][@{}l@{}]\<[396I]%
 \>[12]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaSymbol{((}\AgdaBound{x}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
@@ -532,7 +659,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{+-recursion}%
-\>[367I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[454I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
@@ -549,7 +676,7 @@
 \AgdaOperator{\AgdaFunction{̇}}\AgdaSpace{}%
 \AgdaSymbol{)}\<%
 \\
-\>[.][@{}l@{}]\<[367I]%
+\>[.][@{}l@{}]\<[454I]%
 \>[12]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaSymbol{(}\AgdaBound{X}\AgdaSpace{}%
 \AgdaSymbol{→}\AgdaSpace{}%
@@ -636,7 +763,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}+→\AgdaUnderscore{}}}%
-\>[446I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[533I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
 \AgdaBound{X}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
@@ -660,7 +787,7 @@
 \AgdaSymbol{→}\AgdaSpace{}%
 \AgdaBound{Y}\AgdaSymbol{)}\<%
 \\
-\>[.][@{}l@{}]\<[446I]%
+\>[.][@{}l@{}]\<[533I]%
 \>[5]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaSymbol{(}\AgdaBound{A}\AgdaSpace{}%
 \AgdaOperator{\AgdaDatatype{+}}\AgdaSpace{}%
@@ -693,7 +820,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{+-left-empty}%
-\>[492I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[579I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
@@ -705,7 +832,7 @@
 \AgdaOperator{\AgdaFunction{̇}}\AgdaSpace{}%
 \AgdaSymbol{\}}\<%
 \\
-\>[.][@{}l@{}]\<[492I]%
+\>[.][@{}l@{}]\<[579I]%
 \>[13]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaFunction{empty}\AgdaSpace{}%
 \AgdaBound{X}\<%
@@ -734,7 +861,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{+-rigth-empty}%
-\>[521I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[608I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
@@ -746,7 +873,7 @@
 \AgdaOperator{\AgdaFunction{̇}}\AgdaSpace{}%
 \AgdaSymbol{\}}\<%
 \\
-\>[.][@{}l@{}]\<[521I]%
+\>[.][@{}l@{}]\<[608I]%
 \>[14]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaFunction{empty}\AgdaSpace{}%
 \AgdaBound{Y}\<%
@@ -885,7 +1012,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{Σ-induction}%
-\>[625I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[712I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
@@ -907,7 +1034,7 @@
 \AgdaOperator{\AgdaFunction{̇}}\AgdaSpace{}%
 \AgdaSymbol{\}}\<%
 \\
-\>[.][@{}l@{}]\<[625I]%
+\>[.][@{}l@{}]\<[712I]%
 \>[12]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaSymbol{((}\AgdaBound{x}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
@@ -949,7 +1076,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{carry}%
-\>[677I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[764I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
@@ -971,7 +1098,7 @@
 \AgdaOperator{\AgdaFunction{̇}}\AgdaSpace{}%
 \AgdaSymbol{\}}\<%
 \\
-\>[.][@{}l@{}]\<[677I]%
+\>[.][@{}l@{}]\<[764I]%
 \>[6]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaSymbol{((}\AgdaBound{(}\AgdaBound{x}\AgdaSpace{}%
 \AgdaOperator{\AgdaInductiveConstructor{,}}\AgdaSpace{}%
@@ -1089,7 +1216,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{×-induction}%
-\>[789I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[876I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
@@ -1110,7 +1237,7 @@
 \AgdaOperator{\AgdaFunction{̇}}\AgdaSpace{}%
 \AgdaSymbol{\}}\<%
 \\
-\>[.][@{}l@{}]\<[789I]%
+\>[.][@{}l@{}]\<[876I]%
 \>[12]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaSymbol{((}\AgdaBound{x}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
@@ -1248,7 +1375,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{𝕁}%
-\>[909I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[996I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{(}\AgdaBound{X}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
@@ -1269,7 +1396,7 @@
 \AgdaOperator{\AgdaFunction{̇}}\AgdaSpace{}%
 \AgdaSymbol{)}\<%
 \\
-\>[.][@{}l@{}]\<[909I]%
+\>[.][@{}l@{}]\<[996I]%
 \>[2]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaSymbol{((}\AgdaBound{x}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
@@ -1313,7 +1440,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{ℍ}%
-\>[962I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[1049I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
@@ -1336,7 +1463,7 @@
 \AgdaOperator{\AgdaFunction{̇}}\AgdaSpace{}%
 \AgdaSymbol{)}\<%
 \\
-\>[.][@{}l@{}]\<[962I]%
+\>[.][@{}l@{}]\<[1049I]%
 \>[2]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaBound{P}\AgdaSpace{}%
 \AgdaBound{x}\AgdaSpace{}%
@@ -1498,8 +1625,8 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{assoc}%
-\>[1108I]\AgdaSymbol{:}%
-\>[1109I]\AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
+\>[1195I]\AgdaSymbol{:}%
+\>[1196I]\AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
 \AgdaOperator{\AgdaFunction{̇}}\AgdaSpace{}%
@@ -1511,7 +1638,7 @@
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaBound{X}\AgdaSymbol{\}}\<%
 \\
-\>[.][@{}l@{}]\<[1109I]%
+\>[.][@{}l@{}]\<[1196I]%
 \>[8]\AgdaSymbol{(}\AgdaBound{p}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaBound{x}\AgdaSpace{}%
@@ -1528,7 +1655,7 @@
 \AgdaOperator{\AgdaFunction{==}}\AgdaSpace{}%
 \AgdaBound{w}\AgdaSymbol{)}\<%
 \\
-\>[.][@{}l@{}]\<[1108I]%
+\>[.][@{}l@{}]\<[1195I]%
 \>[6]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaSymbol{(}\AgdaBound{p}\AgdaSpace{}%
 \AgdaOperator{\AgdaFunction{·}}\AgdaSpace{}%
@@ -1556,7 +1683,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{left-unit}%
-\>[1154I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[1241I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
@@ -1572,7 +1699,7 @@
 \AgdaOperator{\AgdaFunction{==}}\AgdaSpace{}%
 \AgdaBound{y}\AgdaSymbol{)}\<%
 \\
-\>[.][@{}l@{}]\<[1154I]%
+\>[.][@{}l@{}]\<[1241I]%
 \>[10]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaSymbol{(}\AgdaInductiveConstructor{refl}\AgdaSpace{}%
 \AgdaBound{x}\AgdaSymbol{)}\AgdaSpace{}%
@@ -1592,7 +1719,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{right-unit}%
-\>[1181I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[1268I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
@@ -1608,7 +1735,7 @@
 \AgdaOperator{\AgdaFunction{==}}\AgdaSpace{}%
 \AgdaBound{y}\AgdaSymbol{)}\<%
 \\
-\>[.][@{}l@{}]\<[1181I]%
+\>[.][@{}l@{}]\<[1268I]%
 \>[11]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaBound{p}\AgdaSpace{}%
 \AgdaOperator{\AgdaFunction{·}}\AgdaSpace{}%
@@ -1628,7 +1755,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{left-inv}%
-\>[1208I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[1295I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
@@ -1644,7 +1771,7 @@
 \AgdaOperator{\AgdaFunction{==}}\AgdaSpace{}%
 \AgdaBound{y}\AgdaSymbol{)}\<%
 \\
-\>[.][@{}l@{}]\<[1208I]%
+\>[.][@{}l@{}]\<[1295I]%
 \>[9]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaBound{p}\AgdaSpace{}%
 \AgdaOperator{\AgdaFunction{⁻¹}}\AgdaSpace{}%
@@ -1665,7 +1792,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{right-inv}%
-\>[1236I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[1323I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
@@ -1681,7 +1808,7 @@
 \AgdaOperator{\AgdaFunction{==}}\AgdaSpace{}%
 \AgdaBound{y}\AgdaSymbol{)}\<%
 \\
-\>[.][@{}l@{}]\<[1236I]%
+\>[.][@{}l@{}]\<[1323I]%
 \>[10]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaBound{p}\AgdaSpace{}%
 \AgdaOperator{\AgdaFunction{·}}\AgdaSpace{}%
@@ -1702,7 +1829,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{double-inv}%
-\>[1264I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[1351I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
@@ -1718,7 +1845,7 @@
 \AgdaOperator{\AgdaFunction{==}}\AgdaSpace{}%
 \AgdaBound{y}\AgdaSymbol{)}\<%
 \\
-\>[.][@{}l@{}]\<[1264I]%
+\>[.][@{}l@{}]\<[1351I]%
 \>[11]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaSymbol{(}\AgdaBound{p}\AgdaSpace{}%
 \AgdaOperator{\AgdaFunction{⁻¹}}\AgdaSpace{}%
@@ -1738,7 +1865,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{ap}%
-\>[1291I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[1378I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
@@ -1759,7 +1886,7 @@
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaBound{X}\AgdaSymbol{\}}\<%
 \\
-\>[.][@{}l@{}]\<[1291I]%
+\>[.][@{}l@{}]\<[1378I]%
 \>[3]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaBound{x}\AgdaSpace{}%
 \AgdaOperator{\AgdaFunction{==}}\AgdaSpace{}%
@@ -1783,7 +1910,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{ap-id}%
-\>[1327I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[1414I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
@@ -1799,7 +1926,7 @@
 \AgdaOperator{\AgdaFunction{==}}\AgdaSpace{}%
 \AgdaBound{y}\AgdaSymbol{)}\<%
 \\
-\>[.][@{}l@{}]\<[1327I]%
+\>[.][@{}l@{}]\<[1414I]%
 \>[6]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaBound{p}\AgdaSpace{}%
 \AgdaOperator{\AgdaFunction{==}}\AgdaSpace{}%
@@ -1818,7 +1945,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{ap-comp}%
-\>[1353I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[1440I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
@@ -1841,7 +1968,7 @@
 \AgdaOperator{\AgdaFunction{==}}\AgdaSpace{}%
 \AgdaBound{y}\AgdaSymbol{)}\<%
 \\
-\>[.][@{}l@{}]\<[1353I]%
+\>[.][@{}l@{}]\<[1440I]%
 \>[8]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaFunction{ap}\AgdaSpace{}%
 \AgdaBound{g}\AgdaSpace{}%
@@ -1870,7 +1997,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{ap-refl}%
-\>[1396I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[1483I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
@@ -1890,7 +2017,7 @@
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaBound{X}\AgdaSymbol{)}\<%
 \\
-\>[.][@{}l@{}]\<[1396I]%
+\>[.][@{}l@{}]\<[1483I]%
 \>[8]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaFunction{ap}\AgdaSpace{}%
 \AgdaBound{f}\AgdaSpace{}%
@@ -1913,7 +2040,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{ap-inv}%
-\>[1430I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[1517I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
@@ -1939,7 +2066,7 @@
 \AgdaOperator{\AgdaFunction{==}}\AgdaSpace{}%
 \AgdaBound{y}\AgdaSymbol{)}\<%
 \\
-\>[.][@{}l@{}]\<[1430I]%
+\>[.][@{}l@{}]\<[1517I]%
 \>[7]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaFunction{ap}\AgdaSpace{}%
 \AgdaBound{f}\AgdaSpace{}%
@@ -1965,7 +2092,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{ap-concat}%
-\>[1473I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[1560I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
@@ -1997,7 +2124,7 @@
 \AgdaOperator{\AgdaFunction{==}}\AgdaSpace{}%
 \AgdaBound{z}\AgdaSymbol{)}\<%
 \\
-\>[.][@{}l@{}]\<[1473I]%
+\>[.][@{}l@{}]\<[1560I]%
 \>[10]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaFunction{ap}\AgdaSpace{}%
 \AgdaBound{f}\AgdaSpace{}%
@@ -2027,7 +2154,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{tr}%
-\>[1526I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[1613I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
@@ -2045,7 +2172,7 @@
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaBound{A}\AgdaSymbol{\}}\<%
 \\
-\>[.][@{}l@{}]\<[1526I]%
+\>[.][@{}l@{}]\<[1613I]%
 \>[3]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaBound{x}\AgdaSpace{}%
 \AgdaOperator{\AgdaFunction{==}}\AgdaSpace{}%
@@ -2070,7 +2197,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{lift}%
-\>[1560I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[1647I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
@@ -2097,7 +2224,7 @@
 \AgdaBound{B}\AgdaSpace{}%
 \AgdaBound{x}\AgdaSymbol{)}\<%
 \\
-\>[.][@{}l@{}]\<[1560I]%
+\>[.][@{}l@{}]\<[1647I]%
 \>[5]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
 \AgdaOperator{\AgdaInductiveConstructor{,}}\AgdaSpace{}%
@@ -2154,7 +2281,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{ℕ-induction}%
-\>[1619I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[1706I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{(}\AgdaBound{P}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaDatatype{ℕ}\AgdaSpace{}%
@@ -2163,7 +2290,7 @@
 \AgdaOperator{\AgdaFunction{̇}}\AgdaSpace{}%
 \AgdaSymbol{)}\<%
 \\
-\>[.][@{}l@{}]\<[1619I]%
+\>[.][@{}l@{}]\<[1706I]%
 \>[12]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaBound{P}\AgdaSpace{}%
 \AgdaNumber{0}\<%
@@ -2216,14 +2343,14 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{ℕ-recursion}%
-\>[1663I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[1750I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{(}\AgdaBound{A}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
 \AgdaOperator{\AgdaFunction{̇}}\AgdaSpace{}%
 \AgdaSymbol{)}\<%
 \\
-\>[.][@{}l@{}]\<[1663I]%
+\>[.][@{}l@{}]\<[1750I]%
 \>[12]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaBound{A}\<%
 \\
@@ -2263,14 +2390,14 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{ℕ-iteration}%
-\>[1685I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[1772I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{(}\AgdaBound{A}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaGeneralizable{𝓤}\AgdaSpace{}%
 \AgdaOperator{\AgdaFunction{̇}}\AgdaSpace{}%
 \AgdaSymbol{)}\<%
 \\
-\>[.][@{}l@{}]\<[1685I]%
+\>[.][@{}l@{}]\<[1772I]%
 \>[12]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaBound{A}\<%
 \\
@@ -2699,7 +2826,7 @@
 \AgdaBound{m}\AgdaSymbol{)}\AgdaSpace{}%
 \AgdaBound{n}\AgdaSpace{}%
 \AgdaSymbol{=}%
-\>[1988I]\AgdaSymbol{(}\AgdaInductiveConstructor{succ}\AgdaSpace{}%
+\>[2075I]\AgdaSymbol{(}\AgdaInductiveConstructor{succ}\AgdaSpace{}%
 \AgdaSymbol{(}\AgdaBound{m}\AgdaSpace{}%
 \AgdaOperator{\AgdaFunction{+ℕ}}\AgdaSpace{}%
 \AgdaBound{n}\AgdaSymbol{))}%
@@ -2711,7 +2838,7 @@
 \AgdaBound{n}\AgdaSymbol{)}\AgdaSpace{}%
 \AgdaOperator{\AgdaFunction{⟩}}\<%
 \\
-\>[.][@{}l@{}]\<[1988I]%
+\>[.][@{}l@{}]\<[2075I]%
 \>[28]\AgdaSymbol{((}\AgdaInductiveConstructor{succ}\AgdaSpace{}%
 \AgdaSymbol{(}\AgdaBound{n}\AgdaSpace{}%
 \AgdaOperator{\AgdaFunction{+ℕ}}\AgdaSpace{}%
@@ -2976,7 +3103,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaFunction{𝟚-induction}%
-\>[2177I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[2264I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{(}\AgdaBound{P}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaFunction{𝟚}\AgdaSpace{}%
@@ -2985,7 +3112,7 @@
 \AgdaOperator{\AgdaFunction{̇}}\AgdaSpace{}%
 \AgdaSymbol{)}\<%
 \\
-\>[.][@{}l@{}]\<[2177I]%
+\>[.][@{}l@{}]\<[2264I]%
 \>[12]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaSymbol{(}\AgdaBound{P}\AgdaSpace{}%
 \AgdaInductiveConstructor{true}\AgdaSymbol{)}\<%
@@ -3023,7 +3150,7 @@
 %
 \\[\AgdaEmptyExtraSkip]%
 \>[0]\AgdaOperator{\AgdaFunction{if\AgdaUnderscore{}then\AgdaUnderscore{}else}}%
-\>[2206I]\AgdaSymbol{:}\AgdaSpace{}%
+\>[2293I]\AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{P}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaFunction{𝟚}\AgdaSpace{}%
@@ -3032,7 +3159,7 @@
 \AgdaOperator{\AgdaFunction{̇}}\AgdaSpace{}%
 \AgdaSymbol{\}}\<%
 \\
-\>[.][@{}l@{}]\<[2206I]%
+\>[.][@{}l@{}]\<[2293I]%
 \>[13]\AgdaSymbol{→}\AgdaSpace{}%
 \AgdaSymbol{(}\AgdaBound{b}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
