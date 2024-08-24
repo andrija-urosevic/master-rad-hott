@@ -2370,33 +2370,41 @@
     <bcf:citekey order="6" intorder="1">pml75</bcf:citekey>
     <bcf:citekey order="6" intorder="2">pml82</bcf:citekey>
     <bcf:citekey order="6" intorder="3">pml84</bcf:citekey>
-    <bcf:citekey order="6" intorder="4">pml98</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">agda</bcf:citekey>
+    <bcf:citekey order="6" intorder="4">pml93</bcf:citekey>
+    <bcf:citekey order="6" intorder="5">pml98</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">norell07</bcf:citekey>
+    <bcf:citekey order="7" intorder="2">norell09</bcf:citekey>
     <bcf:citekey order="8" intorder="1">coq</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">epigram</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">idris</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">nuprl</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">lean</bcf:citekey>
+    <bcf:citekey order="9" intorder="2">lean4</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">bra13</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">nuprl86</bcf:citekey>
     <bcf:citekey order="12" intorder="1">hs98</bcf:citekey>
     <bcf:citekey order="13" intorder="1">vlad06</bcf:citekey>
     <bcf:citekey order="14" intorder="1">aw09</bcf:citekey>
     <bcf:citekey order="15" intorder="1">brw</bcf:citekey>
+    <bcf:citekey order="15" intorder="2">brw2</bcf:citekey>
     <bcf:citekey order="16" intorder="1">kol32</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">hey</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">hey66</bcf:citekey>
     <bcf:citekey order="18" intorder="1">brw</bcf:citekey>
     <bcf:citekey order="19" intorder="1">rob11</bcf:citekey>
     <bcf:citekey order="20" intorder="1">ee</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">vlad_found</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">unimath</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">hottcoq</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">hottagda</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">hottbook</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">agda-unimath</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">symm</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">cube</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">cubi</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">rijke2022intro</bcf:citekey>
-    <bcf:citekey order="31" intorder="1">agda</bcf:citekey>
-    <bcf:citekey order="32" intorder="1" nocite="1">*</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">bur</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">vlad_found</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">unimath</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">hottcoq</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">hottagda</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">hottbook</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">agda-unimath</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">symm</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">coh16</bcf:citekey>
+    <bcf:citekey order="29" intorder="2">coq18</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">vez21</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">rijke2022intro</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">how80</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">wad15</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">agda</bcf:citekey>
+    <bcf:citekey order="35" intorder="1" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

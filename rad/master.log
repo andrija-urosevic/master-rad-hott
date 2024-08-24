@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.27)  24 AUG 2024 05:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.27)  24 AUG 2024 18:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1770,114 +1770,21 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] [1
 
+] [2
+
 ]
-
-LaTeX Warning: Citation 'vlad14' on page 2 undefined on input line 52.
-
-
-LaTeX Warning: Citation 'rus08' on page 2 undefined on input line 60.
-
-
-LaTeX Warning: Citation 'crc40' on page 2 undefined on input line 60.
-
-
-LaTeX Warning: Citation 'crc41' on page 2 undefined on input line 60.
-
-
-LaTeX Warning: Citation 'automath' on page 2 undefined on input line 60.
-
-
-LaTeX Warning: Citation 'pml75' on page 2 undefined on input line 60.
-
-
-LaTeX Warning: Citation 'pml82' on page 2 undefined on input line 60.
-
-
-LaTeX Warning: Citation 'pml84' on page 2 undefined on input line 60.
-
-
-LaTeX Warning: Citation 'pml98' on page 2 undefined on input line 60.
-
-
-LaTeX Warning: Citation 'agda' on page 2 undefined on input line 60.
-
-
-LaTeX Warning: Citation 'coq' on page 2 undefined on input line 60.
-
-
-LaTeX Warning: Citation 'epigram' on page 2 undefined on input line 60.
-
-
-LaTeX Warning: Citation 'idris' on page 2 undefined on input line 60.
-
-
-LaTeX Warning: Citation 'nuprl' on page 2 undefined on input line 60.
-
-
-LaTeX Warning: Citation 'hs98' on page 2 undefined on input line 60.
-
-
-LaTeX Warning: Citation 'vlad06' on page 2 undefined on input line 60.
-
-
-LaTeX Warning: Citation 'aw09' on page 2 undefined on input line 60.
-
-
-Overfull \hbox (0.54881pt too wide) in paragraph at lines 60--61
-[]\T2A/cmsrbr/m/n/12 Теориjу ти-пова jе ори-ги-нално пред-ста-вио Бер-транд Ра-
-сел [[]] (\T2A/cmsrbr/m/it/12 Bertrand
+Overfull \hbox (15.96967pt too wide) in paragraph at lines 64--65
+\OML/cmmsrbm/m/it/12 P \OMS/cmsy/m/n/12 _ :\OML/cmmsrbm/m/it/12 P$ \T2A/cmsrbr/
+m/n/12 [[]7[]]. Jе-дан од ра-злог су \T2A/cmsrbr/m/it/12 слаби контра-примери \
+T2A/cmsrbr/m/n/12 (енгл. \T2A/cmsrbr/m/it/12 weak counterexamples\T2A/cmsrbr/m/
+n/12 ).
  []
 
-[2
-
-]
-
-LaTeX Warning: Citation 'brw' on page 3 undefined on input line 62.
-
-
-LaTeX Warning: Citation 'kol32' on page 3 undefined on input line 62.
-
-
-LaTeX Warning: Citation 'hey' on page 3 undefined on input line 62.
-
-
-LaTeX Warning: Citation 'brw' on page 3 undefined on input line 64.
-
-[3]
-
-LaTeX Warning: Citation 'rob11' on page 4 undefined on input line 68.
-
-[4]
-
-LaTeX Warning: Citation 'ee' on page 5 undefined on input line 78.
-
-[5]
+[3] [4] [5]
 
 LaTeX Warning: Citation 'vlad_found' on page 6 undefined on input line 92.
 
-
-LaTeX Warning: Citation 'unimath' on page 6 undefined on input line 92.
-
-
-LaTeX Warning: Citation 'hottcoq' on page 6 undefined on input line 92.
-
-
-LaTeX Warning: Citation 'hottagda' on page 6 undefined on input line 92.
-
-
-LaTeX Warning: Citation 'agda-unimath' on page 6 undefined on input line 92.
-
-
-LaTeX Warning: Citation 'symm' on page 6 undefined on input line 92.
-
-[6]
-
-LaTeX Warning: Citation 'cube' on page 7 undefined on input line 94.
-
-
-LaTeX Warning: Citation 'cubi' on page 7 undefined on input line 94.
-
-[7]
+[6] [7]
 \myBox1=\box81
 \myScoreStart1=\dimen340
 \myCenter1=\dimen341
@@ -1897,20 +1804,20 @@ LaTeX Warning: Citation 'cubi' on page 7 undefined on input line 94.
  [8
 
 ]
-Overfull \hbox (5.2652pt too wide) in paragraph at lines 138--141
+Overfull \hbox (5.2652pt too wide) in paragraph at lines 139--142
  [] 
  []
 
 [9] [10] [11]
 LaTeX Font Info:    Trying to load font information for U+bbold on input line 2
-83.
+84.
  (/usr/share/texmf-dist/tex/latex/bbold/Ubbold.fd)
-Overfull \hbox (7.21216pt too wide) in paragraph at lines 304--307
+Overfull \hbox (7.21216pt too wide) in paragraph at lines 305--308
  [] 
  []
 
 
-Overfull \hbox (17.90474pt too wide) in paragraph at lines 312--313
+Overfull \hbox (17.90474pt too wide) in paragraph at lines 313--314
 \T2A/cmsrbr/m/n/12 типа $\U/bbold/m/n/12 N$ \T2A/cmsrbr/m/n/12 ако jе $\OML/cmm
 srbm/m/it/12 n \OT1/cmrsrbm/m/n/12 : \U/bbold/m/n/12 N$ \T2A/cmsrbr/m/n/12 ка-н
 о-нични терм. Због тога су $\OT1/cmsssrbm/m/n/12 0[]\OML/cmmsrbm/m/it/12 ; [][]
@@ -1920,7 +1827,7 @@ n/12 ))\OML/cmmsrbm/m/it/12 ; []$
  []
 
 [12]
-Overfull \hbox (2.65407pt too wide) in paragraph at lines 332--333
+Overfull \hbox (2.65407pt too wide) in paragraph at lines 333--334
 \T2A/cmsrbr/m/n/12 comp$[]$ по-требно jе де-фи-ни-сати вред-ност функ-циjе $[][
 ]\OT1/cmrsrbm/m/n/12 (\OML/cmmsrbm/m/it/12 p[]; p[]\OT1/cmrsrbm/m/n/12 ) : [][]
  \OML/cmmsrbm/m/it/12 P\OT1/cmrsrbm/m/n/12 (\OML/cmmsrbm/m/it/12 n\OT1/cmrsrbm/
@@ -1928,7 +1835,7 @@ m/n/12 )$
  []
 
 
-Overfull \hbox (26.66559pt too wide) in paragraph at lines 332--333
+Overfull \hbox (26.66559pt too wide) in paragraph at lines 333--334
 \OML/cmmsrbm/m/it/12 P\OT1/cmrsrbm/m/n/12 (\OT1/cmsssrbm/m/n/12 0[]\OT1/cmrsrbm
 /m/n/12 )$\T2A/cmsrbr/m/n/12 , онда смо про-на-шли од-го-ва-ра-jуЈу кон-струк-ц
 иjу. На-име, $[][]\OT1/cmrsrbm/m/n/12 (\OML/cmmsrbm/m/it/12 p[]; p[]; \OT1/cmss
@@ -1940,7 +1847,7 @@ srbm/m/n/12 0[]\OT1/cmrsrbm/m/n/12 ) \OMS/cmsy/m/n/12 ^^Q
 
 ]
 LaTeX Font Info:    Trying to load font information for T2A+cmsrbt on input lin
-e 1245.
+e 1246.
 
 (/usr/share/texmf-dist/tex/latex/cmsrb/t2acmsrbt.fd
 File: t2acmsrbt.fd 
@@ -1998,11 +1905,11 @@ LaTeX Font Warning: Font shape `T2A/cmsrbr/m/scit' undefined
 )
 
 LaTeX Font Warning: Font shape `T2A/cmsrbr/m/scit' undefined
-(Font)              using `T2A/cmsrbr/m/sc' instead on input line 1264.
+(Font)              using `T2A/cmsrbr/m/sc' instead on input line 1265.
 
 [39]
 LaTeX Font Info:    Trying to load font information for TS1+cmsrbr on input lin
-e 1275.
+e 1276.
  (/usr/share/texmf-dist/tex/latex/cmsrb/ts1cmsrbr.fd
 File: ts1cmsrbr.fd 
 ) [40
@@ -2640,33 +2547,76 @@ LaTeX Font Warning: Font shape `T2A/cmsrbr/m/scit' undefined
 )
 
 LaTeX Font Warning: Font shape `T2A/cmsrbr/m/scit' undefined
-(Font)              using `T2A/cmsrbr/m/sc' instead on input line 1289.
+(Font)              using `T2A/cmsrbr/m/sc' instead on input line 1290.
 
 [54] [55
 
 ] [56]
-Overfull \hbox (6.99309pt too wide) in paragraph at lines 1308--1308
-[]\T2A/cmsrbr/m/n/12 Mart[]^^Yn H[]otzel Escard[]o. Ѕ  Introduction to univalen
-t foundations of mathematics
+Overfull \hbox (7.56403pt too wide) in paragraph at lines 1309--1309
+[]\T2A/cmsrbr/m/n/12 Marc Bezem и др. \T2A/cmsrbr/m/it/12 Symmetry\T2A/cmsrbr/m
+/n/12 . []$\T2A/cmsrbt/m/n/12 https : / / github . com / UniMath / SymmetryBook
+$[]\T2A/cmsrbr/m/n/12 .
  []
 
 
-Overfull \hbox (10.46333pt too wide) in paragraph at lines 1308--1308
-[]\T2A/cmsrbr/m/n/12 Per Martin-L[]of и Giovanni Sambin. \T2A/cmsrbr/m/it/12 In
-tuitionistic type theory\T2A/cmsrbr/m/n/12 . Св. 9. Bibliopolis
+Overfull \hbox (12.32097pt too wide) in paragraph at lines 1309--1309
+\T2A/cmsrbr/m/n/12 Language: Design and Implementation^^Q. У: \T2A/cmsrbr/m/it/
+12 Journal of Functional Programming
  []
 
 
-Overfull \hbox (23.50264pt too wide) in paragraph at lines 1308--1308
-[]\T2A/cmsrbr/m/n/12 Andrea Vezzosi, Anders M[]ortberg и Andreas Abel. Ѕ  Cubic
-al Agda: A dependently
+Overfull \hbox (18.72066pt too wide) in paragraph at lines 1309--1309
+[]\T2A/cmsrbr/m/n/12 Douglas Bridges, Erik Palmgren и Hajime Ishihara. Ѕ  Const
+ructive Mathematics^^Q.
  []
 
 [57
 
-] [58] [59
+]
+Overfull \hbox (23.99817pt too wide) in paragraph at lines 1309--1309
+[]\T2A/cmsrbr/m/n/12 Andrej Kolmogoroff. Ѕ  Zur deutung der intuitionistischen 
+logik^^Q. У: \T2A/cmsrbr/m/it/12 Mathematische
+ []
 
-] [60
+
+Overfull \hbox (3.55386pt too wide) in paragraph at lines 1309--1309
+\T2A/cmsrbr/m/n/12 У: Studies in Logic and the Foundations of Mathematics 104 (
+1982), стр. 153^^U
+ []
+
+
+Overfull \hbox (10.46333pt too wide) in paragraph at lines 1309--1309
+[]\T2A/cmsrbr/m/n/12 Per Martin-L[]of и Giovanni Sambin. \T2A/cmsrbr/m/it/12 In
+tuitionistic type theory\T2A/cmsrbr/m/n/12 . Св. 9. Bibliopolis
+ []
+
+[58]
+Overfull \hbox (19.761pt too wide) in paragraph at lines 1309--1309
+\T2A/cmsrbr/m/it/12 Programming Language\T2A/cmsrbr/m/n/12 . Microsoft Research
+ и Karlsruhe Institute of Technology,
+ []
+
+
+Overfull \hbox (8.83366pt too wide) in paragraph at lines 1309--1309
+\T2A/cmsrbr/m/it/12 4th International Workshop on Types in Language Design and 
+Implementation\T2A/cmsrbr/m/n/12 .
+ []
+
+
+Overfull \hbox (23.50264pt too wide) in paragraph at lines 1309--1309
+[]\T2A/cmsrbr/m/n/12 Andrea Vezzosi, Anders M[]ortberg и Andreas Abel. Ѕ  Cubic
+al Agda: A dependently
+ []
+
+
+Overfull \hbox (4.35307pt too wide) in paragraph at lines 1309--1309
+[]\T2A/cmsrbr/m/n/12 Vladimir Voevodsky. Ѕ  The origins and motivations of Univ
+alent Foundations^^Q.
+ []
+
+[59] [60] [61
+
+] [62
 
 
 ]
@@ -2696,10 +2646,10 @@ Package logreq Info: Writing requests to 'master.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38207 strings out of 476872
- 688345 string characters out of 5820377
+ 38326 strings out of 476872
+ 691508 string characters out of 5820377
  1882388 words of memory out of 5000000
- 57770 multiletter control sequences out of 15000+600000
+ 57860 multiletter control sequences out of 15000+600000
  571606 words of font info for 114 fonts, out of 8000000 for 9000
  725 hyphenation exceptions out of 8191
  99i,12n,122p,2558b,1605s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2724,10 +2674,10 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/
 type1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm
 -super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm2074
 .pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb>
-Output written on master.pdf (68 pages, 620484 bytes).
+Output written on master.pdf (70 pages, 625472 bytes).
 PDF statistics:
- 716 PDF objects out of 1000 (max. 8388607)
- 583 compressed objects within 6 object streams
- 177 named destinations out of 1000 (max. 500000)
+ 801 PDF objects out of 1000 (max. 8388607)
+ 665 compressed objects within 7 object streams
+ 206 named destinations out of 1000 (max. 500000)
  178 words of extra memory for PDF output out of 10000 (max. 10000000)
 

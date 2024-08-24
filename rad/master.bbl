@@ -19,7 +19,261 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
-    \entry{hott-in:agda}{online}{}
+    \entry{brw2}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=3f2bf5bf8384add1388bc608f8456756}{%
+           family={Atten},
+           familyi={A\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Metaphysics Research Lab, Stanford University}%
+      }
+      \strng{namehash}{3f2bf5bf8384add1388bc608f8456756}
+      \strng{fullhash}{3f2bf5bf8384add1388bc608f8456756}
+      \strng{bibnamehash}{3f2bf5bf8384add1388bc608f8456756}
+      \strng{authorbibnamehash}{3f2bf5bf8384add1388bc608f8456756}
+      \strng{authornamehash}{3f2bf5bf8384add1388bc608f8456756}
+      \strng{authorfullhash}{3f2bf5bf8384add1388bc608f8456756}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The {Stanford} Encyclopedia of Philosophy}
+      \field{howpublished}{\url{https://plato.stanford.edu/archives/fall2023/entries/intuitionistic-logic-development/}}
+      \field{title}{{The Development of Intuitionistic Logic}}
+      \field{year}{2023}
+    \endentry
+    \entry{aw09}{article}{}
+      \name{author}{2}{}{%
+        {{hash=b8171e993b0288bf0b7716cdcc9aa013}{%
+           family={Awodey},
+           familyi={A\bibinitperiod},
+           given={Steve},
+           giveni={S\bibinitperiod}}}%
+        {{hash=af56b3803e8d08af73966f4c7b26fd30}{%
+           family={Warren},
+           familyi={W\bibinitperiod},
+           given={Michael\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{4d69a7ad29c7a5ebbc2eeebe17ebefbb}
+      \strng{fullhash}{4d69a7ad29c7a5ebbc2eeebe17ebefbb}
+      \strng{bibnamehash}{4d69a7ad29c7a5ebbc2eeebe17ebefbb}
+      \strng{authorbibnamehash}{4d69a7ad29c7a5ebbc2eeebe17ebefbb}
+      \strng{authornamehash}{4d69a7ad29c7a5ebbc2eeebe17ebefbb}
+      \strng{authorfullhash}{4d69a7ad29c7a5ebbc2eeebe17ebefbb}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mathematical Proceedings of the Cambridge Philosophical Society}
+      \field{number}{1}
+      \field{title}{Homotopy theoretic models of identity types}
+      \field{volume}{146}
+      \field{year}{2009}
+      \field{pages}{45\bibrangedash 55}
+      \range{pages}{11}
+    \endentry
+    \entry{hottcoq}{misc}{}
+      \name{author}{6}{}{%
+        {{hash=3d00839a7d4e4ff29f609b74c7a30980}{%
+           family={Bauer},
+           familyi={B\bibinitperiod},
+           given={Andrej},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3f9d252d19d20f98c265d93f4cd21fc1}{%
+           family={Gross},
+           familyi={G\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod}}}%
+        {{hash=7c4f8c4cd687c31f652591f365a798ef}{%
+           family={Lumsdaine},
+           familyi={L\bibinitperiod},
+           given={Peter\bibnamedelima LeFanu},
+           giveni={P\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=98bd94f22404bcfdc02fa5c3e90cecc8}{%
+           family={Shulman},
+           familyi={S\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod}}}%
+        {{hash=589663bc0518f0e965fe86c4bfafc9f5}{%
+           family={Sozeau},
+           familyi={S\bibinitperiod},
+           given={Matthieu},
+           giveni={M\bibinitperiod}}}%
+        {{hash=fb17eb7a080e0246fc98e395e0a4ec5b}{%
+           family={Spitters},
+           familyi={S\bibinitperiod},
+           given={Bas},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{26667dd5343bf3be0881069a68acb645}
+      \strng{fullhash}{e596a4436cce6bfa50336779305757d3}
+      \strng{bibnamehash}{26667dd5343bf3be0881069a68acb645}
+      \strng{authorbibnamehash}{26667dd5343bf3be0881069a68acb645}
+      \strng{authornamehash}{26667dd5343bf3be0881069a68acb645}
+      \strng{authorfullhash}{e596a4436cce6bfa50336779305757d3}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LO}
+      \field{eprinttype}{arXiv}
+      \field{title}{The HoTT Library: A formalization of homotopy type theory in Coq}
+      \field{year}{2016}
+      \verb{eprint}
+      \verb 1610.04591
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1610.04591
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1610.04591
+      \endverb
+    \endentry
+    \entry{symm}{misc}{}
+      \name{author}{5}{}{%
+        {{hash=6d232f8f72448bcec4812b308c5674c0}{%
+           family={Bezem},
+           familyi={B\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=409448cb828eda10650d18b18b2f0d08}{%
+           family={Buchholtz},
+           familyi={B\bibinitperiod},
+           given={Ulrik},
+           giveni={U\bibinitperiod}}}%
+        {{hash=3cfbc8c7b7fb6beac019367f234586da}{%
+           family={Cagne},
+           familyi={C\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod}}}%
+        {{hash=50ceb7c975d5b0ffa3b5044b4f9932fd}{%
+           family={Dundas},
+           familyi={D\bibinitperiod},
+           given={Bjørn\bibnamedelima Ian},
+           giveni={B\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=e5b197f9abb9382c464eae92cdcc1b2c}{%
+           family={Grayson},
+           familyi={G\bibinitperiod},
+           given={Daniel\bibnamedelima R.},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{a5468c3178958fd24bb5b9fd00ef2bd3}
+      \strng{fullhash}{e0be90dfca6c37c2612505c7a7c3f9dc}
+      \strng{bibnamehash}{a5468c3178958fd24bb5b9fd00ef2bd3}
+      \strng{authorbibnamehash}{a5468c3178958fd24bb5b9fd00ef2bd3}
+      \strng{authornamehash}{a5468c3178958fd24bb5b9fd00ef2bd3}
+      \strng{authorfullhash}{e0be90dfca6c37c2612505c7a7c3f9dc}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{22}
+      \field{howpublished}{\url{https://github.com/UniMath/SymmetryBook}}
+      \field{month}{8}
+      \field{note}{Commit: \texttt{bc24ac2}}
+      \field{title}{Symmetry}
+      \field{year}{2024}
+      \field{dateera}{ce}
+    \endentry
+    \entry{bur}{book}{}
+      \name{author}{1}{}{%
+        {{hash=2192d83c2c342c54dd990b2acfba807d}{%
+           family={Bourbaki},
+           familyi={B\bibinitperiod},
+           given={Nicolas},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{2192d83c2c342c54dd990b2acfba807d}
+      \strng{fullhash}{2192d83c2c342c54dd990b2acfba807d}
+      \strng{bibnamehash}{2192d83c2c342c54dd990b2acfba807d}
+      \strng{authorbibnamehash}{2192d83c2c342c54dd990b2acfba807d}
+      \strng{authornamehash}{2192d83c2c342c54dd990b2acfba807d}
+      \strng{authorfullhash}{2192d83c2c342c54dd990b2acfba807d}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Elements of Mathematics (Éléments de mathématique)}
+      \field{year}{1935--2024}
+      \verb{urlraw}
+      \verb https://www.springer.com/series/47
+      \endverb
+      \verb{url}
+      \verb https://www.springer.com/series/47
+      \endverb
+    \endentry
+    \entry{bra13}{article}{}
+      \name{author}{1}{}{%
+        {{hash=0bc32a97a19022eb7feeba090869b983}{%
+           family={Brady},
+           familyi={B\bibinitperiod},
+           given={Edwin},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{0bc32a97a19022eb7feeba090869b983}
+      \strng{fullhash}{0bc32a97a19022eb7feeba090869b983}
+      \strng{bibnamehash}{0bc32a97a19022eb7feeba090869b983}
+      \strng{authorbibnamehash}{0bc32a97a19022eb7feeba090869b983}
+      \strng{authornamehash}{0bc32a97a19022eb7feeba090869b983}
+      \strng{authorfullhash}{0bc32a97a19022eb7feeba090869b983}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Functional Programming}
+      \field{number}{5}
+      \field{title}{Idris, a General Purpose Dependently Typed Programming Language: Design and Implementation}
+      \field{volume}{23}
+      \field{year}{2013}
+      \field{pages}{552\bibrangedash 593}
+      \range{pages}{42}
+    \endentry
+    \entry{brw}{incollection}{}
+      \name{author}{3}{}{%
+        {{hash=e14087394afd2bbd2f3fb5b506a2349b}{%
+           family={Bridges},
+           familyi={B\bibinitperiod},
+           given={Douglas},
+           giveni={D\bibinitperiod}}}%
+        {{hash=46538b49a01f68b719cc0401fca886bf}{%
+           family={Palmgren},
+           familyi={P\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod}}}%
+        {{hash=97a0a1bfb7aa10a917027d7992a4ac16}{%
+           family={Ishihara},
+           familyi={I\bibinitperiod},
+           given={Hajime},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Metaphysics Research Lab, Stanford University}%
+      }
+      \strng{namehash}{aa49976bd30b16a3c6abca2eca8b075e}
+      \strng{fullhash}{aa49976bd30b16a3c6abca2eca8b075e}
+      \strng{bibnamehash}{aa49976bd30b16a3c6abca2eca8b075e}
+      \strng{authorbibnamehash}{aa49976bd30b16a3c6abca2eca8b075e}
+      \strng{authornamehash}{aa49976bd30b16a3c6abca2eca8b075e}
+      \strng{authorfullhash}{aa49976bd30b16a3c6abca2eca8b075e}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The {Stanford} Encyclopedia of Philosophy}
+      \field{howpublished}{\url{https://plato.stanford.edu/archives/fall2022/entries/mathematics-constructive/}}
+      \field{title}{{Constructive Mathematics}}
+      \field{year}{2022}
+    \endentry
+    \entry{hottagda}{online}{}
       \true{moreauthor}
       \true{morelabelname}
       \name{author}{9}{}{%
@@ -80,7 +334,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Homotopy Type Theory in {A}gda}
-      \true{nocite}
       \verb{urlraw}
       \verb https://github.com/HoTT/HoTT-Agda
       \endverb
@@ -88,7 +341,63 @@
       \verb https://github.com/HoTT/HoTT-Agda
       \endverb
     \endentry
-    \entry{cohen2016cubical}{misc}{}
+    \entry{crc40}{article}{}
+      \name{author}{1}{}{%
+        {{hash=eb8fba5b5e50ff0f327f47041fe3f891}{%
+           family={Church},
+           familyi={C\bibinitperiod},
+           given={Alonzo},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{eb8fba5b5e50ff0f327f47041fe3f891}
+      \strng{fullhash}{eb8fba5b5e50ff0f327f47041fe3f891}
+      \strng{bibnamehash}{eb8fba5b5e50ff0f327f47041fe3f891}
+      \strng{authorbibnamehash}{eb8fba5b5e50ff0f327f47041fe3f891}
+      \strng{authornamehash}{eb8fba5b5e50ff0f327f47041fe3f891}
+      \strng{authorfullhash}{eb8fba5b5e50ff0f327f47041fe3f891}
+      \field{extraname}{1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The journal of symbolic logic}
+      \field{number}{2}
+      \field{title}{A formulation of the simple theory of types}
+      \field{volume}{5}
+      \field{year}{1940}
+      \field{pages}{56\bibrangedash 68}
+      \range{pages}{13}
+    \endentry
+    \entry{crc41}{book}{}
+      \name{author}{1}{}{%
+        {{hash=eb8fba5b5e50ff0f327f47041fe3f891}{%
+           family={Church},
+           familyi={C\bibinitperiod},
+           given={Alonzo},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press}%
+      }
+      \strng{namehash}{eb8fba5b5e50ff0f327f47041fe3f891}
+      \strng{fullhash}{eb8fba5b5e50ff0f327f47041fe3f891}
+      \strng{bibnamehash}{eb8fba5b5e50ff0f327f47041fe3f891}
+      \strng{authorbibnamehash}{eb8fba5b5e50ff0f327f47041fe3f891}
+      \strng{authornamehash}{eb8fba5b5e50ff0f327f47041fe3f891}
+      \strng{authorfullhash}{eb8fba5b5e50ff0f327f47041fe3f891}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{6}
+      \field{title}{The calculi of lambda-conversion}
+      \field{year}{1985}
+    \endentry
+    \entry{coh16}{article}{}
       \name{author}{4}{}{%
         {{hash=fc71d208d46ac1d8ca5cdf9a5ab53f17}{%
            family={Cohen},
@@ -125,12 +434,90 @@
       \field{eprinttype}{arXiv}
       \field{title}{Cubical Type Theory: a constructive interpretation of the univalence axiom}
       \field{year}{2016}
-      \true{nocite}
       \verb{eprint}
       \verb 1611.02108
       \endverb
     \endentry
-    \entry{coquand2018higher}{misc}{}
+    \entry{nuprl86}{book}{}
+      \name{author}{12}{}{%
+        {{hash=42494b8014195492650b3c22134f0684}{%
+           family={Constable},
+           familyi={C\bibinitperiod},
+           given={Robert\bibnamedelima L.},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=5a9cc563055f903c11fea4a14085f0d6}{%
+           family={Allen},
+           familyi={A\bibinitperiod},
+           given={Stuart\bibnamedelima F.},
+           giveni={S\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=c77f1ef484d8056e4987e5e4973a183c}{%
+           family={Bromley},
+           familyi={B\bibinitperiod},
+           given={H.\bibnamedelimi M.},
+           giveni={H\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=c843b695e166d009e53a3a31ca57c2ef}{%
+           family={Cleaveland},
+           familyi={C\bibinitperiod},
+           given={W.\bibnamedelimi R.},
+           giveni={W\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=03d68935b9e3739d94b502dd0ff6bf40}{%
+           family={Cremer},
+           familyi={C\bibinitperiod},
+           given={J.\bibnamedelimi F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=21efc4bacdff358ba2d7b10d88b75294}{%
+           family={Harper},
+           familyi={H\bibinitperiod},
+           given={Richard\bibnamedelima W.},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=13bef3556ae34c187701edac82427cfb}{%
+           family={Howe},
+           familyi={H\bibinitperiod},
+           given={Douglas\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=890f55e13aa5826c75211993ebce65ac}{%
+           family={Knoblock},
+           familyi={K\bibinitperiod},
+           given={T.\bibnamedelimi B.},
+           giveni={T\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=eea46029022f3ab313c408b9f7c2b55f}{%
+           family={Mendler},
+           familyi={M\bibinitperiod},
+           given={Nancy\bibnamedelima A.},
+           giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=26a2b8e345710f6270131c87dba77ea1}{%
+           family={Panangaden},
+           familyi={P\bibinitperiod},
+           given={Prakash},
+           giveni={P\bibinitperiod}}}%
+        {{hash=e93d017a14e46c18566a15f8b22336d4}{%
+           family={Sasaki},
+           familyi={S\bibinitperiod},
+           given={James\bibnamedelima T.},
+           giveni={J\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=5b59d7fcf16beac8d0213c17c0ac368f}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Scott\bibnamedelima F.},
+           giveni={S\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Prentice-Hall}%
+      }
+      \strng{namehash}{7539a0c70127edda74bc29d6e10dc4ac}
+      \strng{fullhash}{d542d121229625a1073673c12da1e764}
+      \strng{bibnamehash}{7539a0c70127edda74bc29d6e10dc4ac}
+      \strng{authorbibnamehash}{7539a0c70127edda74bc29d6e10dc4ac}
+      \strng{authornamehash}{7539a0c70127edda74bc29d6e10dc4ac}
+      \strng{authorfullhash}{d542d121229625a1073673c12da1e764}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Implementing Mathematics with the Nuprl Proof Development System}
+      \field{year}{1986}
+    \endentry
+    \entry{coq18}{article}{}
       \name{author}{3}{}{%
         {{hash=9a0915de15d028e82e7de497c09fe93c}{%
            family={Coquand},
@@ -162,57 +549,310 @@
       \field{eprinttype}{arXiv}
       \field{title}{On Higher Inductive Types in Cubical Type Theory}
       \field{year}{2018}
-      \true{nocite}
       \verb{eprint}
       \verb 1802.01170
       \endverb
     \endentry
-    \entry{escardo2019introduction}{article}{}
+    \entry{automath}{article}{}
       \name{author}{1}{}{%
-        {{hash=922843f318b831b4e2da216b1f3aa6e0}{%
-           family={Escardó},
-           familyi={E\bibinitperiod},
-           given={Martín\bibnamedelima Hötzel},
-           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=9e7d8d87d1a5bfab0060604d4ffd2a39}{%
+           family={De\bibnamedelima Bruijn},
+           familyi={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Nicolaas\bibnamedelima Govert},
+           giveni={N\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
       }
-      \strng{namehash}{922843f318b831b4e2da216b1f3aa6e0}
-      \strng{fullhash}{922843f318b831b4e2da216b1f3aa6e0}
-      \strng{bibnamehash}{922843f318b831b4e2da216b1f3aa6e0}
-      \strng{authorbibnamehash}{922843f318b831b4e2da216b1f3aa6e0}
-      \strng{authornamehash}{922843f318b831b4e2da216b1f3aa6e0}
-      \strng{authorfullhash}{922843f318b831b4e2da216b1f3aa6e0}
+      \list{publisher}{1}{%
+        {Presses de l'Université de Montréal}%
+      }
+      \strng{namehash}{9e7d8d87d1a5bfab0060604d4ffd2a39}
+      \strng{fullhash}{9e7d8d87d1a5bfab0060604d4ffd2a39}
+      \strng{bibnamehash}{9e7d8d87d1a5bfab0060604d4ffd2a39}
+      \strng{authorbibnamehash}{9e7d8d87d1a5bfab0060604d4ffd2a39}
+      \strng{authornamehash}{9e7d8d87d1a5bfab0060604d4ffd2a39}
+      \strng{authorfullhash}{9e7d8d87d1a5bfab0060604d4ffd2a39}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Automath: a language for mathematics}
+      \field{year}{1973}
+    \endentry
+    \entry{ee}{book}{}
+      \name{author}{1}{}{%
+        {{hash=4877d64070edb3a952ce9a11f3edefb5}{%
+           family={Euclid},
+           familyi={E\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=88c8aee7d33841ced57833a47679296b}{%
+           family={Heath},
+           familyi={H\bibinitperiod},
+           given={Thomas\bibnamedelima L.},
+           giveni={T\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Dover Publications}%
+      }
+      \strng{namehash}{4877d64070edb3a952ce9a11f3edefb5}
+      \strng{fullhash}{4877d64070edb3a952ce9a11f3edefb5}
+      \strng{bibnamehash}{4877d64070edb3a952ce9a11f3edefb5}
+      \strng{authorbibnamehash}{4877d64070edb3a952ce9a11f3edefb5}
+      \strng{authornamehash}{4877d64070edb3a952ce9a11f3edefb5}
+      \strng{authorfullhash}{4877d64070edb3a952ce9a11f3edefb5}
+      \strng{editorbibnamehash}{88c8aee7d33841ced57833a47679296b}
+      \strng{editornamehash}{88c8aee7d33841ced57833a47679296b}
+      \strng{editorfullhash}{88c8aee7d33841ced57833a47679296b}
       \field{sortinit}{E}
       \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{arXiv preprint arXiv:1911.00580}
-      \field{title}{Introduction to univalent foundations of mathematics with Agda}
-      \field{year}{2019}
-      \true{nocite}
+      \field{edition}{2nd}
+      \field{title}{The Thirteen Books of Euclid's Elements}
+      \field{year}{1956}
     \endentry
-    \entry{macor2015brief}{misc}{}
+    \entry{rob11}{misc}{}
       \name{author}{1}{}{%
-        {{hash=bbf90e9496305667bb90b06962060b99}{%
-           family={Macor},
-           familyi={M\bibinitperiod},
-           given={Jackson},
-           giveni={J\bibinitperiod}}}%
+        {{hash=73259fe928ce8add0f265e234f8de3a6}{%
+           family={Harper},
+           familyi={H\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
       }
-      \strng{namehash}{bbf90e9496305667bb90b06962060b99}
-      \strng{fullhash}{bbf90e9496305667bb90b06962060b99}
-      \strng{bibnamehash}{bbf90e9496305667bb90b06962060b99}
-      \strng{authorbibnamehash}{bbf90e9496305667bb90b06962060b99}
-      \strng{authornamehash}{bbf90e9496305667bb90b06962060b99}
-      \strng{authorfullhash}{bbf90e9496305667bb90b06962060b99}
+      \list{publisher}{1}{%
+        {Unpublished}%
+      }
+      \strng{namehash}{73259fe928ce8add0f265e234f8de3a6}
+      \strng{fullhash}{73259fe928ce8add0f265e234f8de3a6}
+      \strng{bibnamehash}{73259fe928ce8add0f265e234f8de3a6}
+      \strng{authorbibnamehash}{73259fe928ce8add0f265e234f8de3a6}
+      \strng{authornamehash}{73259fe928ce8add0f265e234f8de3a6}
+      \strng{authorfullhash}{73259fe928ce8add0f265e234f8de3a6}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Holy Trinity}
+      \field{year}{2011}
+    \endentry
+    \entry{hey66}{book}{}
+      \name{author}{1}{}{%
+        {{hash=11d7fe9f4ce47110b35880ba74bbd6ce}{%
+           family={Heyting},
+           familyi={H\bibinitperiod},
+           given={Arend},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{11d7fe9f4ce47110b35880ba74bbd6ce}
+      \strng{fullhash}{11d7fe9f4ce47110b35880ba74bbd6ce}
+      \strng{bibnamehash}{11d7fe9f4ce47110b35880ba74bbd6ce}
+      \strng{authorbibnamehash}{11d7fe9f4ce47110b35880ba74bbd6ce}
+      \strng{authornamehash}{11d7fe9f4ce47110b35880ba74bbd6ce}
+      \strng{authorfullhash}{11d7fe9f4ce47110b35880ba74bbd6ce}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Intuitionism: an introduction}
+      \field{volume}{41}
+      \field{year}{1966}
+    \endentry
+    \entry{hs98}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d3c25d820c67e8530324893291b911d5}{%
+           family={Hofmann},
+           familyi={H\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2fe23e7e33c4a306653b7fae358fc988}{%
+           family={Streicher},
+           familyi={S\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{42abeff9e8c29a933a3fc8bf4cdd7783}
+      \strng{fullhash}{42abeff9e8c29a933a3fc8bf4cdd7783}
+      \strng{bibnamehash}{42abeff9e8c29a933a3fc8bf4cdd7783}
+      \strng{authorbibnamehash}{42abeff9e8c29a933a3fc8bf4cdd7783}
+      \strng{authornamehash}{42abeff9e8c29a933a3fc8bf4cdd7783}
+      \strng{authorfullhash}{42abeff9e8c29a933a3fc8bf4cdd7783}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Twenty-five years of constructive type theory (Venice, 1995)}
+      \field{title}{The groupoid interpretation of type theory}
+      \field{volume}{36}
+      \field{year}{1998}
+      \field{pages}{83\bibrangedash 111}
+      \range{pages}{29}
+    \endentry
+    \entry{how80}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=da4eda396babf23ceb64f9047544e0e9}{%
+           family={Howard},
+           familyi={H\bibinitperiod},
+           given={William\bibnamedelima Alvin},
+           giveni={W\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Academic Press}%
+      }
+      \strng{namehash}{da4eda396babf23ceb64f9047544e0e9}
+      \strng{fullhash}{da4eda396babf23ceb64f9047544e0e9}
+      \strng{bibnamehash}{da4eda396babf23ceb64f9047544e0e9}
+      \strng{authorbibnamehash}{da4eda396babf23ceb64f9047544e0e9}
+      \strng{authornamehash}{da4eda396babf23ceb64f9047544e0e9}
+      \strng{authorfullhash}{da4eda396babf23ceb64f9047544e0e9}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{To H. B. Curry: Essays on Combinatory Logic, Lambda Calculus, and Formalism}
+      \field{title}{The Formulae-as-Types Notion of Construction}
+      \field{year}{1980}
+    \endentry
+    \entry{kol32}{article}{}
+      \name{author}{1}{}{%
+        {{hash=dc253e2a4937a6dd8258f138d92a9c32}{%
+           family={Kolmogoroff},
+           familyi={K\bibinitperiod},
+           given={Andrej},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{dc253e2a4937a6dd8258f138d92a9c32}
+      \strng{fullhash}{dc253e2a4937a6dd8258f138d92a9c32}
+      \strng{bibnamehash}{dc253e2a4937a6dd8258f138d92a9c32}
+      \strng{authorbibnamehash}{dc253e2a4937a6dd8258f138d92a9c32}
+      \strng{authornamehash}{dc253e2a4937a6dd8258f138d92a9c32}
+      \strng{authorfullhash}{dc253e2a4937a6dd8258f138d92a9c32}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mathematische Zeitschrift}
+      \field{number}{1}
+      \field{title}{Zur deutung der intuitionistischen logik}
+      \field{volume}{35}
+      \field{year}{1932}
+      \field{pages}{58\bibrangedash 65}
+      \range{pages}{8}
+    \endentry
+    \entry{pml98}{article}{}
+      \name{author}{1}{}{%
+        {{hash=617a4cbf763fdc17e84e14c7343bddde}{%
+           family={Martin-Löf},
+           familyi={M\bibinithyphendelim L\bibinitperiod},
+           given={Per},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{617a4cbf763fdc17e84e14c7343bddde}
+      \strng{fullhash}{617a4cbf763fdc17e84e14c7343bddde}
+      \strng{bibnamehash}{617a4cbf763fdc17e84e14c7343bddde}
+      \strng{authorbibnamehash}{617a4cbf763fdc17e84e14c7343bddde}
+      \strng{authornamehash}{617a4cbf763fdc17e84e14c7343bddde}
+      \strng{authorfullhash}{617a4cbf763fdc17e84e14c7343bddde}
+      \field{extraname}{1}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{A brief introduction to type theory and the univalence axiom}
-      \field{year}{2015}
-      \true{nocite}
+      \field{journaltitle}{Twenty-five years of constructive type theory}
+      \field{title}{An intuitionistic theory of types}
+      \field{volume}{36}
+      \field{year}{1998}
+      \field{pages}{127\bibrangedash 172}
+      \range{pages}{46}
     \endentry
-    \entry{martin1984itt}{book}{}
+    \entry{pml75}{article}{}
+      \name{author}{1}{}{%
+        {{hash=617a4cbf763fdc17e84e14c7343bddde}{%
+           family={Martin-Löf},
+           familyi={M\bibinithyphendelim L\bibinitperiod},
+           given={Per},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{617a4cbf763fdc17e84e14c7343bddde}
+      \strng{fullhash}{617a4cbf763fdc17e84e14c7343bddde}
+      \strng{bibnamehash}{617a4cbf763fdc17e84e14c7343bddde}
+      \strng{authorbibnamehash}{617a4cbf763fdc17e84e14c7343bddde}
+      \strng{authornamehash}{617a4cbf763fdc17e84e14c7343bddde}
+      \strng{authorfullhash}{617a4cbf763fdc17e84e14c7343bddde}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Logic Colloquium '73}
+      \field{series}{Studies in Logic and the Foundations of Mathematics}
+      \field{title}{An Intuitionistic Theory of Types: Predicative Part}
+      \field{volume}{80}
+      \field{year}{1975}
+      \field{pages}{73\bibrangedash 118}
+      \range{pages}{46}
+    \endentry
+    \entry{pml82}{article}{}
+      \name{author}{1}{}{%
+        {{hash=617a4cbf763fdc17e84e14c7343bddde}{%
+           family={Martin-Löf},
+           familyi={M\bibinithyphendelim L\bibinitperiod},
+           given={Per},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{617a4cbf763fdc17e84e14c7343bddde}
+      \strng{fullhash}{617a4cbf763fdc17e84e14c7343bddde}
+      \strng{bibnamehash}{617a4cbf763fdc17e84e14c7343bddde}
+      \strng{authorbibnamehash}{617a4cbf763fdc17e84e14c7343bddde}
+      \strng{authornamehash}{617a4cbf763fdc17e84e14c7343bddde}
+      \strng{authorfullhash}{617a4cbf763fdc17e84e14c7343bddde}
+      \field{extraname}{3}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Logic, Methodology and Philosophy of Science VI}
+      \field{series}{Studies in Logic and the Foundations of Mathematics}
+      \field{title}{Constructive Mathematics and Computer Programming}
+      \field{volume}{104}
+      \field{year}{1982}
+      \field{pages}{153\bibrangedash 175}
+      \range{pages}{23}
+    \endentry
+    \entry{pml93}{article}{}
+      \name{author}{1}{}{%
+        {{hash=617a4cbf763fdc17e84e14c7343bddde}{%
+           family={Martin-Löf},
+           familyi={M\bibinithyphendelim L\bibinitperiod},
+           given={Per},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{617a4cbf763fdc17e84e14c7343bddde}
+      \strng{fullhash}{617a4cbf763fdc17e84e14c7343bddde}
+      \strng{bibnamehash}{617a4cbf763fdc17e84e14c7343bddde}
+      \strng{authorbibnamehash}{617a4cbf763fdc17e84e14c7343bddde}
+      \strng{authornamehash}{617a4cbf763fdc17e84e14c7343bddde}
+      \strng{authorfullhash}{617a4cbf763fdc17e84e14c7343bddde}
+      \field{extraname}{4}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Unpublished notes by M. Wijers from lectures given at the Faculteit der Wijsbegeerte, Rijksuniversiteit Leiden}
+      \field{title}{Philosophical aspects of intuitionistic type theory}
+      \field{year}{1993}
+    \endentry
+    \entry{pml84}{book}{}
       \name{author}{2}{}{%
         {{hash=617a4cbf763fdc17e84e14c7343bddde}{%
            family={Martin-Löf},
@@ -241,9 +881,103 @@
       \field{title}{Intuitionistic type theory}
       \field{volume}{9}
       \field{year}{1984}
-      \true{nocite}
     \endentry
-    \entry{norell2009dependently}{inproceedings}{}
+    \entry{lean4}{software}{}
+      \name{author}{2}{}{%
+        {{hash=04ffe79f369bf9f16e299fcf4f98e780}{%
+           family={Moura},
+           familyi={M\bibinitperiod},
+           given={Leonardo},
+           giveni={L\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=f0eef0e3dc5cf232456ab1f5460e2ef4}{%
+           family={Ullrich},
+           familyi={U\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{organization}{2}{%
+        {Microsoft Research}%
+        {Karlsruhe Institute of Technology}%
+      }
+      \strng{namehash}{5c705fa7f3300303f20110861a4c6130}
+      \strng{fullhash}{5c705fa7f3300303f20110861a4c6130}
+      \strng{bibnamehash}{5c705fa7f3300303f20110861a4c6130}
+      \strng{authorbibnamehash}{5c705fa7f3300303f20110861a4c6130}
+      \strng{authornamehash}{5c705fa7f3300303f20110861a4c6130}
+      \strng{authorfullhash}{5c705fa7f3300303f20110861a4c6130}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The {Lean 4} Theorem Prover and Programming Language}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://lean-lang.org
+      \endverb
+      \verb{url}
+      \verb https://lean-lang.org
+      \endverb
+    \endentry
+    \entry{lean}{software}{}
+      \name{author}{5}{}{%
+        {{hash=04ffe79f369bf9f16e299fcf4f98e780}{%
+           family={Moura},
+           familyi={M\bibinitperiod},
+           given={Leonardo},
+           giveni={L\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=d9c9513662174e27d426f64146b056d7}{%
+           family={Kong},
+           familyi={K\bibinitperiod},
+           given={Soonho},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b31cc4b873359c0cebe17020de111a47}{%
+           family={Avigad},
+           familyi={A\bibinitperiod},
+           given={Jeremy},
+           giveni={J\bibinitperiod}}}%
+        {{hash=241ef3eeb33e764da3482b74049133fa}{%
+           family={Doorn},
+           familyi={D\bibinitperiod},
+           given={Floris},
+           giveni={F\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=958711fe05928f429fa93d19f5e6c43b}{%
+           family={Raumer},
+           familyi={R\bibinitperiod},
+           given={Jakob},
+           giveni={J\bibinitperiod},
+           prefix={von},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \list{organization}{2}{%
+        {Microsoft Research}%
+        {Carnegie Mellon University}%
+      }
+      \strng{namehash}{d15b6d666648c9f4a613b9c4583703d3}
+      \strng{fullhash}{ba9cbb2b9f1cc8c62c3a76c55a9b32d5}
+      \strng{bibnamehash}{d15b6d666648c9f4a613b9c4583703d3}
+      \strng{authorbibnamehash}{d15b6d666648c9f4a613b9c4583703d3}
+      \strng{authornamehash}{d15b6d666648c9f4a613b9c4583703d3}
+      \strng{authorfullhash}{ba9cbb2b9f1cc8c62c3a76c55a9b32d5}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The {Lean} Theorem Prover}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb https://lean-lang.org
+      \endverb
+      \verb{url}
+      \verb https://lean-lang.org
+      \endverb
+    \endentry
+    \entry{norell09}{inproceedings}{}
       \name{author}{1}{}{%
         {{hash=ba7f3373bd143b65c456fdcbbb82879f}{%
            family={Norell},
@@ -251,24 +985,53 @@
            given={Ulf},
            giveni={U\bibinitperiod}}}%
       }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
       \strng{namehash}{ba7f3373bd143b65c456fdcbbb82879f}
       \strng{fullhash}{ba7f3373bd143b65c456fdcbbb82879f}
       \strng{bibnamehash}{ba7f3373bd143b65c456fdcbbb82879f}
       \strng{authorbibnamehash}{ba7f3373bd143b65c456fdcbbb82879f}
       \strng{authornamehash}{ba7f3373bd143b65c456fdcbbb82879f}
       \strng{authorfullhash}{ba7f3373bd143b65c456fdcbbb82879f}
+      \field{extraname}{1}
       \field{sortinit}{N}
       \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the 4th international workshop on Types in language design and implementation}
+      \field{booktitle}{Proceedings of the 4th International Workshop on Types in Language Design and Implementation}
       \field{title}{Dependently typed programming in Agda}
       \field{year}{2009}
-      \true{nocite}
-      \field{pages}{1\bibrangedash 2}
-      \range{pages}{2}
+      \field{pages}{230\bibrangedash 266}
+      \range{pages}{37}
     \endentry
-    \entry{rijke2022intro}{misc}{}
+    \entry{norell07}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=ba7f3373bd143b65c456fdcbbb82879f}{%
+           family={Norell},
+           familyi={N\bibinitperiod},
+           given={Ulf},
+           giveni={U\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Chalmers University of Technology}%
+      }
+      \strng{namehash}{ba7f3373bd143b65c456fdcbbb82879f}
+      \strng{fullhash}{ba7f3373bd143b65c456fdcbbb82879f}
+      \strng{bibnamehash}{ba7f3373bd143b65c456fdcbbb82879f}
+      \strng{authorbibnamehash}{ba7f3373bd143b65c456fdcbbb82879f}
+      \strng{authornamehash}{ba7f3373bd143b65c456fdcbbb82879f}
+      \strng{authorfullhash}{ba7f3373bd143b65c456fdcbbb82879f}
+      \field{extraname}{2}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Towards a practical programming language based on dependent type theory}
+      \field{type}{phdthesis}
+      \field{year}{2007}
+    \endentry
+    \entry{rijke2022intro}{book}{}
       \name{author}{1}{}{%
         {{hash=b1bb80d57e903f657e4b411a28823e28}{%
            family={Rijke},
@@ -292,6 +1055,107 @@
       \field{year}{2022}
       \verb{eprint}
       \verb 2212.11082
+      \endverb
+    \endentry
+    \entry{agda-unimath}{software}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{4}{}{%
+        {{hash=b1bb80d57e903f657e4b411a28823e28}{%
+           family={Rijke},
+           familyi={R\bibinitperiod},
+           given={Egbert},
+           giveni={E\bibinitperiod}}}%
+        {{hash=30b8e245bd74ef7d0a7f2a3628f852c1}{%
+           family={Stenholm},
+           familyi={S\bibinitperiod},
+           given={Elisabeth},
+           giveni={E\bibinitperiod}}}%
+        {{hash=9baeed9f2f8411e89d99bc6b07fa09ea}{%
+           family={Prieto-Cubides},
+           familyi={P\bibinithyphendelim C\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=931cb424b2abe212feb2390e618bf30c}{%
+           family={Bakke},
+           familyi={B\bibinitperiod},
+           given={Fredrik},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{94c5d4a1e8403cf74abf3f1ba3f560d2}
+      \strng{fullhash}{dcaacbcb2a0d1b345733b2208d425c4a}
+      \strng{bibnamehash}{94c5d4a1e8403cf74abf3f1ba3f560d2}
+      \strng{authorbibnamehash}{94c5d4a1e8403cf74abf3f1ba3f560d2}
+      \strng{authornamehash}{94c5d4a1e8403cf74abf3f1ba3f560d2}
+      \strng{authorfullhash}{dcaacbcb2a0d1b345733b2208d425c4a}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{The agda-unimath library}}
+      \verb{urlraw}
+      \verb https://github.com/UniMath/agda-unimath/
+      \endverb
+      \verb{url}
+      \verb https://github.com/UniMath/agda-unimath/
+      \endverb
+    \endentry
+    \entry{rus08}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c58c42b6f7e7e1f78dbbdc65ed8e5384}{%
+           family={Russell},
+           familyi={R\bibinitperiod},
+           given={Bertrand},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JSTOR}%
+      }
+      \strng{namehash}{c58c42b6f7e7e1f78dbbdc65ed8e5384}
+      \strng{fullhash}{c58c42b6f7e7e1f78dbbdc65ed8e5384}
+      \strng{bibnamehash}{c58c42b6f7e7e1f78dbbdc65ed8e5384}
+      \strng{authorbibnamehash}{c58c42b6f7e7e1f78dbbdc65ed8e5384}
+      \strng{authornamehash}{c58c42b6f7e7e1f78dbbdc65ed8e5384}
+      \strng{authorfullhash}{c58c42b6f7e7e1f78dbbdc65ed8e5384}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{American journal of mathematics}
+      \field{number}{3}
+      \field{title}{Mathematical logic as based on the theory of types}
+      \field{volume}{30}
+      \field{year}{1908}
+      \field{pages}{222\bibrangedash 262}
+      \range{pages}{41}
+    \endentry
+    \entry{coq}{software}{}
+      \name{author}{1}{}{%
+        {{hash=d47c52d4add3e3728b111d5bc2db76ec}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={The\bibnamedelimb Coq\bibnamedelima Development},
+           giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Inria}%
+      }
+      \strng{namehash}{d47c52d4add3e3728b111d5bc2db76ec}
+      \strng{fullhash}{d47c52d4add3e3728b111d5bc2db76ec}
+      \strng{bibnamehash}{d47c52d4add3e3728b111d5bc2db76ec}
+      \strng{authorbibnamehash}{d47c52d4add3e3728b111d5bc2db76ec}
+      \strng{authornamehash}{d47c52d4add3e3728b111d5bc2db76ec}
+      \strng{authorfullhash}{d47c52d4add3e3728b111d5bc2db76ec}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The {Coq} Proof Assistant}
+      \verb{urlraw}
+      \verb https://coq.inria.fr
+      \endverb
+      \verb{url}
+      \verb https://coq.inria.fr
       \endverb
     \endentry
     \entry{hottbook}{book}{}
@@ -321,7 +1185,7 @@
       \field{title}{Homotopy Type Theory: Univalent Foundations of Mathematics}
       \field{year}{2013}
     \endentry
-    \entry{vezzosi2021cubical}{article}{}
+    \entry{vez21}{article}{}
       \name{author}{3}{}{%
         {{hash=38b551d0b5ec5e2b4c915bd08649e102}{%
            family={Vezzosi},
@@ -356,11 +1220,58 @@
       \field{title}{Cubical Agda: A dependently typed programming language with univalence and higher inductive types}
       \field{volume}{31}
       \field{year}{2021}
-      \true{nocite}
       \field{pages}{e8}
       \range{pages}{-1}
     \endentry
-    \entry{hott-in:coq}{misc}{}
+    \entry{vlad06}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=0d96e6700be0d712c0a35b7559668f76}{%
+           family={Voevodsky},
+           familyi={V\bibinitperiod},
+           given={Vladimir},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Unpublished}%
+      }
+      \strng{namehash}{0d96e6700be0d712c0a35b7559668f76}
+      \strng{fullhash}{0d96e6700be0d712c0a35b7559668f76}
+      \strng{bibnamehash}{0d96e6700be0d712c0a35b7559668f76}
+      \strng{authorbibnamehash}{0d96e6700be0d712c0a35b7559668f76}
+      \strng{authornamehash}{0d96e6700be0d712c0a35b7559668f76}
+      \strng{authorfullhash}{0d96e6700be0d712c0a35b7559668f76}
+      \field{extraname}{1}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A very short note on the homotopy $\lambda$-calculus}
+      \field{year}{2006}
+    \endentry
+    \entry{vlad14}{article}{}
+      \name{author}{1}{}{%
+        {{hash=0d96e6700be0d712c0a35b7559668f76}{%
+           family={Voevodsky},
+           familyi={V\bibinitperiod},
+           given={Vladimir},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{0d96e6700be0d712c0a35b7559668f76}
+      \strng{fullhash}{0d96e6700be0d712c0a35b7559668f76}
+      \strng{bibnamehash}{0d96e6700be0d712c0a35b7559668f76}
+      \strng{authorbibnamehash}{0d96e6700be0d712c0a35b7559668f76}
+      \strng{authornamehash}{0d96e6700be0d712c0a35b7559668f76}
+      \strng{authorfullhash}{0d96e6700be0d712c0a35b7559668f76}
+      \field{extraname}{2}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Institute Letter}
+      \field{title}{The origins and motivations of {U}nivalent {F}oundations}
+      \field{year}{2014}
+    \endentry
+    \entry{unimath}{online}{}
       \true{moreauthor}
       \true{morelabelname}
       \name{author}{3}{}{%
@@ -390,29 +1301,21 @@
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{available at \url{http://unimath.org}}
       \field{title}{UniMath --- a computer-checked library of univalent mathematics}
-      \true{nocite}
-      \verb{doi}
-      \verb 10.5281/zenodo.7848572
-      \endverb
       \verb{urlraw}
-      \verb https://doi.org/10.5281/zenodo.7848572
+      \verb https://github.com/UniMath/UniMath
       \endverb
       \verb{url}
-      \verb https://doi.org/10.5281/zenodo.7848572
+      \verb https://github.com/UniMath/UniMath
       \endverb
     \endentry
-    \entry{wadler2015props}{article}{}
+    \entry{wad15}{article}{}
       \name{author}{1}{}{%
         {{hash=b4d861345944ddeeaf658a11c2f0f6a7}{%
            family={Wadler},
            familyi={W\bibinitperiod},
            given={Philip},
            giveni={P\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {New York, NY, USA}%
       }
       \list{publisher}{1}{%
         {Association for Computing Machinery}%
@@ -428,25 +1331,13 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Connecting mathematical logic and computation, it ensures that some aspects of programming are absolute.}
-      \field{issn}{0001-0782}
-      \field{journaltitle}{Commun. ACM}
-      \field{month}{11}
+      \field{journaltitle}{Communications of the ACM}
       \field{number}{12}
-      \field{title}{Propositions as Types}
+      \field{title}{Propositions as types}
       \field{volume}{58}
       \field{year}{2015}
-      \true{nocite}
       \field{pages}{75\bibrangedash 84}
       \range{pages}{10}
-      \verb{doi}
-      \verb 10.1145/2699407
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1145/2699407
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1145/2699407
-      \endverb
     \endentry
   \enddatalist
 \endrefsection
