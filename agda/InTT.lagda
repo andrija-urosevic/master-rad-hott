@@ -98,7 +98,7 @@ empty X = X → 𝟘
 \begin{code}
 ¬-inv-functor f ny x = ny (f x)
 \end{code}
-Тражену конструкицју о функториалности дупле негације извршавамо интерактивно на сличан начин.
+Тражену конструкцију о функториалности дупле негације извршавамо интерактивно на сличан начин.
 \begin{code}
 ¬¬-functor : {X : 𝓤 ̇ } {Y : 𝓥 ̇ } → (X → Y) → (¬¬ X → ¬¬ Y)
 ¬¬-functor f nnx ny = nnx (¬-inv-functor f ny)
@@ -169,13 +169,11 @@ _+→_ : {A X : 𝓤 ̇ } {B Y : 𝓤 ̇ } (f : A → X) (g : B → Y)
 +-empty f g (inr b) = g b
 
 +-left-empty : {X : 𝓤 ̇ } {Y : 𝓤 ̇ }
-             → ¬ X 
-             → X + Y → Y
+             → ¬ X → X + Y → Y
 +-left-empty {𝓤} {X} {Y} ex = +-recursion Y (!𝟘 ∘ ex) id 
 
 +-right-empty : {X : 𝓤 ̇ } {Y : 𝓤 ̇ }
-              → ¬ Y
-              → X + Y → X 
+              → ¬ Y → X + Y → X 
 +-right-empty {𝓤} {X} {Y} ey = +-recursion X id (!𝟘 ∘ ey)
 \end{code}
 
@@ -193,10 +191,12 @@ record Σ {𝓤 𝓥} {X : 𝓤 ̇ } (Y : X → 𝓥 ̇ ) : 𝓤 ⊔ 𝓥 ̇  wh
 
 Дефиницију пројекција на први и други елемент~\ref{def:proj} у језику \textsc{Agda} записујемо као:
 \begin{code}
-fst : {X : 𝓤 ̇ } {Y : X → 𝓥 ̇ } → Σ Y → X
+fst : {X : 𝓤 ̇ } {Y : X → 𝓥 ̇ } 
+    → Σ Y → X
 fst (x , y) = x
 
-snd : {X : 𝓤 ̇ } {Y : X → 𝓥 ̇ } → (z : Σ Y) → Y (fst z)
+snd : {X : 𝓤 ̇ } {Y : X → 𝓥 ̇ } 
+    → (z : Σ Y) → Y (fst z)
 snd (x , y) = y
 \end{code}
 
@@ -267,29 +267,35 @@ x == y = Id _ x y
   → ((x y : X) (p : x == y) → P x y p)
 𝕁 X P f x y (refl x) = f x
 \end{code}
-Индукцију путање се традиционално назива $\mathbb{J}$ правило. Поред индукције путање можемо дефинисати и базну индукцију путање, која се традиционално назива $\mathbb{H}$ правило, и у језику \textsc{Agda} се записује као:
+Индукцију путање традиционално називамо и $\mathbb{J}$ правило. Поред индукције путање можемо дефинисати и базну индукцију путање, коју традиционално називамо $\mathbb{H}$ правило, и у језику \textsc{Agda} записујемо као:
 \begin{code}
 ℍ : {X : 𝓤 ̇ } (x : X) (P : (y : X) → x == y → 𝓥 ̇ )
   → P x (refl x) → (y : X) (p : x == y) → P y p 
 ℍ x P p-refl y (refl x) = p-refl
 \end{code}
 
-Лему~\ref{lmm:inv} (о инверзу) и лему~\ref{lmm:comp} (о надовзивању) у језику \textsc{Agda} формализујемо као:
+У наставку текста биће описане формализације лема о особинама типова индентитета које су наведене и доказане у поглављу~\ref{sec:id}.
+
+Лему~\ref{lmm:inv} (о инверзу) и лему~\ref{lmm:comp} (о надовизивању) у језику \textsc{Agda} формализујемо као:
 \begin{code}
-_⁻¹ : {X : 𝓤 ̇ } {x y : X} → x == y → y == x 
+_⁻¹ : {X : 𝓤 ̇ } {x y : X} 
+    → x == y → y == x 
 (refl x) ⁻¹ = refl x
 
 infixr 11 _·_
 
-_·_ : {X : 𝓤 ̇ } {x y z : X} → x == y → y == z → x == z
+_·_ : {X : 𝓤 ̇ } {x y z : X} 
+    → x == y → y == z → x == z
 refl _ · q = q
 \end{code}
 Често надовезујемо и више од две путање, те тако добијамо ланац надовезаних путањи. Због тога, згодно је на сваком кораку пратити тренутни елемент ланца, као и последњи елемент ланца. То нам омогућава следећа синтакса:
 \begin{code}
-_==⟨_⟩_ : {X : 𝓤 ̇ } (x : X) {y z : X} → x == y → y == z → x == z
+_==⟨_⟩_ : {X : 𝓤 ̇ } (x : X) {y z : X} 
+        → x == y → y == z → x == z
 x ==⟨ p ⟩ q = p · q
 
-_∎ : {X : 𝓤 ̇ } (x : X) → x == x
+_∎ : {X : 𝓤 ̇ } (x : X) 
+    → x == x
 x ∎ = refl x
 \end{code}
 
@@ -334,7 +340,8 @@ ap-id : {X : 𝓤 ̇ } {x y : X} (p : x == y)
       → p == ap id p
 ap-id (refl x) = refl (refl x)
 
-ap-comp : {X : 𝓤 ̇ } (f g : X → X) {x y z : X} (p : x == y)
+ap-comp : {X : 𝓤 ̇ } (f g : X → X) 
+          {x y z : X} (p : x == y)
         → ap g (ap f p) == ap (g ∘ f) p
 ap-comp f g (refl x) = refl (refl (g (f x)))
 
@@ -342,11 +349,13 @@ ap-refl : {X : 𝓤 ̇ } {Y : 𝓥 ̇ } (f : X → Y) (x : X)
         → ap f (refl x) == refl (f x)
 ap-refl f x = refl (refl (f x))
 
-ap-inv : {X : 𝓤 ̇ } {Y : 𝓥 ̇ } (f : X → Y) {x y : X} (p : x == y) 
+ap-inv : {X : 𝓤 ̇ } {Y : 𝓥 ̇ } (f : X → Y) 
+         {x y : X} (p : x == y) 
        → ap f (p ⁻¹) == (ap f p) ⁻¹
 ap-inv f (refl x) = refl (ap f (refl x))
 
-ap-concat : {X : 𝓤 ̇ } {Y : 𝓥 ̇ } (f : X → Y) {x y z : X} (p : x == y) (q : y == z)
+ap-concat : {X : 𝓤 ̇ } {Y : 𝓥 ̇ } (f : X → Y) 
+            {x y z : X} (p : x == y) (q : y == z)
           → ap f (p · q) == ap f p · ap f q 
 ap-concat f (refl x) q = refl (ap f q)
 \end{code}
@@ -355,12 +364,12 @@ ap-concat f (refl x) q = refl (ap f q)
 \begin{code}
 tr : {A : 𝓤 ̇ } (B : A → 𝓥 ̇ ) {x y : A}
    → x == y → B x → B y
-tr B (refl x) = λ x → x
+tr B (refl x) = id
 \end{code}
 
 \subsection{Природни бројеви}
 
-Као што је описано у поглављу~\ref{sec:ex} тип природних бројева $\N$ у језику \textsc{Agda} уводимо као:
+Природни бројеви $0, 1, 2, \ldots$ представљају основне математичке конструкције. Тип природних бројева $\N$ у језику \textsc{Agda} је већ детаљно уведен у поглављу~\ref{sec:ex} као:
 \begin{code}
 data ℕ : 𝓤₀ ̇ where
     zero : ℕ
@@ -438,13 +447,15 @@ associative-+ℕ (succ m) n k = ap succ (associative-+ℕ m n k)
 
 commutative-+ℕ : (m n : ℕ) → m +ℕ n == n +ℕ m 
 commutative-+ℕ 0 n = right-zero-law-+ℕ n ⁻¹
-commutative-+ℕ (succ m) n = (succ (m +ℕ n))  ==⟨ ap succ (commutative-+ℕ m n) ⟩ 
-                            ((succ (n +ℕ m)) ==⟨ right-succ-law-+ℕ n m ⁻¹ ⟩ 
-                            ((n +ℕ succ m)   ∎))
+commutative-+ℕ (succ m) n = (succ (m +ℕ n))  ==⟨ 
+                                ap succ (commutative-+ℕ m n) 
+                            ⟩ ((succ (n +ℕ m)) ==⟨ 
+                                right-succ-law-+ℕ n m ⁻¹ 
+                            ⟩ ((n +ℕ succ m)   ∎))
 \end{code}
 Приметимо да се за конструисање доказа ових својстава користе особине путање. Прецизније, често користимо акције над путањама, инверз путање, као и надовезивање путања. Поред тога, приметимо и да у доказу о комутативности, користимо синтаксу за ланац путања. 
 
-Простор кодова, односно дефиницију~\ref{def:code}, у језику \textsc{Agda} записујемо као:
+Простор кодова над типом природних бројева, односно дефиницију~\ref{def:code}, у језику \textsc{Agda} записујемо као:
 \begin{code}
 code-ℕ : ℕ → ℕ → 𝓤₀ ̇
 code-ℕ 0 0 = 𝟙
@@ -492,7 +503,7 @@ succ m ≤ℕ succ n = m ≤ℕ n
 
 \subsection{Булов тип}
 
-Булоб тип $\2$ је специјалан случај типа копроизвода $A + B$ када су и $A$ и $B$ јединични типови, тј. $\2 :\equiv \1 + \1$. Као такав, њега настањују једино $\inl(\star)$ и $\inr(\star)$, које другачије називамо $\true$ и $\false$. У језику \textsc{Agda}, Булов тип $\2$ уводимо на следећи начин: 
+Булов тип $\2$ је специјалан случај типа копроизвода $A + B$ када су и $A$ и $B$ јединични типови, тј. $\2 :\equiv \1 + \1$. Као такав, њега настањују једино $\inl(\star)$ и $\inr(\star)$, које другачије називамо $\true$ и $\false$. У језику \textsc{Agda}, Булов тип $\2$ уводимо на следећи начин: 
 \begin{code}
 𝟚 : 𝓤₀ ̇ 
 𝟚 = 𝟙 + 𝟙
@@ -511,6 +522,7 @@ pattern false = inr ⋆
 𝟚-induction P p₀ p₁ false = p₁
 \end{code}
 
+\newpage%
 Уколико у правилу индукције $\2$-ind заменимо одговарајуће аргументе добијамо конструкцију коју називамо \emph{if-then-else}:   
 \begin{code}
 if_then_else : {P : 𝟚 → 𝓤 ̇ }

@@ -78,6 +78,32 @@
       \field{pages}{45\bibrangedash 55}
       \range{pages}{11}
     \endentry
+    \entry{lambda_cube}{article}{}
+      \name{author}{1}{}{%
+        {{hash=13e7f47b04b8634325430668da666933}{%
+           family={Barendregt},
+           familyi={B\bibinitperiod},
+           given={Henk\bibnamedelima P},
+           giveni={H\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{13e7f47b04b8634325430668da666933}
+      \strng{fullhash}{13e7f47b04b8634325430668da666933}
+      \strng{bibnamehash}{13e7f47b04b8634325430668da666933}
+      \strng{authorbibnamehash}{13e7f47b04b8634325430668da666933}
+      \strng{authornamehash}{13e7f47b04b8634325430668da666933}
+      \strng{authorfullhash}{13e7f47b04b8634325430668da666933}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Functional Programming}
+      \field{number}{2}
+      \field{title}{Introduction to generalized type systems}
+      \field{volume}{1}
+      \field{year}{1991}
+      \field{pages}{124\bibrangedash 154}
+      \range{pages}{31}
+    \endentry
     \entry{hottcoq}{misc}{}
       \name{author}{6}{}{%
         {{hash=3d00839a7d4e4ff29f609b74c7a30980}{%
@@ -174,12 +200,17 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{day}{22}
-      \field{howpublished}{\url{https://github.com/UniMath/SymmetryBook}}
       \field{month}{8}
       \field{note}{Commit: \texttt{bc24ac2}}
       \field{title}{Symmetry}
       \field{year}{2024}
       \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/UniMath/SymmetryBook
+      \endverb
+      \verb{url}
+      \verb https://github.com/UniMath/SymmetryBook
+      \endverb
     \endentry
     \entry{bur}{book}{}
       \name{author}{1}{}{%
@@ -272,6 +303,34 @@
       \field{howpublished}{\url{https://plato.stanford.edu/archives/fall2022/entries/mathematics-constructive/}}
       \field{title}{{Constructive Mathematics}}
       \field{year}{2022}
+    \endentry
+    \entry{brw07}{article}{}
+      \name{author}{1}{}{%
+        {{hash=57f81583abec4fc009ba9c59b5fbdddd}{%
+           family={Brouwer},
+           familyi={B\bibinitperiod},
+           given={Luitzen\bibnamedelimb Egbertus\bibnamedelima Jan},
+           giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Citeseer}%
+      }
+      \strng{namehash}{57f81583abec4fc009ba9c59b5fbdddd}
+      \strng{fullhash}{57f81583abec4fc009ba9c59b5fbdddd}
+      \strng{bibnamehash}{57f81583abec4fc009ba9c59b5fbdddd}
+      \strng{authorbibnamehash}{57f81583abec4fc009ba9c59b5fbdddd}
+      \strng{authornamehash}{57f81583abec4fc009ba9c59b5fbdddd}
+      \strng{authorfullhash}{57f81583abec4fc009ba9c59b5fbdddd}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Collected works}
+      \field{title}{On the foundations of mathematics}
+      \field{volume}{1}
+      \field{year}{1907}
+      \field{pages}{11\bibrangedash 101}
+      \range{pages}{91}
     \endentry
     \entry{hottagda}{online}{}
       \true{moreauthor}
@@ -977,6 +1036,51 @@
       \verb https://lean-lang.org
       \endverb
     \endentry
+    \entry{isabelle_hol}{manual}{}
+      \name{author}{3}{}{%
+        {{hash=a41b38c2580f5bb8c574d84f66e0856a}{%
+           family={Nipkow},
+           familyi={N\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+        {{hash=3c148717c5f0355213ec4ed493cbd64e}{%
+           family={Paulson},
+           familyi={P\bibinitperiod},
+           given={Lawrence\bibnamedelima C.},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=601e622530ffdabcfaef351e537dbd6c}{%
+           family={Wenzel},
+           familyi={W\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Technische Universität München}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{7fd845d8f5e64ea1f3fd574f88408236}
+      \strng{fullhash}{7fd845d8f5e64ea1f3fd574f88408236}
+      \strng{bibnamehash}{7fd845d8f5e64ea1f3fd574f88408236}
+      \strng{authorbibnamehash}{7fd845d8f5e64ea1f3fd574f88408236}
+      \strng{authornamehash}{7fd845d8f5e64ea1f3fd574f88408236}
+      \strng{authorfullhash}{7fd845d8f5e64ea1f3fd574f88408236}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Lecture Notes in Computer Science}
+      \field{title}{Isabelle/HOL: A Proof Assistant for Higher-Order Logic}
+      \field{volume}{2283}
+      \field{year}{2002}
+      \verb{urlraw}
+      \verb https://isabelle.in.tum.de
+      \endverb
+      \verb{url}
+      \verb https://isabelle.in.tum.de
+      \endverb
+    \endentry
     \entry{norell09}{inproceedings}{}
       \name{author}{1}{}{%
         {{hash=ba7f3373bd143b65c456fdcbbb82879f}{%
@@ -1129,6 +1233,38 @@
       \field{pages}{222\bibrangedash 262}
       \range{pages}{41}
     \endentry
+    \entry{agda_manual}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=513d80af572d56435f1caf9149f22847}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={The\bibnamedelimb Agda\bibnamedelima Development},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Chalmers University of Technology}%
+      }
+      \strng{namehash}{513d80af572d56435f1caf9149f22847}
+      \strng{fullhash}{513d80af572d56435f1caf9149f22847}
+      \strng{bibnamehash}{513d80af572d56435f1caf9149f22847}
+      \strng{authorbibnamehash}{513d80af572d56435f1caf9149f22847}
+      \strng{authornamehash}{513d80af572d56435f1caf9149f22847}
+      \strng{authorfullhash}{513d80af572d56435f1caf9149f22847}
+      \field{extraname}{1}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Version 2.6.3}
+      \field{title}{The {Agda} Reference Manual}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://agda.readthedocs.io/en/v2.6.3/
+      \endverb
+      \verb{url}
+      \verb https://agda.readthedocs.io/en/v2.6.3/
+      \endverb
+    \endentry
     \entry{coq}{software}{}
       \name{author}{1}{}{%
         {{hash=d47c52d4add3e3728b111d5bc2db76ec}{%
@@ -1146,6 +1282,7 @@
       \strng{authorbibnamehash}{d47c52d4add3e3728b111d5bc2db76ec}
       \strng{authornamehash}{d47c52d4add3e3728b111d5bc2db76ec}
       \strng{authorfullhash}{d47c52d4add3e3728b111d5bc2db76ec}
+      \field{extraname}{2}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{labelnamesource}{author}
@@ -1184,6 +1321,40 @@
       \field{labeltitlesource}{title}
       \field{title}{Homotopy Type Theory: Univalent Foundations of Mathematics}
       \field{year}{2013}
+    \endentry
+    \entry{van17}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9a30c18f505b82794382f2f0eda5679a}{%
+           family={Van\bibnamedelima Atten},
+           familyi={V\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c8d81b3ecb806201b6e72ae6d60d3948}{%
+           family={Sundholm},
+           familyi={S\bibinitperiod},
+           given={Göran},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{adf864fae7ae29ec5a181651227817d4}
+      \strng{fullhash}{adf864fae7ae29ec5a181651227817d4}
+      \strng{bibnamehash}{adf864fae7ae29ec5a181651227817d4}
+      \strng{authorbibnamehash}{adf864fae7ae29ec5a181651227817d4}
+      \strng{authornamehash}{adf864fae7ae29ec5a181651227817d4}
+      \strng{authorfullhash}{adf864fae7ae29ec5a181651227817d4}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{History and Philosophy of Logic}
+      \field{number}{1}
+      \field{title}{LEJ Brouwer's ‘Unreliability of the Logical Principles’: A New Translation, with an Introduction}
+      \field{volume}{38}
+      \field{year}{2017}
+      \field{pages}{24\bibrangedash 47}
+      \range{pages}{24}
     \endentry
     \entry{vez21}{article}{}
       \name{author}{3}{}{%
@@ -1248,7 +1419,7 @@
       \field{title}{A very short note on the homotopy $\lambda$-calculus}
       \field{year}{2006}
     \endentry
-    \entry{vlad14}{article}{}
+    \entry{vlad_found}{online}{}
       \name{author}{1}{}{%
         {{hash=0d96e6700be0d712c0a35b7559668f76}{%
            family={Voevodsky},
@@ -1263,6 +1434,33 @@
       \strng{authornamehash}{0d96e6700be0d712c0a35b7559668f76}
       \strng{authorfullhash}{0d96e6700be0d712c0a35b7559668f76}
       \field{extraname}{2}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Foundations -- Voevodsky's original development of the univalent foundations of mathematics in Coq}
+      \verb{urlraw}
+      \verb https://github.com/vladimirias/Foundations
+      \endverb
+      \verb{url}
+      \verb https://github.com/vladimirias/Foundations
+      \endverb
+    \endentry
+    \entry{vlad14}{article}{}
+      \name{author}{1}{}{%
+        {{hash=0d96e6700be0d712c0a35b7559668f76}{%
+           family={Voevodsky},
+           familyi={V\bibinitperiod},
+           given={Vladimir},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{0d96e6700be0d712c0a35b7559668f76}
+      \strng{fullhash}{0d96e6700be0d712c0a35b7559668f76}
+      \strng{bibnamehash}{0d96e6700be0d712c0a35b7559668f76}
+      \strng{authorbibnamehash}{0d96e6700be0d712c0a35b7559668f76}
+      \strng{authornamehash}{0d96e6700be0d712c0a35b7559668f76}
+      \strng{authorfullhash}{0d96e6700be0d712c0a35b7559668f76}
+      \field{extraname}{3}
       \field{sortinit}{V}
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
       \field{labelnamesource}{author}

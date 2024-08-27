@@ -2386,7 +2386,8 @@
     <bcf:citekey order="15" intorder="2">brw2</bcf:citekey>
     <bcf:citekey order="16" intorder="1">kol32</bcf:citekey>
     <bcf:citekey order="17" intorder="1">hey66</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">brw</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">brw07</bcf:citekey>
+    <bcf:citekey order="18" intorder="2">van17</bcf:citekey>
     <bcf:citekey order="19" intorder="1">rob11</bcf:citekey>
     <bcf:citekey order="20" intorder="1">ee</bcf:citekey>
     <bcf:citekey order="21" intorder="1">bur</bcf:citekey>
@@ -2403,8 +2404,15 @@
     <bcf:citekey order="31" intorder="1">rijke2022intro</bcf:citekey>
     <bcf:citekey order="32" intorder="1">how80</bcf:citekey>
     <bcf:citekey order="33" intorder="1">wad15</bcf:citekey>
-    <bcf:citekey order="34" intorder="1">agda</bcf:citekey>
-    <bcf:citekey order="35" intorder="1" nocite="1">*</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">norell07</bcf:citekey>
+    <bcf:citekey order="34" intorder="2">norell09</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">lean4</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">bra13</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">coq</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">nuprl86</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">isabelle_hol</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">lambda_cube</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">agda_manual</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

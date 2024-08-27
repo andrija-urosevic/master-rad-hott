@@ -1,21 +1,21 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'master.blg'
-[104] biber:340> INFO - === Sat Aug 24, 2024, 18:37:38
-[123] Biber.pm:419> INFO - Reading 'master.bcf'
-[213] Biber.pm:976> INFO - Using all citekeys in bib section 0
-[236] Biber.pm:4419> INFO - Processing section 0
-[249] Biber.pm:4610> INFO - Looking for bibtex file 'master.bib' for section 0
-[251] bibtex.pm:1713> INFO - LaTeX decoding ...
-[293] bibtex.pm:1519> INFO - Found BibTeX data source 'master.bib'
-[672] UCollate.pm:68> INFO - Overriding locale 'sr-Cyrl' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[672] UCollate.pm:68> INFO - Overriding locale 'sr-Cyrl' defaults 'variable = shifted' with 'variable = non-ignorable'
-[672] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'sr-Cyrl'
-[722] bbl.pm:660> INFO - Writing 'master.bbl' with encoding 'UTF-8'
-[741] bbl.pm:763> INFO - Output to master.bbl
-[741] Biber.pm:131> WARN - legacy year field '1935--2024' in entry 'bur' is not an integer - this will probably not sort properly.
-[741] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[741] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[742] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[742] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[742] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[742] Biber.pm:133> INFO - WARNINGS: 6
+[109] biber:340> INFO - === Tue Aug 27, 2024, 01:38:46
+[130] Biber.pm:419> INFO - Reading 'master.bcf'
+[226] Biber.pm:979> INFO - Found 45 citekeys in bib section 0
+[250] Biber.pm:4419> INFO - Processing section 0
+[265] Biber.pm:4610> INFO - Looking for bibtex file 'master.bib' for section 0
+[267] bibtex.pm:1713> INFO - LaTeX decoding ...
+[318] bibtex.pm:1519> INFO - Found BibTeX data source 'master.bib'
+[748] UCollate.pm:68> INFO - Overriding locale 'sr-Cyrl' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[748] UCollate.pm:68> INFO - Overriding locale 'sr-Cyrl' defaults 'variable = shifted' with 'variable = non-ignorable'
+[748] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'sr-Cyrl'
+[809] bbl.pm:660> INFO - Writing 'master.bbl' with encoding 'UTF-8'
+[830] bbl.pm:763> INFO - Output to master.bbl
+[830] Biber.pm:131> WARN - legacy year field '1935--2024' in entry 'bur' is not an integer - this will probably not sort properly.
+[831] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[831] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[831] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[831] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[831] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[831] Biber.pm:133> INFO - WARNINGS: 6
