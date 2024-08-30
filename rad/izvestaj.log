@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.27)  28 AUG 2024 15:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.27)  30 AUG 2024 20:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -285,14 +285,14 @@ Here is how much of TeX's memory you used:
  23164 multiletter control sequences out of 15000+600000
  513603 words of font info for 35 fonts, out of 8000000 for 9000
  725 hyphenation exceptions out of 8191
- 57i,5n,62p,972b,204s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,5n,62p,1027b,204s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/
 andrija/.texlive/texmf-var/fonts/pk/ljfour/lh/lh-ot2/wncsc10.600pk> </home/andr
 ija/.texlive/texmf-var/fonts/pk/ljfour/lh/lh-ot2/wnbx10.600pk> </home/andrija/.
 texlive/texmf-var/fonts/pk/ljfour/lh/lh-ot2/wnr10.600pk>
-Output written on izvestaj.pdf (1 page, 28587 bytes).
+Output written on izvestaj.pdf (1 page, 29488 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
+ 117 PDF objects out of 1000 (max. 8388607)
  16 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
