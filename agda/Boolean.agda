@@ -57,3 +57,14 @@ not-id-neg-𝟚 : (x : 𝟚) → ¬ (x == ¬𝟚 x)
 not-id-neg-𝟚 true  = λ ()
 not-id-neg-𝟚 false = λ ()
 
+neg-neg-𝟚 : (¬𝟚 ∘ ¬𝟚) ~ id 
+neg-neg-𝟚 true  = refl true
+neg-neg-𝟚 false = refl false
+
+neg-𝟚-equiv : is-equiv ¬𝟚 
+neg-𝟚-equiv = (¬𝟚 , neg-neg-𝟚) , (¬𝟚 , neg-neg-𝟚)
+
+equiv-neg-𝟚 : 𝟚 ≃ 𝟚
+equiv-neg-𝟚 = ¬𝟚 , neg-𝟚-equiv
+
+

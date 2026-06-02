@@ -351,3 +351,34 @@ commutative-*ℤ (inr (inr (succ x))) l = (l +ℤ inr (inr x) *ℤ l)         ==
                                         ((l +ℤ l *ℤ inr (inr x))        ==⟨ ap (λ y → y +ℤ l *ℤ inr (inr x)) ((right-unit-law-*ℤ l) ⁻¹) ⟩ 
                                         ((l *ℤ +1ℤ +ℤ l *ℤ inr (inr x)) ==⟨ (left-distirbutive-ℤ l +1ℤ (inr (inr x))) ⁻¹ ⟩ 
                                         ((l *ℤ inr (inr (succ x)))      ∎)))   
+
+equiv-succℤ : is-equiv succℤ
+equiv-succℤ = (predℤ , succ-pred-id) , (predℤ , pred-succ-id)
+
+succℤ-equiv : ℤ ≃ ℤ 
+succℤ-equiv = succℤ , equiv-succℤ
+
+equiv-predℤ : is-equiv predℤ
+equiv-predℤ = (succℤ , pred-succ-id) , (succℤ , succ-pred-id)
+
+predℤ-equiv : ℤ ≃ ℤ
+predℤ-equiv = predℤ , equiv-predℤ
+
+equiv-+ℤ : (k : ℤ) → is-equiv (_+ℤ_ k)
+equiv-+ℤ k = (_+ℤ_ (negℤ k) , 
+                λ x → (k +ℤ (negℤ k +ℤ x)) ==⟨ (associative-+ℤ k (negℤ k) x) ⁻¹ ⟩ 
+                      ((k +ℤ negℤ k +ℤ x)  ==⟨ ap (λ z → z +ℤ x) (right-inverse-law-+ℤ k)   ⟩ 
+                      (x                   ∎))) ,
+             (_+ℤ_ (negℤ k) , 
+                λ x → (negℤ k +ℤ (k +ℤ x)) ==⟨ (associative-+ℤ (negℤ k) k x) ⁻¹ ⟩ 
+                      ((negℤ k +ℤ k +ℤ x)  ==⟨ ap (λ z → z +ℤ x) (left-inverse-law-+ℤ k) ⟩ 
+                      (x                   ∎)))
+
++ℤ-equiv : ℤ → ℤ ≃ ℤ
++ℤ-equiv k = _+ℤ_ k , equiv-+ℤ k
+
+equiv-negℤ : is-equiv negℤ
+equiv-negℤ = (negℤ , negℤ-negℤ-id) , (negℤ , negℤ-negℤ-id)
+
+negℤ-equiv : ℤ ≃ ℤ 
+negℤ-equiv = negℤ , equiv-negℤ

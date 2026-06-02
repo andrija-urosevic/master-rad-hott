@@ -18,6 +18,10 @@ id x = x
 𝑖𝑑 : (X : 𝓤 ̇ ) → X → X 
 𝑖𝑑 X = id
 
+const : {X : 𝓤 ̇ } {Y : 𝓥 ̇ } 
+      → X → Y → X
+const x _ = x
+
 domain : {X : 𝓤 ̇ } {Y : 𝓥 ̇ } → (X → Y) → 𝓤 ̇
 domain {𝓤} {𝓥} {X} {Y} f = X
 
@@ -93,7 +97,9 @@ n-n-n+ : {A : 𝓤 ̇ } {B : 𝓥 ̇ } → ¬ A → ¬ B → ¬ (A + B)
 n-n-n+ f g (inl a) = f a
 n-n-n+ f g (inr b) = g b
 
-_+→_ : {A X : 𝓤 ̇ } {B Y : 𝓤 ̇ } (f : A → X) (g : B → Y) 
+_+→_ : {𝓤₀ 𝓤₁ : Universe} {𝓥₀ 𝓥₁ : Universe} 
+     → {A : 𝓤₀ ̇ } {X : 𝓤₁ ̇ } {B : 𝓥₀ ̇ } {Y : 𝓥₁ ̇ } 
+     → (f : A → X) (g : B → Y) 
      → (A + B) → (X + Y)
 (f +→ g) (inl x) = inl (f x)
 (f +→ g) (inr x) = inr (g x)
@@ -124,7 +130,7 @@ snd (x , y) = y
 -Σ : {𝓤 𝓥 : Universe} (X : 𝓤 ̇ ) (Y : X → 𝓥 ̇ ) → 𝓤 ⊔ 𝓥 ̇
 -Σ X Y = Σ Y
 
-syntax -Σ X (λ x → y) = Σ x ꞉ X , y
+syntax -Σ X (λ x → y) = Σ x ∶ X , y
 
 Σ-induction : {X : 𝓤 ̇ } {Y : X → 𝓥 ̇ } {P : Σ Y → 𝓦 ̇ }
             → ((x : X) (y : Y x) → P (x , y))
@@ -137,7 +143,7 @@ carry : {X : 𝓤 ̇ } {Y : X → 𝓥 ̇ } {P : Σ Y → 𝓦 ̇ }
 carry f x y = f (x , y)
 
 _×_ : 𝓤 ̇ → 𝓥 ̇ → 𝓤 ⊔ 𝓥 ̇
-X × Y = Σ x ꞉ X , Y
+X × Y = Σ x ∶ X , Y
 
 ×-induction : {X : 𝓤 ̇ } {Y : 𝓥 ̇ } {P : X × Y → 𝓦 ̇ }
             → ((x : X) (y : Y) → P (x , y))
