@@ -236,3 +236,13 @@ has-inverse-is-contr-map has-inverse-f b = has-inverse-center has-inverse-f b
 is-equiv-is-contr-map : {A : 𝓤 ̇ } {B : 𝓥 ̇ } {f : A → B}
                       → is-equiv f → is-contr-map f
 is-equiv-is-contr-map is-equiv-f = has-inverse-is-contr-map (is-equiv-has-inverse is-equiv-f)
+
+
+is-contr-== : {A : 𝓤 ̇ } → is-contr A → (x y : A) → x == y
+is-contr-== (c , C) x y = C x ⁻¹ · C y
+
+is-contr-==-contration : {A : 𝓤 ̇ } {x y : A} → (is-contr-A : is-contr A) → (p : x == y) → is-contr-== is-contr-A x y == p
+is-contr-==-contration {𝓤} {A} {x} {x} (c , C) (refl x) = left-inv (C x)
+
+is-contr-eq : {A : 𝓤 ̇ } → is-contr A → (x y : A) → is-contr (x == y)
+is-contr-eq is-contr-A x y = is-contr-== is-contr-A x y , is-contr-==-contration is-contr-A
