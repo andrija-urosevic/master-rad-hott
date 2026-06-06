@@ -67,20 +67,20 @@ left-whisk-~ : {A : 𝓤 ̇ } {B : 𝓥 ̇ } → {C : 𝓦 ̇ } {f g : A → B}
              → h ∘ f ~ h ∘ g
 left-whisk-~ h H x = ap h (H x)
 
-_~l_ : {A : 𝓤 ̇ } {B : 𝓥 ̇ } → {C : 𝓦 ̇ } {f g : A → B}
+_·l_ : {A : 𝓤 ̇ } {B : 𝓥 ̇ } → {C : 𝓦 ̇ } {f g : A → B}
      → (h : B → C) → (H : f ~ g)
      → h ∘ f ~ h ∘ g
-h ~l H = left-whisk-~ h H
+h ·l H = left-whisk-~ h H
 
 right-whisk-~ : {A : 𝓤 ̇ } {B : 𝓥 ̇ } → {C : 𝓦 ̇ } {g h : B → C}
               → (f : A → B) → (H : g ~ h)
               → g ∘ f ~ h ∘ f 
 right-whisk-~ f H x = H (f x)
 
-_~r_ : {A : 𝓤 ̇ } {B : 𝓥 ̇ } → {C : 𝓦 ̇ } {g h : B → C}
-     → (f : A → B) → (H : g ~ h)
+_·r_ : {A : 𝓤 ̇ } {B : 𝓥 ̇ } → {C : 𝓦 ̇ } {g h : B → C}
+     → (H : g ~ h) → (f : A → B)
      → g ∘ f ~ h ∘ f 
-f ~r H = right-whisk-~ f H 
+H ·r f = right-whisk-~ f H 
 
 sec : {A : 𝓤 ̇ } {B : 𝓥 ̇ }
     → (f : A → B)

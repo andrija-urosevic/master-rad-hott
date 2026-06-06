@@ -299,7 +299,7 @@ ap-id : {X : 𝓤 ̇ } {x y : X} (p : x == y)
       → p == ap id p
 ap-id (refl x) = refl (refl x)
 
-ap-comp : {X : 𝓤 ̇ } (f g : X → X) {x y z : X} (p : x == y)
+ap-comp : {X : 𝓤 ̇ } {Y : 𝓥 ̇ } {Z : 𝓦 ̇ } (f : X → Y) (g : Y → Z) {x y : X} (p : x == y)
         → ap g (ap f p) == ap (g ∘ f) p
 ap-comp f g (refl x) = refl (refl (g (f x)))
 
@@ -323,6 +323,16 @@ uniqueness-refl : {X : 𝓤 ̇ } (x y : X) (p : x == y)
                 → (x , refl x) == (y , p) 
 uniqueness-refl x x (refl x) = refl (x , (refl x))
 
+unconcat-left : {X : 𝓤 ̇ } {x y z : X} (p : x == y) (q : y == z) (r : y == z) → p · q == p · r → q == r
+unconcat-left (refl x) q r p = p
+        
+unconcat-right : {X : 𝓤 ̇ } {x y z : X} (p : x == y) (q : x == y) (r : y == z) → p · r == q · r → p == q
+unconcat-right p q (refl y) path =  p             ==⟨ (right-unit p) ⁻¹ ⟩ 
+                                    ((p · refl y) ==⟨ path ⟩ 
+                                    ((q · refl y) ==⟨ right-unit q ⟩ 
+                                    (q            ∎)))
+
+
 distributive-inv-concat : {X : 𝓤 ̇ } {x y z : X} (p : x == y) (q : y == z)
                         → (p · q) ⁻¹ == q ⁻¹ · p ⁻¹
 distributive-inv-concat (refl x) (refl x) = refl (refl x)
@@ -337,6 +347,17 @@ concat-inv p (refl y) r = λ α → p             ==⟨ (right-unit p) ⁻¹ ⟩
                                 ((p · refl y) ==⟨ α ⟩ 
                                 (r            ==⟨ (right-unit r) ⁻¹ ⟩ 
                                 ((r · refl y) ∎)))
+
+square-comm : {X : 𝓤 ̇ } {x y y' z : X} (p : x == y) (q : y == z) (p' : x == y') (q' : y' == z) → 𝓤 ̇ 
+square-comm p q p' q' = p · q == p' · q' 
+
+square-comm-top : {X : 𝓤 ̇ } {x y y' z : X} {p1 p2 : x == y} {q : y == z} {p' : x == y'} {q' : y' == z}
+                → (p1 == p2) → square-comm p1 q p' q' → square-comm p2 q p' q'
+square-comm-top (refl _) sq = sq
+
+square-comm-left : {X : 𝓤 ̇ } {x y y' z : X} (p : x == y) (q : y == z) (p1' p2' : x == y') (q' : y' == z)
+                 → (p1' == p2') → square-comm p q p1' q' → square-comm p q p2' q'
+square-comm-left p q p1' p2' q' (refl _) sq = sq
 
 lift : {A : 𝓤 ̇ } {B : A → 𝓥 ̇ } {x y : A} (p : x == y) (b : B x) 
      → (x , b) == (y , tr B p b)
